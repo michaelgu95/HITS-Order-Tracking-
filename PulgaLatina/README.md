@@ -3,5 +3,5 @@
 ##Summary
 
 
-iOS Application accomapnying http://www.pulgalatina.com/
-Written in Swift
+iOS/Swift Application accomapanying http://www.pulgalatina.com/
+
