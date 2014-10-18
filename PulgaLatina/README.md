@@ -3,5 +3,5 @@
 ##Summary
 
 
-iOS/Swift Application accomapanying http://www.pulgalatina.com/
+iOS/Swift Application for http://www.pulgalatina.com/
 
