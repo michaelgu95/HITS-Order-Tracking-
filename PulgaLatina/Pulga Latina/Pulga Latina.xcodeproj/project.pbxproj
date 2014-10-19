@@ -1,0 +1,445 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		689B16C719F2E45A004CF144 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689B16C619F2E45A004CF144 /* AppDelegate.swift */; };
+		689B16CA19F2E45A004CF144 /* Pulga_Latina.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 689B16C819F2E45A004CF144 /* Pulga_Latina.xcdatamodeld */; };
+		689B16CC19F2E45A004CF144 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689B16CB19F2E45A004CF144 /* MasterViewController.swift */; };
+		689B16CE19F2E45A004CF144 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689B16CD19F2E45A004CF144 /* DetailViewController.swift */; };
+		689B16D119F2E45B004CF144 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 689B16CF19F2E45B004CF144 /* Main.storyboard */; };
+		689B16D319F2E45B004CF144 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 689B16D219F2E45B004CF144 /* Images.xcassets */; };
+		689B16D619F2E45B004CF144 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 689B16D419F2E45B004CF144 /* LaunchScreen.xib */; };
+		689B16E219F2E45B004CF144 /* Pulga_LatinaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689B16E119F2E45B004CF144 /* Pulga_LatinaTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		689B16DC19F2E45B004CF144 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 689B16B919F2E45A004CF144 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 689B16C019F2E45A004CF144;
+			remoteInfo = "Pulga Latina";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		689B16C119F2E45A004CF144 /* Pulga Latina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pulga Latina.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		689B16C519F2E45A004CF144 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		689B16C619F2E45A004CF144 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		689B16C919F2E45A004CF144 /* Pulga_Latina.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pulga_Latina.xcdatamodel; sourceTree = "<group>"; };
+		689B16CB19F2E45A004CF144 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		689B16CD19F2E45A004CF144 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		689B16D019F2E45B004CF144 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		689B16D219F2E45B004CF144 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		689B16D519F2E45B004CF144 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		689B16DB19F2E45B004CF144 /* Pulga LatinaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pulga LatinaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		689B16E019F2E45B004CF144 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		689B16E119F2E45B004CF144 /* Pulga_LatinaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pulga_LatinaTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		689B16BE19F2E45A004CF144 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		689B16D819F2E45B004CF144 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		689B16B819F2E45A004CF144 = {
+			isa = PBXGroup;
+			children = (
+				689B16C319F2E45A004CF144 /* Pulga Latina */,
+				689B16DE19F2E45B004CF144 /* Pulga LatinaTests */,
+				689B16C219F2E45A004CF144 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		689B16C219F2E45A004CF144 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				689B16C119F2E45A004CF144 /* Pulga Latina.app */,
+				689B16DB19F2E45B004CF144 /* Pulga LatinaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		689B16C319F2E45A004CF144 /* Pulga Latina */ = {
+			isa = PBXGroup;
+			children = (
+				689B16C619F2E45A004CF144 /* AppDelegate.swift */,
+				689B16CB19F2E45A004CF144 /* MasterViewController.swift */,
+				689B16CD19F2E45A004CF144 /* DetailViewController.swift */,
+				689B16CF19F2E45B004CF144 /* Main.storyboard */,
+				689B16D219F2E45B004CF144 /* Images.xcassets */,
+				689B16D419F2E45B004CF144 /* LaunchScreen.xib */,
+				689B16C819F2E45A004CF144 /* Pulga_Latina.xcdatamodeld */,
+				689B16C419F2E45A004CF144 /* Supporting Files */,
+			);
+			path = "Pulga Latina";
+			sourceTree = "<group>";
+		};
+		689B16C419F2E45A004CF144 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				689B16C519F2E45A004CF144 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		689B16DE19F2E45B004CF144 /* Pulga LatinaTests */ = {
+			isa = PBXGroup;
+			children = (
+				689B16E119F2E45B004CF144 /* Pulga_LatinaTests.swift */,
+				689B16DF19F2E45B004CF144 /* Supporting Files */,
+			);
+			path = "Pulga LatinaTests";
+			sourceTree = "<group>";
+		};
+		689B16DF19F2E45B004CF144 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				689B16E019F2E45B004CF144 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		689B16C019F2E45A004CF144 /* Pulga Latina */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 689B16E519F2E45B004CF144 /* Build configuration list for PBXNativeTarget "Pulga Latina" */;
+			buildPhases = (
+				689B16BD19F2E45A004CF144 /* Sources */,
+				689B16BE19F2E45A004CF144 /* Frameworks */,
+				689B16BF19F2E45A004CF144 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pulga Latina";
+			productName = "Pulga Latina";
+			productReference = 689B16C119F2E45A004CF144 /* Pulga Latina.app */;
+			productType = "com.apple.product-type.application";
+		};
+		689B16DA19F2E45B004CF144 /* Pulga LatinaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 689B16E819F2E45B004CF144 /* Build configuration list for PBXNativeTarget "Pulga LatinaTests" */;
+			buildPhases = (
+				689B16D719F2E45B004CF144 /* Sources */,
+				689B16D819F2E45B004CF144 /* Frameworks */,
+				689B16D919F2E45B004CF144 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				689B16DD19F2E45B004CF144 /* PBXTargetDependency */,
+			);
+			name = "Pulga LatinaTests";
+			productName = "Pulga LatinaTests";
+			productReference = 689B16DB19F2E45B004CF144 /* Pulga LatinaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		689B16B919F2E45A004CF144 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = Gutang;
+				TargetAttributes = {
+					689B16C019F2E45A004CF144 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					689B16DA19F2E45B004CF144 = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = 689B16C019F2E45A004CF144;
+					};
+				};
+			};
+			buildConfigurationList = 689B16BC19F2E45A004CF144 /* Build configuration list for PBXProject "Pulga Latina" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 689B16B819F2E45A004CF144;
+			productRefGroup = 689B16C219F2E45A004CF144 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				689B16C019F2E45A004CF144 /* Pulga Latina */,
+				689B16DA19F2E45B004CF144 /* Pulga LatinaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		689B16BF19F2E45A004CF144 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				689B16D119F2E45B004CF144 /* Main.storyboard in Resources */,
+				689B16D619F2E45B004CF144 /* LaunchScreen.xib in Resources */,
+				689B16D319F2E45B004CF144 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		689B16D919F2E45B004CF144 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		689B16BD19F2E45A004CF144 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				689B16CA19F2E45A004CF144 /* Pulga_Latina.xcdatamodeld in Sources */,
+				689B16C719F2E45A004CF144 /* AppDelegate.swift in Sources */,
+				689B16CC19F2E45A004CF144 /* MasterViewController.swift in Sources */,
+				689B16CE19F2E45A004CF144 /* DetailViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		689B16D719F2E45B004CF144 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				689B16E219F2E45B004CF144 /* Pulga_LatinaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		689B16DD19F2E45B004CF144 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 689B16C019F2E45A004CF144 /* Pulga Latina */;
+			targetProxy = 689B16DC19F2E45B004CF144 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		689B16CF19F2E45B004CF144 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				689B16D019F2E45B004CF144 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		689B16D419F2E45B004CF144 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				689B16D519F2E45B004CF144 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		689B16E319F2E45B004CF144 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		689B16E419F2E45B004CF144 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		689B16E619F2E45B004CF144 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Pulga Latina/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		689B16E719F2E45B004CF144 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Pulga Latina/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		689B16E919F2E45B004CF144 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Pulga LatinaTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pulga Latina.app/Pulga Latina";
+			};
+			name = Debug;
+		};
+		689B16EA19F2E45B004CF144 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Pulga LatinaTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pulga Latina.app/Pulga Latina";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		689B16BC19F2E45A004CF144 /* Build configuration list for PBXProject "Pulga Latina" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				689B16E319F2E45B004CF144 /* Debug */,
+				689B16E419F2E45B004CF144 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		689B16E519F2E45B004CF144 /* Build configuration list for PBXNativeTarget "Pulga Latina" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				689B16E619F2E45B004CF144 /* Debug */,
+				689B16E719F2E45B004CF144 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		689B16E819F2E45B004CF144 /* Build configuration list for PBXNativeTarget "Pulga LatinaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				689B16E919F2E45B004CF144 /* Debug */,
+				689B16EA19F2E45B004CF144 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		689B16C819F2E45A004CF144 /* Pulga_Latina.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				689B16C919F2E45A004CF144 /* Pulga_Latina.xcdatamodel */,
+			);
+			currentVersion = 689B16C919F2E45A004CF144 /* Pulga_Latina.xcdatamodel */;
+			path = Pulga_Latina.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 689B16B919F2E45A004CF144 /* Project object */;
+}
