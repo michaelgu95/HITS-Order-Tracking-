@@ -24,13 +24,25 @@ class DetailViewController: UIViewController {
     func configureView() {
         // Update the user interface for the detail item.
     
-            webView.loadHTMLString(adContent, baseURL: nil)
-        
+        webView.loadHTMLString(adContent, baseURL: nil)
+        var nav = self.navigationController?.navigationBar
+        nav?.tintColor = UIColor.whiteColor()
+        nav?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.blueColor()]
+     
+      
+        var tLabel = UILabel(frame: CGRectMake(0, 0, 200, 40))
+        tLabel.text = "Descripción"
+        tLabel.textColor = UIColor.whiteColor()
+        tLabel.adjustsFontSizeToFitWidth = true
+        self.navigationItem.titleView = tLabel
+       
+      
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+       
         self.configureView()
     }
 

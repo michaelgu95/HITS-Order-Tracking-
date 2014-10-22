@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -32,21 +32,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oRp-F5-zri">
-                                <rect key="frame" x="-5" y="64" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <webView contentMode="scaleAspectFill" misplaced="YES" paginationMode="topToBottom" pageLength="10000" translatesAutoresizingMaskIntoConstraints="NO" id="oRp-F5-zri">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="oRp-F5-zri" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" id="1W7-9m-CqF"/>
+                            <constraint firstItem="oRp-F5-zri" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" id="2hu-Uq-1AZ"/>
                             <constraint firstAttribute="bottomMargin" secondItem="oRp-F5-zri" secondAttribute="bottom" id="5bc-Bb-kBH"/>
+                            <constraint firstItem="GAO-Cl-Wes" firstAttribute="top" secondItem="oRp-F5-zri" secondAttribute="bottom" id="8lQ-t6-ctt"/>
+                            <constraint firstItem="oRp-F5-zri" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" id="Ej5-fV-x0X"/>
+                            <constraint firstItem="oRp-F5-zri" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="57" id="FI3-CF-UaF"/>
                             <constraint firstItem="oRp-F5-zri" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" id="Ffk-jZ-4fg"/>
+                            <constraint firstAttribute="trailing" secondItem="oRp-F5-zri" secondAttribute="trailing" id="Fut-En-Jes"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oRp-F5-zri" secondAttribute="trailing" id="JRA-Ni-ESk"/>
+                            <constraint firstItem="oRp-F5-zri" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" id="Kme-eL-2at"/>
+                            <constraint firstItem="GAO-Cl-Wes" firstAttribute="top" secondItem="oRp-F5-zri" secondAttribute="bottom" id="Le2-sk-mlk"/>
                             <constraint firstItem="oRp-F5-zri" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" id="Ylx-d1-wqb"/>
+                            <constraint firstItem="oRp-F5-zri" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" id="Z7s-vr-Ace"/>
+                            <constraint firstItem="oRp-F5-zri" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" id="aEB-Tv-gpG"/>
+                            <constraint firstAttribute="bottom" secondItem="oRp-F5-zri" secondAttribute="bottom" id="lWr-Tv-NVH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oRp-F5-zri" secondAttribute="trailing" id="sX4-QX-QeR"/>
+                            <constraint firstAttribute="trailing" secondItem="oRp-F5-zri" secondAttribute="trailing" id="tAq-YP-bFN"/>
+                            <constraint firstAttribute="bottom" secondItem="oRp-F5-zri" secondAttribute="bottom" id="uIr-Sh-CFI"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1W7-9m-CqF"/>
+                                <exclude reference="5bc-Bb-kBH"/>
+                                <exclude reference="Ej5-fV-x0X"/>
+                                <exclude reference="Ffk-jZ-4fg"/>
+                                <exclude reference="Fut-En-Jes"/>
+                                <exclude reference="JRA-Ni-ESk"/>
+                                <exclude reference="Kme-eL-2at"/>
+                                <exclude reference="Ylx-d1-wqb"/>
+                                <exclude reference="Z7s-vr-Ace"/>
+                                <exclude reference="aEB-Tv-gpG"/>
+                                <exclude reference="lWr-Tv-NVH"/>
+                                <exclude reference="tAq-YP-bFN"/>
+                                <exclude reference="uIr-Sh-CFI"/>
+                                <exclude reference="8lQ-t6-ctt"/>
+                            </mask>
+                        </variation>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Anuncio Clasificado" id="mOI-FS-AaM"/>
+                    <navigationItem key="navigationItem" id="mOI-FS-AaM"/>
                     <connections>
                         <outlet property="webView" destination="oRp-F5-zri" id="HpV-g8-zsx"/>
                     </connections>
@@ -73,55 +106,42 @@
         <scene sceneID="smW-Zh-WAh">
             <objects>
                 <tableViewController title="Master" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MasterViewController" customModule="Pulga_Latina" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="r7i-6Z-zg0">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="151" sectionHeaderHeight="22" sectionFooterHeight="22" id="r7i-6Z-zg0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Arm-wq-HPj" style="IBUITableViewCellStyleDefault" id="WCw-Qf-5nD">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WCw-Qf-5nD" id="37f-cq-3Eg">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" id="Arm-wq-HPj">
-                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="showDetail" id="6S0-TO-JiA"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
                         <sections/>
                         <connections>
                             <outlet property="dataSource" destination="7bK-jq-Zjz" id="Gho-Na-rnu"/>
                             <outlet property="delegate" destination="7bK-jq-Zjz" id="RA6-mI-bju"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Anuncios Clasificados" id="Zdf-7t-Un8"/>
+                    <navigationItem key="navigationItem" id="Zdf-7t-Un8">
+                        <barButtonItem key="leftBarButtonItem" systemItem="search" id="zDO-R7-eXj">
+                            <inset key="imageInsets" minX="0.0" minY="2" maxX="0.0" maxY="0.0"/>
+                            <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="adTableView" destination="r7i-6Z-zg0" id="OTa-sN-WDN"/>
+                        <outlet property="adTableView" destination="r7i-6Z-zg0" id="YL5-Qn-5Q1"/>
+                        <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="showDetail" id="b13-K8-7mA"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="709" y="-630"/>
+            <point key="canvasLocation" x="709" y="-638"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="r7l-gg-dq7">
             <objects>
                 <navigationController id="vC3-pB-5Vb" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="DjV-YW-jjY">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="5dY-my-Mxs">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="JEX-9P-axG" kind="relationship" relationship="rootViewController" id="GKi-kA-LjT"/>
                     </connections>
@@ -132,6 +152,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6S0-TO-JiA"/>
+        <segue reference="b13-K8-7mA"/>
     </inferredMetricsTieBreakers>
 </document>
