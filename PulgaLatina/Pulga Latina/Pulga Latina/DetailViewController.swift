@@ -12,6 +12,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var webView: UIWebView!
 
     var detailItem: AnyObject? {
@@ -28,14 +29,14 @@ class DetailViewController: UIViewController {
         var nav = self.navigationController?.navigationBar
         nav?.tintColor = UIColor.whiteColor()
         nav?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.blueColor()]
-     
+        nav?.barTintColor = UIColorFromRGB(0x067AB5)
       
         var tLabel = UILabel(frame: CGRectMake(0, 0, 200, 40))
-        tLabel.text = "Descripción"
         tLabel.textColor = UIColor.whiteColor()
         tLabel.adjustsFontSizeToFitWidth = true
         self.navigationItem.titleView = tLabel
        
+        emailLabel.text = email
       
     }
 

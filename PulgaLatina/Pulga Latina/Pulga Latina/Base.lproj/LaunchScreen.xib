@@ -17,7 +17,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pulgalogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="2Yn-4t-7X0">
-                    <rect key="frame" x="57" y="132" width="366" height="109"/>
+                    <rect key="frame" x="57" y="132" width="366" height="84"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="0.29947299235523506" green="0.48121922108836102" blue="0.66436144770408156" alpha="1" colorSpace="calibratedRGB"/>
