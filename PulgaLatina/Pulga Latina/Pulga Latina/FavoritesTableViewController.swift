@@ -67,16 +67,33 @@ class FavoritesTableViewController:UITableViewController, UITableViewDataSource,
         var locations = favoriteLocations[indexPath.row]
         var prices = favoritePrices[indexPath.row]
         var adImage = favoriteImages[indexPath.row]
-        var adContent = favoriteAdContent[indexPath.row]
+        cell.swipeEnabled = false
         cell.loadAd(names, price: prices, location: locations, adImage: adImage, adContent: nil, email: nil)
         
         return cell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        adContent = favoriteAdContent[indexPath.row]
-        email = favoriteEmail[indexPath.row]
+        DisplayedAdContent = favoriteAdContent[indexPath.row] as String
+        println(DisplayedAdContent)
+        DisplayedEmail = favoriteEmail[indexPath.row] as String
         self.performSegueWithIdentifier("favoriteDetail", sender: tableView)
+    }
+    
+    override func tableView(tableView: UITableView!, canEditRowAtIndexPath indexPath: NSIndexPath!) -> Bool {
+        return true
+    }
+    
+    override func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
+        if (editingStyle == UITableViewCellEditingStyle.Delete) {
+        favoriteTitles.removeLast()
+        favoritePrices.removeLast()
+        favoriteLocations.removeLast()
+        favoriteImages.removeLast()
+        favoriteAdContent.removeLast()
+        favoriteEmail.removeLast()
+        self.tableView.reloadData()
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -87,5 +104,4 @@ class FavoritesTableViewController:UITableViewController, UITableViewDataSource,
             }
         }
     }
-
 }

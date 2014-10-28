@@ -10,8 +10,7 @@
 import UIKit
 import CoreData
 
-var adContent:String = ""
-var email:String = ""
+
 
 public func UIColorFromRGB(rgbValue: UInt) -> UIColor {
     return UIColor(
@@ -28,7 +27,7 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
     var jsonURL:NSURL!
     var jsonURLString:String!
     var filteredItems = NSDictionary()
-    var adData = []
+    var adData:[AnyObject] = []
     var adImage:UIImage?
     var detailViewController: DetailViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil
@@ -46,6 +45,10 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
             }
+    
+//    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+//            TipInCellAnimator.animate(cell)
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -123,7 +126,6 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
             })
             
         })
-        
         task.resume()
     }
     
@@ -131,7 +133,6 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
         var page = jsonURLString.componentsSeparatedByString("page=")
         var pageNumber:Int = page[1].toInt()!
         pageNumber += 1
-        println(pageNumber)
         jsonURLString = "http://www.pulgalatina.com/api/v1/ads/?format=json&page=\(pageNumber)"
         jsonURL = NSURL(string: jsonURLString)
         println(jsonURL)
@@ -139,7 +140,7 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
         self.adTableView.reloadData()
         refresher.endRefreshing()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -187,17 +188,19 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
         var adImagesNSURL: NSURL! = NSURL(string: fullURL)
         var adImagesData: NSData! = NSData(contentsOfURL: adImagesNSURL)
         var adImage:UIImage = UIImage(data:adImagesData)!
-        
-        cell.loadAd(names!, price: prices, location: locations, adImage: adImage, adContent: adContent, email: email)
-        
+        var adContents = rowData["description"] as? String
+        var  emails = rowData["email"] as?String
+        cell.swipeEnabled = true
+        cell.loadAd(names!, price: prices, location: locations, adImage: adImage, adContent: adContents, email: emails)
         return cell
     }
     
    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let rowData: NSDictionary = self.adData[indexPath.row] as NSDictionary
-        adContent = rowData["description"] as String
-        email = rowData["email"] as String
+    
         self.performSegueWithIdentifier("showDetail", sender: tableView)
     }
 
+
+    
 }

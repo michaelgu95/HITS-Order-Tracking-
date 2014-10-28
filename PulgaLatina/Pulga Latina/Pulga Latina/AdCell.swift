@@ -17,6 +17,9 @@ class AdCell: MGSwipeTableCell, MGSwipeTableCellDelegate {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet  weak var locationLabel: UILabel!
     @IBOutlet var adImageLabel: UIImageView!
+    var swipeEnabled: Bool!
+    var listedAdContent: String!
+    var listedAdEmail: String!
     
     
     func UIColorFromRGB(rgbValue: UInt) -> UIColor {
@@ -29,6 +32,8 @@ class AdCell: MGSwipeTableCell, MGSwipeTableCellDelegate {
     }
     
     func loadAd(title: String, price: String?, location: String?, adImage: UIImage?, adContent: String?, email: String?) {
+        listedAdContent = adContent
+        listedAdEmail = email
         titleLabel.numberOfLines = 0
         locationLabel.numberOfLines = 0
         priceLabel.numberOfLines = 0
@@ -44,7 +49,7 @@ class AdCell: MGSwipeTableCell, MGSwipeTableCellDelegate {
         adImageLabel.layer.shadowOffset = CGSizeMake(0, 1)
         adImageLabel.layer.shadowOpacity = 1
         adImageLabel.layer.shadowRadius = 4.0
-       adImageLabel.clipsToBounds = true
+        adImageLabel.clipsToBounds = true
         
         //rounded border
         adImageLabel.layer.cornerRadius = 3.0
@@ -70,26 +75,30 @@ class AdCell: MGSwipeTableCell, MGSwipeTableCellDelegate {
         let newShareImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        
-        self.rightSwipeSettings.transition = MGSwipeTransition.Transition3D
-        self.rightButtons = [
+        if swipeEnabled == true {
+            self.rightSwipeSettings.transition = MGSwipeTransition.Transition3D
+            self.rightButtons = [
             
-            MGSwipeButton(title: "Favorito", icon: newFavoriteImage, backgroundColor: UIColorFromRGB(0x067AB5), callback: { (sender) -> Bool in
-        //send cell into favorites
-                favoriteTitles.append(self.titleLabel.text!)
-                favoritePrices.append(self.priceLabel.text!)
-                favoriteLocations.append(self.locationLabel.text!)
-                favoriteImages.append(adImage!)
-                favoriteAdContent.append(adContent!)
-                favoriteEmail.append(email!)
-            return true}),
-            MGSwipeButton(title: "Compartir", icon: newShareImage, backgroundColor: UIColorFromRGB(0x067AB5), callback:{ (sender) -> Bool in
-            println("yes")
-            return true
-        })]
+                MGSwipeButton(title: "Favorito", icon: newFavoriteImage, backgroundColor: UIColorFromRGB(0x067AB5), callback: { (sender) -> Bool in
+                    //send cell into favorites
+                    favoriteTitles.append(self.titleLabel.text!)
+                    favoritePrices.append(self.priceLabel.text!)
+                    favoriteLocations.append(self.locationLabel.text!)
+                    favoriteImages.append(adImage!)
+                    favoriteAdContent.append(self.listedAdContent!)
+                    favoriteEmail.append(self.listedAdEmail!)
+                    println(favoriteAdContent)
+                    return true}),
+                
+                MGSwipeButton(title: "Compartir", icon: newShareImage, backgroundColor: UIColorFromRGB(0x067AB5), callback:{ (sender) -> Bool in
+                    println("yes")
+                    return true
+                })]
+        }
         
         func swipeTableCell(cell: MGSwipeTableCell!, canSwipe direction: MGSwipeDirection) -> Bool {
             return true
+            
         }
     
     }

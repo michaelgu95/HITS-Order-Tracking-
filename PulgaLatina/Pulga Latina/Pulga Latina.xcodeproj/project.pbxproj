@@ -23,6 +23,7 @@
 		68430CA219F6B5B4004FA1AE /* 90.png in Resources */ = {isa = PBXBuildFile; fileRef = 68430CA119F6B5B4004FA1AE /* 90.png */; };
 		68430CA419F6B5F9004FA1AE /* 32.png in Resources */ = {isa = PBXBuildFile; fileRef = 68430CA319F6B5F9004FA1AE /* 32.png */; };
 		685523C019FAFE4000EAA1E8 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685523BF19FAFE4000EAA1E8 /* FavoritesTableViewController.swift */; };
+		685523C219FD844C00EAA1E8 /* TipInCellAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685523C119FD844C00EAA1E8 /* TipInCellAnimator.swift */; };
 		689B16C719F2E45A004CF144 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689B16C619F2E45A004CF144 /* AppDelegate.swift */; };
 		689B16CA19F2E45A004CF144 /* Pulga_Latina.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 689B16C819F2E45A004CF144 /* Pulga_Latina.xcdatamodeld */; };
 		689B16CC19F2E45A004CF144 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689B16CB19F2E45A004CF144 /* MasterViewController.swift */; };
@@ -66,6 +67,7 @@
 		68430CA119F6B5B4004FA1AE /* 90.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 90.png; sourceTree = "<group>"; };
 		68430CA319F6B5F9004FA1AE /* 32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 32.png; sourceTree = "<group>"; };
 		685523BF19FAFE4000EAA1E8 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
+		685523C119FD844C00EAA1E8 /* TipInCellAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipInCellAnimator.swift; sourceTree = "<group>"; };
 		689B16C119F2E45A004CF144 /* Pulga Latina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pulga Latina.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		689B16C519F2E45A004CF144 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		689B16C619F2E45A004CF144 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				689B16CD19F2E45A004CF144 /* DetailViewController.swift */,
 				685523BF19FAFE4000EAA1E8 /* FavoritesTableViewController.swift */,
 				6801B68219F3F8FC0097988D /* AdCell.swift */,
+				685523C119FD844C00EAA1E8 /* TipInCellAnimator.swift */,
 				689B16CF19F2E45B004CF144 /* Main.storyboard */,
 				689B16D219F2E45B004CF144 /* Images.xcassets */,
 				689B16D419F2E45B004CF144 /* LaunchScreen.xib */,
@@ -350,6 +353,7 @@
 				6825E2A219F93F4200731110 /* MGSwipeTableCell.m in Sources */,
 				689B16CC19F2E45A004CF144 /* MasterViewController.swift in Sources */,
 				689B16CE19F2E45A004CF144 /* DetailViewController.swift in Sources */,
+				685523C219FD844C00EAA1E8 /* TipInCellAnimator.swift in Sources */,
 				6801B68319F3F8FC0097988D /* AdCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
