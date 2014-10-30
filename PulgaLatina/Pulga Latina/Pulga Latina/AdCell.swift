@@ -8,7 +8,9 @@
 
 import Foundation
 import UIKit
+import CoreData
 
+let context = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext!
 
 
 class AdCell: MGSwipeTableCell, MGSwipeTableCellDelegate {
@@ -22,6 +24,7 @@ class AdCell: MGSwipeTableCell, MGSwipeTableCellDelegate {
     var listedAdEmail: String!
     
     
+    
     func UIColorFromRGB(rgbValue: UInt) -> UIColor {
         return UIColor(
             red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
@@ -31,7 +34,11 @@ class AdCell: MGSwipeTableCell, MGSwipeTableCellDelegate {
         )
     }
     
+         
     func loadAd(title: String, price: String?, location: String?, adImage: UIImage?, adContent: String?, email: String?) {
+        
+       
+    
         listedAdContent = adContent
         listedAdEmail = email
         titleLabel.numberOfLines = 0
@@ -75,19 +82,33 @@ class AdCell: MGSwipeTableCell, MGSwipeTableCellDelegate {
         let newShareImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
+        
         if swipeEnabled == true {
             self.rightSwipeSettings.transition = MGSwipeTransition.Transition3D
             self.rightButtons = [
             
                 MGSwipeButton(title: "Favorito", icon: newFavoriteImage, backgroundColor: UIColorFromRGB(0x067AB5), callback: { (sender) -> Bool in
                     //send cell into favorites
+                
                     favoriteTitles.append(self.titleLabel.text!)
                     favoritePrices.append(self.priceLabel.text!)
                     favoriteLocations.append(self.locationLabel.text!)
                     favoriteImages.append(adImage!)
                     favoriteAdContent.append(self.listedAdContent!)
                     favoriteEmail.append(self.listedAdEmail!)
-                    println(favoriteAdContent)
+                 
+                    coreDataEnabled = true
+                    
+                    let entityDescription = NSEntityDescription.entityForName("FavoriteAd", inManagedObjectContext: context)
+                    let task = Pulga_Latina(entity: entityDescription!, insertIntoManagedObjectContext: context)
+                    task.favTitle = self.titleLabel.text!
+                    task.favPrice = self.priceLabel.text!
+                    task.favLocation = self.locationLabel.text!
+                    task.favContent = self.listedAdContent!
+                    task.favEmail = self.listedAdEmail!
+                    task.favImage = UIImagePNGRepresentation(adImage!)
+                    println(task.favTitle)
+                    context.save(nil)
                     return true}),
                 
                 MGSwipeButton(title: "Compartir", icon: newShareImage, backgroundColor: UIColorFromRGB(0x067AB5), callback:{ (sender) -> Bool in
@@ -100,6 +121,7 @@ class AdCell: MGSwipeTableCell, MGSwipeTableCellDelegate {
             return true
             
         }
-    
+        
+        
     }
 }

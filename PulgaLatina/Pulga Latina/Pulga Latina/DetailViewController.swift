@@ -8,8 +8,8 @@
 
 import UIKit
 
-var DisplayedAdContent:String = ""
-var DisplayedEmail:String = ""
+var displayedAdContent:String? = ""
+var displayedEmail:String? = ""
 
 class DetailViewController: UIViewController {
     
@@ -25,8 +25,9 @@ class DetailViewController: UIViewController {
 
     func configureView() {
         // Update the user interface for the detail item.
-    
-        webView.loadHTMLString(DisplayedAdContent, baseURL: nil)
+     
+
+        webView.loadHTMLString(displayedAdContent, baseURL: nil)
         var nav = self.navigationController?.navigationBar
         nav?.tintColor = UIColor.whiteColor()
         nav?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.blueColor()]
@@ -37,7 +38,7 @@ class DetailViewController: UIViewController {
         tLabel.adjustsFontSizeToFitWidth = true
         self.navigationItem.titleView = tLabel
        
-        emailLabel.text = DisplayedEmail
+        emailLabel.text = displayedEmail
       
     }
 

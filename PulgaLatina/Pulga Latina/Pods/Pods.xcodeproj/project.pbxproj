@@ -7,238 +7,226 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		163F4429D7AC2D6AC6EB4EE3 /* SWUtilityButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA85BF337736E2F100D245A /* SWUtilityButtonView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		2920EEEB9DA0E684239E767B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C15629ADE18B0ACB10104B2D /* Foundation.framework */; };
-		2BF919C7529455B2AF23133A /* SWLongPressGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B591C0CD03995842F854FA5 /* SWLongPressGestureRecognizer.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		2CED92F7AB46099B37ECE7BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C15629ADE18B0ACB10104B2D /* Foundation.framework */; };
-		4863C9273964979E979225E2 /* NSMutableArray+SWUtilityButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A932BDA910D506C7E87557 /* NSMutableArray+SWUtilityButtons.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		4E5062E76770856C866162DE /* SWUtilityButtonTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A0985E24FB1210F2FA0E86 /* SWUtilityButtonTapGestureRecognizer.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		51805A0DE21768639B6FDEF8 /* SWCellScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A52EC700857C3D666E82FC71 /* SWCellScrollView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		5DABE767C639AC94610171F5 /* NSMutableArray+SWUtilityButtons.h in Headers */ = {isa = PBXBuildFile; fileRef = DDFB7BF89DA361B041880797 /* NSMutableArray+SWUtilityButtons.h */; };
-		62E7797592FD24DEE02DD822 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E43502E55D5BFE233D74B51D /* Pods-dummy.m */; };
-		6464E05E9D40B66E2BC9F6D0 /* SWUtilityButtonTapGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 92C7DFE3BF9EB0A2C67E9546 /* SWUtilityButtonTapGestureRecognizer.h */; };
-		6815E84419FF416000BE3597 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6815E84119FF416000BE3597 /* Foundation.framework */; };
-		6815E84519FF416000BE3597 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6815E84219FF416000BE3597 /* CoreGraphics.framework */; };
-		6815E84619FF416000BE3597 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6815E84319FF416000BE3597 /* UIKit.framework */; };
-		8067A79B92D0D86F0F97E9B8 /* SWTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC90C6A4ADA7E444632AA590 /* SWTableViewCell.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		86FC48C98E3E3ECFBFE8F09F /* Pods-SWTableViewCell-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 13DE776BF11520EB5DF73848 /* Pods-SWTableViewCell-dummy.m */; };
-		8A44404514953BFFEB40EF97 /* SWUtilityButtonView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D603846D369951E6AB535F1 /* SWUtilityButtonView.h */; };
-		8A9CCD9AE80C31B6F7B8ED98 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C15629ADE18B0ACB10104B2D /* Foundation.framework */; };
-		B0627640BE51EA5431916CE4 /* SWCellScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 43F7EF78E6A1F441C83205EE /* SWCellScrollView.h */; };
-		CB4A57AF667F4AF816ACEDDF /* SWTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D6BF548A7D31E53074D12FB7 /* SWTableViewCell.h */; };
-		E1F6C87B85851FC8DEED7FA9 /* SWLongPressGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FB376A2AE4541637EFA4D6D /* SWLongPressGestureRecognizer.h */; };
+		05D2D1EDBC0243145C0B4F21 /* SWUtilityButtonTapGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B6F0A3071C6F0A9EA1A9946 /* SWUtilityButtonTapGestureRecognizer.h */; };
+		2FF2CEAB5A101E4C6B08614D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58F298C33E419EC83D2EA5F4 /* Foundation.framework */; };
+		524BDFD810B2659CE4CC6200 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58F298C33E419EC83D2EA5F4 /* Foundation.framework */; };
+		58FEFD9D640CF0C7EFC5112F /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 289622988CE518D1DA2FCFA7 /* Pods-dummy.m */; };
+		6E946B224102490B23AC4F0A /* SWUtilityButtonView.h in Headers */ = {isa = PBXBuildFile; fileRef = 00C2B2DB976E53F8E1E43FB7 /* SWUtilityButtonView.h */; };
+		73344AD38AE3169AD47DC65E /* Pods-SWTableViewCell-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 50EE09F9987FD1CF488EE5E5 /* Pods-SWTableViewCell-dummy.m */; };
+		7D2697A4FCEE50A6816D9E76 /* SWTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 08AB771080112F0BB7F40ADD /* SWTableViewCell.h */; };
+		7DBDFD4F179C074C5D4D141A /* SWLongPressGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F348D41166FA706EF8325F /* SWLongPressGestureRecognizer.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		9CDE920F75EFB530EC7C4C8D /* SWLongPressGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 5309F0F3B82A7F70E5E20521 /* SWLongPressGestureRecognizer.h */; };
+		AC98F230132374ABA0F40FBF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58F298C33E419EC83D2EA5F4 /* Foundation.framework */; };
+		B366488B6CB5A0EB752CDFD8 /* SWCellScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868B8D5970D745932BA7CDC /* SWCellScrollView.h */; };
+		B8E30DCFB20E7A9C6F0CD696 /* SWCellScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A872C071842737EF11139111 /* SWCellScrollView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		BBB9B31ACA6C0C40194AB2C0 /* SWTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E167A996E097FFDC111186 /* SWTableViewCell.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		D7F88B45515B2E400DA94C62 /* SWUtilityButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7781003DEB1DD3BA7100C1DD /* SWUtilityButtonView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		DCFF7223B59A7E0FFAD9C93E /* NSMutableArray+SWUtilityButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B87B6E32E357105AAB65591 /* NSMutableArray+SWUtilityButtons.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		E8A492ACCF2612F4F3CE9393 /* NSMutableArray+SWUtilityButtons.h in Headers */ = {isa = PBXBuildFile; fileRef = 450C699F2F645BF3D9B96585 /* NSMutableArray+SWUtilityButtons.h */; };
+		EF9684CB3CDA121FC49CEFB7 /* SWUtilityButtonTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E8B907907E14A7CAB2AB3E /* SWUtilityButtonTapGestureRecognizer.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		07D76A1C56DD880858A3B4FD /* PBXContainerItemProxy */ = {
+		A5BA28F5E9829DBC68E477E0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = AAD098E7B1ADF2BEA5DF7F7F /* Project object */;
+			containerPortal = D90EE8B7FADB5A26BEAF11E7 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3A09B65CB4B472B9F03F222D;
+			remoteGlobalIDString = 7DF6C59551A21F4079BA5EEB;
 			remoteInfo = "Pods-pop";
 		};
-		28BFD28185D3DE6358B71EF8 /* PBXContainerItemProxy */ = {
+		EDAAB91923459A5428173C2E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = AAD098E7B1ADF2BEA5DF7F7F /* Project object */;
+			containerPortal = D90EE8B7FADB5A26BEAF11E7 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = FF2DE0E93DF9AB19BC3646CB;
+			remoteGlobalIDString = E434362FD2B9C30BF6F764B4;
 			remoteInfo = "Pods-SWTableViewCell";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A5D1D2B3987EC33CB3843FA /* Pods-SWTableViewCell-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SWTableViewCell-prefix.pch"; sourceTree = "<group>"; };
-		13DE776BF11520EB5DF73848 /* Pods-SWTableViewCell-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SWTableViewCell-dummy.m"; sourceTree = "<group>"; };
-		1F1E683E2671833A892C8504 /* libPods-SWTableViewCell.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SWTableViewCell.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1FB376A2AE4541637EFA4D6D /* SWLongPressGestureRecognizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWLongPressGestureRecognizer.h; path = SWTableViewCell/PodFiles/SWLongPressGestureRecognizer.h; sourceTree = "<group>"; };
-		2B997F5F061A22A095765A2E /* Pods-SWTableViewCell-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SWTableViewCell-Private.xcconfig"; sourceTree = "<group>"; };
-		3B18A5765EDC70C180A27F3A /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		43F7EF78E6A1F441C83205EE /* SWCellScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWCellScrollView.h; path = SWTableViewCell/PodFiles/SWCellScrollView.h; sourceTree = "<group>"; };
-		44A0985E24FB1210F2FA0E86 /* SWUtilityButtonTapGestureRecognizer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWUtilityButtonTapGestureRecognizer.m; path = SWTableViewCell/PodFiles/SWUtilityButtonTapGestureRecognizer.m; sourceTree = "<group>"; };
-		4C8CBF5A27A19EC20A6E2B07 /* libPods-pop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-pop.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		535F923308E39F92E4B67CAD /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		6782916FB81522251059BB93 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		6815E84119FF416000BE3597 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6815E84219FF416000BE3597 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		6815E84319FF416000BE3597 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		6D603846D369951E6AB535F1 /* SWUtilityButtonView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWUtilityButtonView.h; path = SWTableViewCell/PodFiles/SWUtilityButtonView.h; sourceTree = "<group>"; };
-		7ACC044B547357B9FC5ACBAC /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
-		8B591C0CD03995842F854FA5 /* SWLongPressGestureRecognizer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWLongPressGestureRecognizer.m; path = SWTableViewCell/PodFiles/SWLongPressGestureRecognizer.m; sourceTree = "<group>"; };
-		92C7DFE3BF9EB0A2C67E9546 /* SWUtilityButtonTapGestureRecognizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWUtilityButtonTapGestureRecognizer.h; path = SWTableViewCell/PodFiles/SWUtilityButtonTapGestureRecognizer.h; sourceTree = "<group>"; };
-		9BEFBA1CF466887566A2AF72 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		A52EC700857C3D666E82FC71 /* SWCellScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWCellScrollView.m; path = SWTableViewCell/PodFiles/SWCellScrollView.m; sourceTree = "<group>"; };
-		B7A932BDA910D506C7E87557 /* NSMutableArray+SWUtilityButtons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+SWUtilityButtons.m"; path = "SWTableViewCell/PodFiles/NSMutableArray+SWUtilityButtons.m"; sourceTree = "<group>"; };
-		C15629ADE18B0ACB10104B2D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		CF206F7F3441DB28A5E4E55D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		D6BF548A7D31E53074D12FB7 /* SWTableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWTableViewCell.h; path = SWTableViewCell/PodFiles/SWTableViewCell.h; sourceTree = "<group>"; };
-		DDFB7BF89DA361B041880797 /* NSMutableArray+SWUtilityButtons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+SWUtilityButtons.h"; path = "SWTableViewCell/PodFiles/NSMutableArray+SWUtilityButtons.h"; sourceTree = "<group>"; };
-		E43502E55D5BFE233D74B51D /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		EC90C6A4ADA7E444632AA590 /* SWTableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWTableViewCell.m; path = SWTableViewCell/PodFiles/SWTableViewCell.m; sourceTree = "<group>"; };
-		EE502D10A46D7820A285179C /* Pods-SWTableViewCell.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SWTableViewCell.xcconfig"; sourceTree = "<group>"; };
-		F6F725E60A4EEF8B917CF487 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		FB3CF21F917581638162ACA0 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		FBA85BF337736E2F100D245A /* SWUtilityButtonView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWUtilityButtonView.m; path = SWTableViewCell/PodFiles/SWUtilityButtonView.m; sourceTree = "<group>"; };
+		00C2B2DB976E53F8E1E43FB7 /* SWUtilityButtonView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWUtilityButtonView.h; path = SWTableViewCell/PodFiles/SWUtilityButtonView.h; sourceTree = "<group>"; };
+		04956E207DA09BC0BA160E02 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		06E167A996E097FFDC111186 /* SWTableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWTableViewCell.m; path = SWTableViewCell/PodFiles/SWTableViewCell.m; sourceTree = "<group>"; };
+		07C7AF343E994853276B7DC1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		07E8B907907E14A7CAB2AB3E /* SWUtilityButtonTapGestureRecognizer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWUtilityButtonTapGestureRecognizer.m; path = SWTableViewCell/PodFiles/SWUtilityButtonTapGestureRecognizer.m; sourceTree = "<group>"; };
+		08AB771080112F0BB7F40ADD /* SWTableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWTableViewCell.h; path = SWTableViewCell/PodFiles/SWTableViewCell.h; sourceTree = "<group>"; };
+		20F348D41166FA706EF8325F /* SWLongPressGestureRecognizer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWLongPressGestureRecognizer.m; path = SWTableViewCell/PodFiles/SWLongPressGestureRecognizer.m; sourceTree = "<group>"; };
+		217481784CC955814F1B7580 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		289622988CE518D1DA2FCFA7 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		2B6F0A3071C6F0A9EA1A9946 /* SWUtilityButtonTapGestureRecognizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWUtilityButtonTapGestureRecognizer.h; path = SWTableViewCell/PodFiles/SWUtilityButtonTapGestureRecognizer.h; sourceTree = "<group>"; };
+		3868B8D5970D745932BA7CDC /* SWCellScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWCellScrollView.h; path = SWTableViewCell/PodFiles/SWCellScrollView.h; sourceTree = "<group>"; };
+		38A198A62B4D6C8E796F7599 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		450C699F2F645BF3D9B96585 /* NSMutableArray+SWUtilityButtons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+SWUtilityButtons.h"; path = "SWTableViewCell/PodFiles/NSMutableArray+SWUtilityButtons.h"; sourceTree = "<group>"; };
+		4B58C63C6BD4D2205631F5A3 /* Pods-SWTableViewCell-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SWTableViewCell-prefix.pch"; sourceTree = "<group>"; };
+		50EE09F9987FD1CF488EE5E5 /* Pods-SWTableViewCell-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SWTableViewCell-dummy.m"; sourceTree = "<group>"; };
+		5309F0F3B82A7F70E5E20521 /* SWLongPressGestureRecognizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWLongPressGestureRecognizer.h; path = SWTableViewCell/PodFiles/SWLongPressGestureRecognizer.h; sourceTree = "<group>"; };
+		58F298C33E419EC83D2EA5F4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5CD77FF01319887445D36A14 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		7781003DEB1DD3BA7100C1DD /* SWUtilityButtonView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWUtilityButtonView.m; path = SWTableViewCell/PodFiles/SWUtilityButtonView.m; sourceTree = "<group>"; };
+		8A56B72DC5C3A5A099F3621F /* Pods-SWTableViewCell-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SWTableViewCell-Private.xcconfig"; sourceTree = "<group>"; };
+		8B87B6E32E357105AAB65591 /* NSMutableArray+SWUtilityButtons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+SWUtilityButtons.m"; path = "SWTableViewCell/PodFiles/NSMutableArray+SWUtilityButtons.m"; sourceTree = "<group>"; };
+		A872C071842737EF11139111 /* SWCellScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWCellScrollView.m; path = SWTableViewCell/PodFiles/SWCellScrollView.m; sourceTree = "<group>"; };
+		C6D79F1757908C3BF9ECE262 /* libPods-pop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-pop.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7EC9A5A9EA0447A95177811 /* libPods-SWTableViewCell.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SWTableViewCell.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED1FB0B2ED17EE80612610D1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		F03C66C057D2DA41FDA1B654 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		F1CC06EAF3CCFD76996E2088 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		F2C64145BC49D5A9CDF04D4C /* Pods-SWTableViewCell.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SWTableViewCell.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		44FD7007255AA567E0E7E758 /* Frameworks */ = {
+		653D9733806BF6EFD65C04B0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2920EEEB9DA0E684239E767B /* Foundation.framework in Frameworks */,
+				AC98F230132374ABA0F40FBF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B9766BE84B778A4B6F1954D7 /* Frameworks */ = {
+		6ED5B72825F74BD4534DCA0C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CED92F7AB46099B37ECE7BF /* Foundation.framework in Frameworks */,
+				524BDFD810B2659CE4CC6200 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D74C9662557D929268ABB619 /* Frameworks */ = {
+		8D35384C546908F3CB77704D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6815E84519FF416000BE3597 /* CoreGraphics.framework in Frameworks */,
-				6815E84619FF416000BE3597 /* UIKit.framework in Frameworks */,
-				8A9CCD9AE80C31B6F7B8ED98 /* Foundation.framework in Frameworks */,
-				6815E84419FF416000BE3597 /* Foundation.framework in Frameworks */,
+				2FF2CEAB5A101E4C6B08614D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		08B5674910999363F0996935 /* Products */ = {
+		4EFFA86D1B116F7B26B5656A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CF206F7F3441DB28A5E4E55D /* libPods.a */,
-				1F1E683E2671833A892C8504 /* libPods-SWTableViewCell.a */,
-				4C8CBF5A27A19EC20A6E2B07 /* libPods-pop.a */,
+				E94924E3CEBDCC406EF2C8D7 /* iOS */,
 			);
-			name = Products;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2281F9704960C8FD45D537B8 /* SWTableViewCell */ = {
+		7737F39F38445DAF3D0C2803 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				DDFB7BF89DA361B041880797 /* NSMutableArray+SWUtilityButtons.h */,
-				B7A932BDA910D506C7E87557 /* NSMutableArray+SWUtilityButtons.m */,
-				43F7EF78E6A1F441C83205EE /* SWCellScrollView.h */,
-				A52EC700857C3D666E82FC71 /* SWCellScrollView.m */,
-				1FB376A2AE4541637EFA4D6D /* SWLongPressGestureRecognizer.h */,
-				8B591C0CD03995842F854FA5 /* SWLongPressGestureRecognizer.m */,
-				D6BF548A7D31E53074D12FB7 /* SWTableViewCell.h */,
-				EC90C6A4ADA7E444632AA590 /* SWTableViewCell.m */,
-				92C7DFE3BF9EB0A2C67E9546 /* SWUtilityButtonTapGestureRecognizer.h */,
-				44A0985E24FB1210F2FA0E86 /* SWUtilityButtonTapGestureRecognizer.m */,
-				6D603846D369951E6AB535F1 /* SWUtilityButtonView.h */,
-				FBA85BF337736E2F100D245A /* SWUtilityButtonView.m */,
-				279A400226012C5ECC5C82AA /* Support Files */,
-			);
-			path = SWTableViewCell;
-			sourceTree = "<group>";
-		};
-		279A400226012C5ECC5C82AA /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				EE502D10A46D7820A285179C /* Pods-SWTableViewCell.xcconfig */,
-				2B997F5F061A22A095765A2E /* Pods-SWTableViewCell-Private.xcconfig */,
-				13DE776BF11520EB5DF73848 /* Pods-SWTableViewCell-dummy.m */,
-				0A5D1D2B3987EC33CB3843FA /* Pods-SWTableViewCell-prefix.pch */,
+				F2C64145BC49D5A9CDF04D4C /* Pods-SWTableViewCell.xcconfig */,
+				8A56B72DC5C3A5A099F3621F /* Pods-SWTableViewCell-Private.xcconfig */,
+				50EE09F9987FD1CF488EE5E5 /* Pods-SWTableViewCell-dummy.m */,
+				4B58C63C6BD4D2205631F5A3 /* Pods-SWTableViewCell-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-SWTableViewCell";
 			sourceTree = "<group>";
 		};
-		3E8F4E93F8A3C1AF928AEE8F /* Pods */ = {
+		96117A189B17ABF5EF8156F6 /* SWTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				535F923308E39F92E4B67CAD /* Pods-acknowledgements.markdown */,
-				3B18A5765EDC70C180A27F3A /* Pods-acknowledgements.plist */,
-				E43502E55D5BFE233D74B51D /* Pods-dummy.m */,
-				7ACC044B547357B9FC5ACBAC /* Pods-environment.h */,
-				F6F725E60A4EEF8B917CF487 /* Pods-resources.sh */,
-				6782916FB81522251059BB93 /* Pods.debug.xcconfig */,
-				9BEFBA1CF466887566A2AF72 /* Pods.release.xcconfig */,
+				450C699F2F645BF3D9B96585 /* NSMutableArray+SWUtilityButtons.h */,
+				8B87B6E32E357105AAB65591 /* NSMutableArray+SWUtilityButtons.m */,
+				3868B8D5970D745932BA7CDC /* SWCellScrollView.h */,
+				A872C071842737EF11139111 /* SWCellScrollView.m */,
+				5309F0F3B82A7F70E5E20521 /* SWLongPressGestureRecognizer.h */,
+				20F348D41166FA706EF8325F /* SWLongPressGestureRecognizer.m */,
+				08AB771080112F0BB7F40ADD /* SWTableViewCell.h */,
+				06E167A996E097FFDC111186 /* SWTableViewCell.m */,
+				2B6F0A3071C6F0A9EA1A9946 /* SWUtilityButtonTapGestureRecognizer.h */,
+				07E8B907907E14A7CAB2AB3E /* SWUtilityButtonTapGestureRecognizer.m */,
+				00C2B2DB976E53F8E1E43FB7 /* SWUtilityButtonView.h */,
+				7781003DEB1DD3BA7100C1DD /* SWUtilityButtonView.m */,
+				7737F39F38445DAF3D0C2803 /* Support Files */,
+			);
+			path = SWTableViewCell;
+			sourceTree = "<group>";
+		};
+		C6AF7D597DB75B0E92813E90 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				96117A189B17ABF5EF8156F6 /* SWTableViewCell */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D105582EA028AD2D7454407B = {
+			isa = PBXGroup;
+			children = (
+				5CD77FF01319887445D36A14 /* Podfile */,
+				4EFFA86D1B116F7B26B5656A /* Frameworks */,
+				C6AF7D597DB75B0E92813E90 /* Pods */,
+				DD3405B4C49E4D34B5DBB7CB /* Products */,
+				F549D823E605CDAA2B6CA169 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		DD3405B4C49E4D34B5DBB7CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07C7AF343E994853276B7DC1 /* libPods.a */,
+				D7EC9A5A9EA0447A95177811 /* libPods-SWTableViewCell.a */,
+				C6D79F1757908C3BF9ECE262 /* libPods-pop.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E94924E3CEBDCC406EF2C8D7 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				58F298C33E419EC83D2EA5F4 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F549D823E605CDAA2B6CA169 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F90AE1B17E3E7333648409CA /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		F90AE1B17E3E7333648409CA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				04956E207DA09BC0BA160E02 /* Pods-acknowledgements.markdown */,
+				38A198A62B4D6C8E796F7599 /* Pods-acknowledgements.plist */,
+				289622988CE518D1DA2FCFA7 /* Pods-dummy.m */,
+				F1CC06EAF3CCFD76996E2088 /* Pods-environment.h */,
+				F03C66C057D2DA41FDA1B654 /* Pods-resources.sh */,
+				ED1FB0B2ED17EE80612610D1 /* Pods.debug.xcconfig */,
+				217481784CC955814F1B7580 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			path = "Target Support Files/Pods";
 			sourceTree = "<group>";
 		};
-		57ED6BA6C8A6BC7C5DA86914 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6815E84119FF416000BE3597 /* Foundation.framework */,
-				6815E84219FF416000BE3597 /* CoreGraphics.framework */,
-				6815E84319FF416000BE3597 /* UIKit.framework */,
-				ACE41A8CFE28D8CB444D4E71 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		9E62E7BD6A120742904D3268 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				3E8F4E93F8A3C1AF928AEE8F /* Pods */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		ACE41A8CFE28D8CB444D4E71 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				C15629ADE18B0ACB10104B2D /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		C161B71BC1C7235FC62FCFEC = {
-			isa = PBXGroup;
-			children = (
-				FB3CF21F917581638162ACA0 /* Podfile */,
-				57ED6BA6C8A6BC7C5DA86914 /* Frameworks */,
-				D370373C08A951A3EF54C3FF /* Pods */,
-				08B5674910999363F0996935 /* Products */,
-				9E62E7BD6A120742904D3268 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		D370373C08A951A3EF54C3FF /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2281F9704960C8FD45D537B8 /* SWTableViewCell */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1FD190430ED972C56A9948FA /* Headers */ = {
+		A3B7BA1C0D629DB6F640F817 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DABE767C639AC94610171F5 /* NSMutableArray+SWUtilityButtons.h in Headers */,
-				B0627640BE51EA5431916CE4 /* SWCellScrollView.h in Headers */,
-				E1F6C87B85851FC8DEED7FA9 /* SWLongPressGestureRecognizer.h in Headers */,
-				CB4A57AF667F4AF816ACEDDF /* SWTableViewCell.h in Headers */,
-				6464E05E9D40B66E2BC9F6D0 /* SWUtilityButtonTapGestureRecognizer.h in Headers */,
-				8A44404514953BFFEB40EF97 /* SWUtilityButtonView.h in Headers */,
+				E8A492ACCF2612F4F3CE9393 /* NSMutableArray+SWUtilityButtons.h in Headers */,
+				B366488B6CB5A0EB752CDFD8 /* SWCellScrollView.h in Headers */,
+				9CDE920F75EFB530EC7C4C8D /* SWLongPressGestureRecognizer.h in Headers */,
+				7D2697A4FCEE50A6816D9E76 /* SWTableViewCell.h in Headers */,
+				05D2D1EDBC0243145C0B4F21 /* SWUtilityButtonTapGestureRecognizer.h in Headers */,
+				6E946B224102490B23AC4F0A /* SWUtilityButtonView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3A09B65CB4B472B9F03F222D /* Pods-pop */ = {
+		7DF6C59551A21F4079BA5EEB /* Pods-pop */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 777CAC77FBE6A8F443E83FB8 /* Build configuration list for PBXNativeTarget "Pods-pop" */;
+			buildConfigurationList = 0C88BB9FE555107AE2CC12C0 /* Build configuration list for PBXNativeTarget "Pods-pop" */;
 			buildPhases = (
-				4B2220AEB9D4C4D457142691 /* Sources */,
-				44FD7007255AA567E0E7E758 /* Frameworks */,
+				38FDF12B05592BFC1BD27C43 /* Sources */,
+				8D35384C546908F3CB77704D /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -246,34 +234,34 @@
 			);
 			name = "Pods-pop";
 			productName = "Pods-pop";
-			productReference = 4C8CBF5A27A19EC20A6E2B07 /* libPods-pop.a */;
+			productReference = C6D79F1757908C3BF9ECE262 /* libPods-pop.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		463782C210B1DE6E0EB21965 /* Pods */ = {
+		B4F90BCBF6D71151EDFCF0C2 /* Pods */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7C7E6409B93C88DE041A81C2 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildConfigurationList = 23520A65BC419A275AF86F20 /* Build configuration list for PBXNativeTarget "Pods" */;
 			buildPhases = (
-				DD40B0C873454B3D7D7E39B8 /* Sources */,
-				D74C9662557D929268ABB619 /* Frameworks */,
+				84644243F9BCFED7501DA2AF /* Sources */,
+				653D9733806BF6EFD65C04B0 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				045247A0D1334BFAF8E909E1 /* PBXTargetDependency */,
-				1E13961E603020916F714A7E /* PBXTargetDependency */,
+				7A2CB27A1FF00283ABB5936B /* PBXTargetDependency */,
+				058B0CC97D3C2656DB6BC1B2 /* PBXTargetDependency */,
 			);
 			name = Pods;
 			productName = Pods;
-			productReference = CF206F7F3441DB28A5E4E55D /* libPods.a */;
+			productReference = 07C7AF343E994853276B7DC1 /* libPods.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		FF2DE0E93DF9AB19BC3646CB /* Pods-SWTableViewCell */ = {
+		E434362FD2B9C30BF6F764B4 /* Pods-SWTableViewCell */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 518DFF56978C7EC3F7616D18 /* Build configuration list for PBXNativeTarget "Pods-SWTableViewCell" */;
+			buildConfigurationList = 575012586C65060D9ADF21BB /* Build configuration list for PBXNativeTarget "Pods-SWTableViewCell" */;
 			buildPhases = (
-				AD96CD10EDD165018DCB08AB /* Sources */,
-				B9766BE84B778A4B6F1954D7 /* Frameworks */,
-				1FD190430ED972C56A9948FA /* Headers */,
+				83B1D6C97657C115F06E2BAA /* Sources */,
+				6ED5B72825F74BD4534DCA0C /* Frameworks */,
+				A3B7BA1C0D629DB6F640F817 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -281,110 +269,83 @@
 			);
 			name = "Pods-SWTableViewCell";
 			productName = "Pods-SWTableViewCell";
-			productReference = 1F1E683E2671833A892C8504 /* libPods-SWTableViewCell.a */;
+			productReference = D7EC9A5A9EA0447A95177811 /* libPods-SWTableViewCell.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		AAD098E7B1ADF2BEA5DF7F7F /* Project object */ = {
+		D90EE8B7FADB5A26BEAF11E7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
 			};
-			buildConfigurationList = 2E49605D21656DE7ED9F17CC /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 45EF969B0FC8CB99EBB4D1F1 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = C161B71BC1C7235FC62FCFEC;
-			productRefGroup = 08B5674910999363F0996935 /* Products */;
+			mainGroup = D105582EA028AD2D7454407B;
+			productRefGroup = DD3405B4C49E4D34B5DBB7CB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				463782C210B1DE6E0EB21965 /* Pods */,
-				FF2DE0E93DF9AB19BC3646CB /* Pods-SWTableViewCell */,
-				3A09B65CB4B472B9F03F222D /* Pods-pop */,
+				B4F90BCBF6D71151EDFCF0C2 /* Pods */,
+				E434362FD2B9C30BF6F764B4 /* Pods-SWTableViewCell */,
+				7DF6C59551A21F4079BA5EEB /* Pods-pop */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4B2220AEB9D4C4D457142691 /* Sources */ = {
+		38FDF12B05592BFC1BD27C43 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AD96CD10EDD165018DCB08AB /* Sources */ = {
+		83B1D6C97657C115F06E2BAA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4863C9273964979E979225E2 /* NSMutableArray+SWUtilityButtons.m in Sources */,
-				86FC48C98E3E3ECFBFE8F09F /* Pods-SWTableViewCell-dummy.m in Sources */,
-				51805A0DE21768639B6FDEF8 /* SWCellScrollView.m in Sources */,
-				2BF919C7529455B2AF23133A /* SWLongPressGestureRecognizer.m in Sources */,
-				8067A79B92D0D86F0F97E9B8 /* SWTableViewCell.m in Sources */,
-				4E5062E76770856C866162DE /* SWUtilityButtonTapGestureRecognizer.m in Sources */,
-				163F4429D7AC2D6AC6EB4EE3 /* SWUtilityButtonView.m in Sources */,
+				DCFF7223B59A7E0FFAD9C93E /* NSMutableArray+SWUtilityButtons.m in Sources */,
+				73344AD38AE3169AD47DC65E /* Pods-SWTableViewCell-dummy.m in Sources */,
+				B8E30DCFB20E7A9C6F0CD696 /* SWCellScrollView.m in Sources */,
+				7DBDFD4F179C074C5D4D141A /* SWLongPressGestureRecognizer.m in Sources */,
+				BBB9B31ACA6C0C40194AB2C0 /* SWTableViewCell.m in Sources */,
+				EF9684CB3CDA121FC49CEFB7 /* SWUtilityButtonTapGestureRecognizer.m in Sources */,
+				D7F88B45515B2E400DA94C62 /* SWUtilityButtonView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DD40B0C873454B3D7D7E39B8 /* Sources */ = {
+		84644243F9BCFED7501DA2AF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62E7797592FD24DEE02DD822 /* Pods-dummy.m in Sources */,
+				58FEFD9D640CF0C7EFC5112F /* Pods-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		045247A0D1334BFAF8E909E1 /* PBXTargetDependency */ = {
+		058B0CC97D3C2656DB6BC1B2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FF2DE0E93DF9AB19BC3646CB /* Pods-SWTableViewCell */;
-			targetProxy = 28BFD28185D3DE6358B71EF8 /* PBXContainerItemProxy */;
+			target = 7DF6C59551A21F4079BA5EEB /* Pods-pop */;
+			targetProxy = A5BA28F5E9829DBC68E477E0 /* PBXContainerItemProxy */;
 		};
-		1E13961E603020916F714A7E /* PBXTargetDependency */ = {
+		7A2CB27A1FF00283ABB5936B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3A09B65CB4B472B9F03F222D /* Pods-pop */;
-			targetProxy = 07D76A1C56DD880858A3B4FD /* PBXContainerItemProxy */;
+			target = E434362FD2B9C30BF6F764B4 /* Pods-SWTableViewCell */;
+			targetProxy = EDAAB91923459A5428173C2E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		50984921167E663C9CFAF815 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2B997F5F061A22A095765A2E /* Pods-SWTableViewCell-Private.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-SWTableViewCell/Pods-SWTableViewCell-prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		6594E33E82DE47745D40C3CC /* Debug */ = {
+		002A675D734654D3317327C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -420,7 +381,88 @@
 			};
 			name = Debug;
 		};
-		660ADB2128B9DC4CED83D097 /* Release */ = {
+		139522D852C559F38B79DC22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 217481784CC955814F1B7580 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		697FCDBD7E86A783A2378B4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A56B72DC5C3A5A099F3621F /* Pods-SWTableViewCell-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-SWTableViewCell/Pods-SWTableViewCell-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		7FA25D82573612362617D405 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-pop/Pods-pop-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		81CD03AE0A042FEF7AD70D7D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -451,35 +493,9 @@
 			};
 			name = Release;
 		};
-		951E52C531662AF3551C8095 /* Debug */ = {
+		94D7E42119DC9AE9628B0A9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-pop/Pods-pop-prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		AB283E4532F650F53DFD29D5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2B997F5F061A22A095765A2E /* Pods-SWTableViewCell-Private.xcconfig */;
+			baseConfigurationReference = 8A56B72DC5C3A5A099F3621F /* Pods-SWTableViewCell-Private.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
@@ -506,35 +522,7 @@
 			};
 			name = Release;
 		};
-		AB87BC0D8CD64A14D53767F1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9BEFBA1CF466887566A2AF72 /* Pods.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_CFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		BB20704FE9A884507E156272 /* Release */ = {
+		D868C8C42B226375F1D24882 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -562,9 +550,9 @@
 			};
 			name = Release;
 		};
-		EFFCD50BBC7E0DA90D0A0C30 /* Debug */ = {
+		EF12E6E3A536F3C8CB54577E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6782916FB81522251059BB93 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = ED1FB0B2ED17EE80612610D1 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
@@ -591,43 +579,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2E49605D21656DE7ED9F17CC /* Build configuration list for PBXProject "Pods" */ = {
+		0C88BB9FE555107AE2CC12C0 /* Build configuration list for PBXNativeTarget "Pods-pop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6594E33E82DE47745D40C3CC /* Debug */,
-				660ADB2128B9DC4CED83D097 /* Release */,
+				7FA25D82573612362617D405 /* Debug */,
+				D868C8C42B226375F1D24882 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		518DFF56978C7EC3F7616D18 /* Build configuration list for PBXNativeTarget "Pods-SWTableViewCell" */ = {
+		23520A65BC419A275AF86F20 /* Build configuration list for PBXNativeTarget "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				50984921167E663C9CFAF815 /* Debug */,
-				AB283E4532F650F53DFD29D5 /* Release */,
+				EF12E6E3A536F3C8CB54577E /* Debug */,
+				139522D852C559F38B79DC22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		777CAC77FBE6A8F443E83FB8 /* Build configuration list for PBXNativeTarget "Pods-pop" */ = {
+		45EF969B0FC8CB99EBB4D1F1 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				951E52C531662AF3551C8095 /* Debug */,
-				BB20704FE9A884507E156272 /* Release */,
+				002A675D734654D3317327C2 /* Debug */,
+				81CD03AE0A042FEF7AD70D7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7C7E6409B93C88DE041A81C2 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+		575012586C65060D9ADF21BB /* Build configuration list for PBXNativeTarget "Pods-SWTableViewCell" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EFFCD50BBC7E0DA90D0A0C30 /* Debug */,
-				AB87BC0D8CD64A14D53767F1 /* Release */,
+				697FCDBD7E86A783A2378B4C /* Debug */,
+				94D7E42119DC9AE9628B0A9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = AAD098E7B1ADF2BEA5DF7F7F /* Project object */;
+	rootObject = D90EE8B7FADB5A26BEAF11E7 /* Project object */;
 }

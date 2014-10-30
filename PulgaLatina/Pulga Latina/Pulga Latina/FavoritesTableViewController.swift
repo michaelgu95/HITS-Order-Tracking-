@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 
     var favoriteTitles: [String] = []
@@ -16,13 +17,22 @@ import UIKit
     var favoriteImages: [UIImage] = []
     var favoriteAdContent: [String] = []
     var favoriteEmail: [String] = []
+    var coreDataEnabled:Bool = false
+
 
 class FavoritesTableViewController:UITableViewController, UITableViewDataSource, UITableViewDelegate {
     
     override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        
+                     
+        //load Nib
         var nib = UINib(nibName: "AdCell", bundle: nil)
         self.tableView.registerNib(nib, forCellReuseIdentifier: "Ad")
-        //removes divider line between cells
+        
+        //retrieve from CoreData
+               //removes divider line between cells
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         
         //creates custom navbar
@@ -44,6 +54,12 @@ class FavoritesTableViewController:UITableViewController, UITableViewDataSource,
         //nav?.setBackgroundImage(newImage, forBarMetrics: UIBarMetrics.Default)
         nav?.translucent = true
         nav?.barTintColor = UIColorFromRGB(0x067AB5)
+        
+        //set background image
+        let backgroundImage = UIImage(named: "graygradient.jpg") as UIImage!
+        let tableViewBackground = UIImageView(image: backgroundImage) as UIImageView
+        tableViewBackground.frame = self.tableView.frame
+        self.tableView.backgroundView = tableViewBackground
 
     }
     
@@ -63,6 +79,8 @@ class FavoritesTableViewController:UITableViewController, UITableViewDataSource,
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:AdCell = tableView.dequeueReusableCellWithIdentifier("Ad") as AdCell
+      
+
         var names = favoriteTitles[indexPath.row]
         var locations = favoriteLocations[indexPath.row]
         var prices = favoritePrices[indexPath.row]
@@ -74,9 +92,9 @@ class FavoritesTableViewController:UITableViewController, UITableViewDataSource,
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        DisplayedAdContent = favoriteAdContent[indexPath.row] as String
-        println(DisplayedAdContent)
-        DisplayedEmail = favoriteEmail[indexPath.row] as String
+        displayedAdContent = favoriteAdContent[indexPath.row] as String
+        println(displayedAdContent)
+        displayedEmail = favoriteEmail[indexPath.row] as String
         self.performSegueWithIdentifier("favoriteDetail", sender: tableView)
     }
     
@@ -84,7 +102,7 @@ class FavoritesTableViewController:UITableViewController, UITableViewDataSource,
         return true
     }
     
-    override func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
+    override func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
         favoriteTitles.removeLast()
         favoritePrices.removeLast()
@@ -92,9 +110,16 @@ class FavoritesTableViewController:UITableViewController, UITableViewDataSource,
         favoriteImages.removeLast()
         favoriteAdContent.removeLast()
         favoriteEmail.removeLast()
+//        managedObjectContext.deleteObject(fetchedResultsController.objectAtIndexPath(indexPath) as NSManagedObject)
         self.tableView.reloadData()
         }
     }
+    
+    
+    func controllerDidChangeContent(controller: NSFetchedResultsController!) {
+        tableView.reloadData()
+    }
+   
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "favoriteDetail" {

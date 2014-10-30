@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6801B68319F3F8FC0097988D /* AdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6801B68219F3F8FC0097988D /* AdCell.swift */; };
 		6801B68519F40B040097988D /* AdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6801B68419F40B040097988D /* AdCell.xib */; };
+		6815E8ED1A00107800BE3597 /* pulgalogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6815E8EC1A00107800BE3597 /* pulgalogo.jpg */; };
 		6825E2A119F93F4200731110 /* MGSwipeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6825E29E19F93F4200731110 /* MGSwipeButton.m */; };
 		6825E2A219F93F4200731110 /* MGSwipeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6825E2A019F93F4200731110 /* MGSwipeTableCell.m */; };
 		6825E2A419F957B200731110 /* 55.png in Resources */ = {isa = PBXBuildFile; fileRef = 6825E2A319F957B200731110 /* 55.png */; };
@@ -17,6 +18,8 @@
 		68265E0119F5B7EF001A7506 /* graygradient.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 68265E0019F5B7EF001A7506 /* graygradient.jpg */; };
 		68265E0319F606BE001A7506 /* cell_top.png in Resources */ = {isa = PBXBuildFile; fileRef = 68265E0219F606BE001A7506 /* cell_top.png */; };
 		6835795B19F4509F004B73C4 /* pulgalogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6835795A19F4509F004B73C4 /* pulgalogo.png */; };
+		683667331A0186A0008FA1CE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683667321A0186A0008FA1CE /* CoreData.framework */; };
+		6836673B1A01C93B008FA1CE /* Pulga Latina.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6836673A1A01C93B008FA1CE /* Pulga Latina.swift */; };
 		68430C9C19F6B2DA004FA1AE /* 13.png in Resources */ = {isa = PBXBuildFile; fileRef = 68430C9B19F6B2DA004FA1AE /* 13.png */; };
 		68430C9E19F6B534004FA1AE /* cell_middle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68430C9D19F6B534004FA1AE /* cell_middle@2x.png */; };
 		68430CA019F6B583004FA1AE /* 15.png in Resources */ = {isa = PBXBuildFile; fileRef = 68430C9F19F6B583004FA1AE /* 15.png */; };
@@ -32,7 +35,6 @@
 		689B16D319F2E45B004CF144 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 689B16D219F2E45B004CF144 /* Images.xcassets */; };
 		689B16D619F2E45B004CF144 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 689B16D419F2E45B004CF144 /* LaunchScreen.xib */; };
 		689B16E219F2E45B004CF144 /* Pulga_LatinaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689B16E119F2E45B004CF144 /* Pulga_LatinaTests.swift */; };
-		C973A9BE36FB98AA0A64A9A5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 584A566E0266C0EEC8620561 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,9 +49,9 @@
 
 /* Begin PBXFileReference section */
 		4DAFDDBE9DC4FB3C8A2F6D0A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		584A566E0266C0EEC8620561 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6801B68219F3F8FC0097988D /* AdCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdCell.swift; sourceTree = "<group>"; };
 		6801B68419F40B040097988D /* AdCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdCell.xib; sourceTree = "<group>"; };
+		6815E8EC1A00107800BE3597 /* pulgalogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pulgalogo.jpg; path = ../../../Downloads/pulgalogo.jpg; sourceTree = "<group>"; };
 		6825E28B19F93A5800731110 /* Pulga Latina-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pulga Latina-Bridging-Header.h"; sourceTree = "<group>"; };
 		6825E29D19F93F4200731110 /* MGSwipeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGSwipeButton.h; path = "../../../Downloads/MGSwipeTableCell-master/MGSwipeTableCell/MGSwipeButton.h"; sourceTree = "<group>"; };
 		6825E29E19F93F4200731110 /* MGSwipeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGSwipeButton.m; path = "../../../Downloads/MGSwipeTableCell-master/MGSwipeTableCell/MGSwipeButton.m"; sourceTree = "<group>"; };
@@ -61,6 +63,8 @@
 		68265E0019F5B7EF001A7506 /* graygradient.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = graygradient.jpg; sourceTree = "<group>"; };
 		68265E0219F606BE001A7506 /* cell_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_top.png; sourceTree = "<group>"; };
 		6835795A19F4509F004B73C4 /* pulgalogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pulgalogo.png; sourceTree = "<group>"; };
+		683667321A0186A0008FA1CE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		6836673A1A01C93B008FA1CE /* Pulga Latina.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pulga Latina.swift"; sourceTree = "<group>"; };
 		68430C9B19F6B2DA004FA1AE /* 13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 13.png; sourceTree = "<group>"; };
 		68430C9D19F6B534004FA1AE /* cell_middle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_middle@2x.png"; sourceTree = "<group>"; };
 		68430C9F19F6B583004FA1AE /* 15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 15.png; sourceTree = "<group>"; };
@@ -88,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C973A9BE36FB98AA0A64A9A5 /* libPods.a in Frameworks */,
+				683667331A0186A0008FA1CE /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +150,7 @@
 				689B16D419F2E45B004CF144 /* LaunchScreen.xib */,
 				6801B68419F40B040097988D /* AdCell.xib */,
 				689B16C819F2E45A004CF144 /* Pulga_Latina.xcdatamodeld */,
+				6836673A1A01C93B008FA1CE /* Pulga Latina.swift */,
 				689B16C419F2E45A004CF144 /* Supporting Files */,
 			);
 			path = "Pulga Latina";
@@ -159,6 +164,7 @@
 				6825E29F19F93F4200731110 /* MGSwipeTableCell.h */,
 				6825E2A019F93F4200731110 /* MGSwipeTableCell.m */,
 				6835795A19F4509F004B73C4 /* pulgalogo.png */,
+				6815E8EC1A00107800BE3597 /* pulgalogo.jpg */,
 				68430C9B19F6B2DA004FA1AE /* 13.png */,
 				68430C9F19F6B583004FA1AE /* 15.png */,
 				68430CA119F6B5B4004FA1AE /* 90.png */,
@@ -194,7 +200,7 @@
 		CDD0D946BE404FCCBC078967 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				584A566E0266C0EEC8620561 /* libPods.a */,
+				683667321A0186A0008FA1CE /* CoreData.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -293,6 +299,7 @@
 				689B16D119F2E45B004CF144 /* Main.storyboard in Resources */,
 				6825E2A419F957B200731110 /* 55.png in Resources */,
 				68265DFB19F5A44E001A7506 /* gradient.jpg in Resources */,
+				6815E8ED1A00107800BE3597 /* pulgalogo.jpg in Resources */,
 				689B16D619F2E45B004CF144 /* LaunchScreen.xib in Resources */,
 				68265E0319F606BE001A7506 /* cell_top.png in Resources */,
 				689B16D319F2E45B004CF144 /* Images.xcassets in Resources */,
@@ -347,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6825E2A119F93F4200731110 /* MGSwipeButton.m in Sources */,
+				6836673B1A01C93B008FA1CE /* Pulga Latina.swift in Sources */,
 				689B16CA19F2E45A004CF144 /* Pulga_Latina.xcdatamodeld in Sources */,
 				689B16C719F2E45A004CF144 /* AppDelegate.swift in Sources */,
 				685523C019FAFE4000EAA1E8 /* FavoritesTableViewController.swift in Sources */,
@@ -485,6 +493,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Pulga Latina/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/michaelgu/PulgaLatina/Pulga Latina/Pulga Latina-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -499,6 +511,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Pulga Latina/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/michaelgu/PulgaLatina/Pulga Latina/Pulga Latina-Bridging-Header.h";
 			};

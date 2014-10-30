@@ -99,7 +99,8 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="mOI-FS-AaM">
-                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="bzi-SJ-nBO">
+                        <barButtonItem key="backBarButtonItem" title="Anuncios" id="fgQ-HS-bgd"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="bzi-SJ-nBO">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="1Pm-Gm-QWm" kind="presentation" id="vPi-BA-1Gp"/>
@@ -113,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1657" y="177"/>
+            <point key="canvasLocation" x="2185" y="-611"/>
         </scene>
         <!--Favoritos-->
         <scene sceneID="Ccv-dg-lgU">
@@ -153,7 +154,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WMX-jy-mlp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="729" y="723"/>
+            <point key="canvasLocation" x="707" y="691"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="5gu-VM-X6H">
@@ -178,10 +179,26 @@
         <scene sceneID="smW-Zh-WAh">
             <objects>
                 <tableViewController title="Master" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MasterViewController" customModule="Pulga_Latina" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="151" sectionHeaderHeight="22" sectionFooterHeight="22" id="r7i-6Z-zg0">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="151" sectionHeaderHeight="22" sectionFooterHeight="22" id="r7i-6Z-zg0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="To2-Kt-5cT">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="7bK-jq-Zjz" id="qlI-8y-NWG"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Wv8-oR-xfc">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wv8-oR-xfc" id="RVU-q8-eDK">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
                         <sections/>
                         <connections>
                             <outlet property="dataSource" destination="7bK-jq-Zjz" id="Gho-Na-rnu"/>
@@ -191,7 +208,7 @@
                     <navigationItem key="navigationItem" id="Zdf-7t-Un8"/>
                     <connections>
                         <outlet property="adTableView" destination="r7i-6Z-zg0" id="YL5-Qn-5Q1"/>
-                        <outlet property="searchDisplayController" destination="YMr-db-ul3" id="hWk-zc-7hc"/>
+                        <outlet property="searchDisplayController" destination="YMr-db-ul3" id="le3-NW-Gfv"/>
                         <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="showDetail" id="b13-K8-7mA"/>
                     </connections>
                 </tableViewController>
@@ -199,6 +216,7 @@
                 <searchDisplayController id="YMr-db-ul3">
                     <connections>
                         <outlet property="delegate" destination="7bK-jq-Zjz" id="05o-DS-5r8"/>
+                        <outlet property="searchBar" destination="To2-Kt-5cT" id="Cdr-X1-gfY"/>
                         <outlet property="searchContentsController" destination="7bK-jq-Zjz" id="672-WN-k9G"/>
                         <outlet property="searchResultsDataSource" destination="7bK-jq-Zjz" id="59x-sk-CV7"/>
                         <outlet property="searchResultsDelegate" destination="7bK-jq-Zjz" id="iyf-qf-6gz"/>
@@ -228,6 +246,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="44s-m5-3NY"/>
+        <segue reference="b13-K8-7mA"/>
     </inferredMetricsTieBreakers>
 </document>

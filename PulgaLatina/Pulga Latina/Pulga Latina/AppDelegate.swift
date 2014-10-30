@@ -9,17 +9,57 @@
 import UIKit
 import CoreData
 
+let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+let managedObjectContext: NSManagedObjectContext = appDelegate.managedObjectContext!
+let fetchRequest = NSFetchRequest(entityName: "FavoriteAd")
+var fetchResults: [Pulga_Latina] = managedObjectContext.executeFetchRequest(fetchRequest, error: nil) as [Pulga_Latina]
+  var fetchedResultsController: NSFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
+
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate{
+class AppDelegate: UIResponder, UIApplicationDelegate, NSFetchedResultsControllerDelegate{
 
     var window: UIWindow?
-
+    var resultsFetched: Bool = false
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-      
+      fetchCoreData()
         return true
     }
+    
+    func fetchCoreData(){
+        
+        let titleSortDescriptor = NSSortDescriptor(key: "favTitle", ascending: true)
+        let priceSortDescriptor = NSSortDescriptor(key: "favPrice", ascending: true)
+        let locationSortDescriptor = NSSortDescriptor(key: "favLocation", ascending: true)
+        let contentSortDescriptor = NSSortDescriptor(key: "favContent", ascending: true)
+        let emailSortDescriptor = NSSortDescriptor(key: "favEmail", ascending: true)
+        let imageSortDescriptor = NSSortDescriptor(key: "favImage", ascending: true)
+        fetchRequest.sortDescriptors = [titleSortDescriptor, priceSortDescriptor, locationSortDescriptor, contentSortDescriptor, emailSortDescriptor, imageSortDescriptor]
+      
+        fetchedResultsController.delegate = self
+        
+        
+            if !resultsFetched{
+                for (var i = 0; i < fetchResults.count; i++) {
+                    favoriteTitles.append(fetchResults[i].favTitle!)
+                    println(favoriteTitles)
+                    favoritePrices.append(fetchResults[i].favPrice!)
+                    favoriteLocations.append(fetchResults[i].favLocation!)
+                    favoriteAdContent.append(fetchResults[i].favContent!)
+                    favoriteEmail.append(fetchResults[i].favEmail!)
+                    var fetchedImageData = fetchResults[i].favImage
+                    var fetchedImage = UIImage(data: fetchedImageData!)
+                    favoriteImages.append(fetchedImage!)
+                }
+                
+                resultsFetched = true
+            
+            
+        }
+        
+    }
+
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
