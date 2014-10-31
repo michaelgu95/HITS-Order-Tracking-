@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import CoreData
 
+
 let context = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext!
 
 
@@ -20,6 +21,7 @@ class AdCell: MGSwipeTableCell, MGSwipeTableCellDelegate {
     @IBOutlet  weak var locationLabel: UILabel!
     @IBOutlet var adImageLabel: UIImageView!
     var swipeEnabled: Bool!
+    var newFavoriteAdded: Bool = false
     var listedAdContent: String!
     var listedAdEmail: String!
     
@@ -36,7 +38,7 @@ class AdCell: MGSwipeTableCell, MGSwipeTableCellDelegate {
     
          
     func loadAd(title: String, price: String?, location: String?, adImage: UIImage?, adContent: String?, email: String?) {
-        
+        newFavoriteAdded = false
        
     
         listedAdContent = adContent
@@ -88,8 +90,7 @@ class AdCell: MGSwipeTableCell, MGSwipeTableCellDelegate {
             self.rightButtons = [
             
                 MGSwipeButton(title: "Favorito", icon: newFavoriteImage, backgroundColor: UIColorFromRGB(0x067AB5), callback: { (sender) -> Bool in
-                    //send cell into favorites
-                
+                    //send cell into favoriteTableViewController
                     favoriteTitles.append(self.titleLabel.text!)
                     favoritePrices.append(self.priceLabel.text!)
                     favoriteLocations.append(self.locationLabel.text!)
@@ -97,8 +98,17 @@ class AdCell: MGSwipeTableCell, MGSwipeTableCellDelegate {
                     favoriteAdContent.append(self.listedAdContent!)
                     favoriteEmail.append(self.listedAdEmail!)
                  
+                    
                     coreDataEnabled = true
                     
+                    //HUD
+                    var hud = HUDContentView.SubtitleView(subtitle: "Favorito Añadido", image: newFavoriteImage )
+                    HUDController.sharedController.contentView = hud
+                    HUDController.sharedController.dimsBackground = true
+                    HUDController.sharedController.show()
+                    HUDController.sharedController.hide(afterDelay: 0.83)
+                    
+                    //add favorite to coredata
                     let entityDescription = NSEntityDescription.entityForName("FavoriteAd", inManagedObjectContext: context)
                     let task = Pulga_Latina(entity: entityDescription!, insertIntoManagedObjectContext: context)
                     task.favTitle = self.titleLabel.text!

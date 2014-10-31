@@ -110,7 +110,10 @@ class FavoritesTableViewController:UITableViewController, UITableViewDataSource,
         favoriteImages.removeLast()
         favoriteAdContent.removeLast()
         favoriteEmail.removeLast()
-//        managedObjectContext.deleteObject(fetchedResultsController.objectAtIndexPath(indexPath) as NSManagedObject)
+        
+                     
+        managedObjectContext.deleteObject(fetchResults[indexPath.row])
+        managedObjectContext.save(nil)
         self.tableView.reloadData()
         }
     }

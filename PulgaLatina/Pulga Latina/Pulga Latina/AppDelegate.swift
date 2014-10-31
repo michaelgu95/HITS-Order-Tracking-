@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 
+
 let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
 let managedObjectContext: NSManagedObjectContext = appDelegate.managedObjectContext!
 let fetchRequest = NSFetchRequest(entityName: "FavoriteAd")
@@ -52,10 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, NSFetchedResultsControlle
                     var fetchedImage = UIImage(data: fetchedImageData!)
                     favoriteImages.append(fetchedImage!)
                 }
-                
-                resultsFetched = true
-            
-            
+            resultsFetched = true
         }
         
     }
