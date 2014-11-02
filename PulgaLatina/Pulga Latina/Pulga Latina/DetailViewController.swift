@@ -30,7 +30,7 @@ class DetailViewController: UIViewController {
         webView.loadHTMLString(displayedAdContent, baseURL: nil)
         var nav = self.navigationController?.navigationBar
         nav?.tintColor = UIColor.whiteColor()
-        nav?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.blueColor()]
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         nav?.barTintColor = UIColorFromRGB(0x067AB5)
       
         var tLabel = UILabel(frame: CGRectMake(0, 0, 200, 40))

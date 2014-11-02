@@ -16,16 +16,36 @@ let fetchRequest = NSFetchRequest(entityName: "FavoriteAd")
 var fetchResults: [Pulga_Latina] = managedObjectContext.executeFetchRequest(fetchRequest, error: nil) as [Pulga_Latina]
   var fetchedResultsController: NSFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
 
+
+
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, NSFetchedResultsControllerDelegate{
+class AppDelegate: UIResponder, UIApplicationDelegate, NSFetchedResultsControllerDelegate, UITabBarControllerDelegate{
 
     var window: UIWindow?
     var resultsFetched: Bool = false
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-      fetchCoreData()
+        
+        //set coloring for tabbarcontroller
+//        var mask = CALayer()
+//        mask.contents = UIImage(named: "32.png")
+//        mask.bounds = CGRect(x: 0, y: 0, width: 100, height: 100)
+//        mask.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+//        mask.position = CGPoint(x: self.window!.frame.size.width/2, y: self.window!.frame.size.height/2)
+//        self.window!.layer.mask = mask
+
+        fetchCoreData()
+        setTabBarColors()
         return true
+    }
+    
+    func setTabBarColors() {
+        
+        var tabBarController: UITabBarController = self.window!.rootViewController as UITabBarController
+        tabBarController.delegate = self
+        tabBarController.tabBar.tintColor = UIColor.whiteColor()
+        tabBarController.tabBar.barTintColor = UIColorFromRGB(0x067AB5)
     }
     
     func fetchCoreData(){
@@ -39,9 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, NSFetchedResultsControlle
         fetchRequest.sortDescriptors = [titleSortDescriptor, priceSortDescriptor, locationSortDescriptor, contentSortDescriptor, emailSortDescriptor, imageSortDescriptor]
       
         fetchedResultsController.delegate = self
-        
-        
-            if !resultsFetched{
+        if !resultsFetched{
                 for (var i = 0; i < fetchResults.count; i++) {
                     favoriteTitles.append(fetchResults[i].favTitle!)
                     println(favoriteTitles)
@@ -55,7 +73,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, NSFetchedResultsControlle
                 }
             resultsFetched = true
         }
-        
     }
 
 

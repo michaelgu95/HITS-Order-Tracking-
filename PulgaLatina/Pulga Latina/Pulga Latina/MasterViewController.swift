@@ -20,17 +20,31 @@ public func UIColorFromRGB(rgbValue: UInt) -> UIColor {
     )
 }
 
-class MasterViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UISearchDisplayDelegate{
+class MasterViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UISearchDisplayDelegate, UITabBarControllerDelegate {
+    var window: UIWindow?
     var namesToSearch:Array<String> = []
     var rowData: NSDictionary!
     var refresher: UIRefreshControl!
     var jsonURL:NSURL!
     var jsonURLString:String!
-    var filteredItems = [AnyObject]()
+    var loadedCells: [AdCell]!
+    var filteredCells: [AdCell]!
     var adData = []
+    //variables to store cell values
+    var names: String?
+    var prices: String?
+    var locations: String?
     var adImage:UIImage?
+    var adContents: NSString?
+    var emails: String?
     var detailViewController: DetailViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil
+    var isFiltered: Bool = false
+
+
+    
+    
+    
     @IBOutlet var adTableView : UITableView!
     
     override func awakeFromNib() {
@@ -44,7 +58,7 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-            }
+                   }
     
 //    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
 //            TipInCellAnimator.animate(cell)
@@ -53,6 +67,7 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        appDelegate.setTabBarColors()
         
         // Do any additional setup after loading the view, typically from a nib.
         
@@ -99,16 +114,11 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
         //make pull to refresh
         refresher = UIRefreshControl()
         refresher.attributedTitle = NSAttributedString(string: "Nuevos Anuncios")
-        refresher.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged)
+        refresher.addTarget(self, action: "loadNewJSON", forControlEvents: UIControlEvents.ValueChanged)
         adTableView.addSubview(refresher)
 
     }
     
-    func refresh(){
-        println("refreshed")
-        loadNewJSON()
-        
-    }
     
     func loadJSON(jsonURL: NSURL){
         var request: NSURLRequest = NSURLRequest(URL:jsonURL)
@@ -168,8 +178,8 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if tableView == self.searchDisplayController!.searchResultsTableView {
-            return self.filteredItems.count
+        if isFiltered == true {
+            return filteredCells.count
         } else {
             return adData.count
         }
@@ -182,34 +192,39 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var rowData: NSDictionary
         var cell:AdCell = tableView.dequeueReusableCellWithIdentifier("Ad") as AdCell
-        
-        for( var i = 0; i < adData.count ;i++) {
-            var name = self.adData[i]["name"] as String
-            namesToSearch.append(name)
-        }
-        
-         var rowData: NSDictionary
-        //store json objects into variables
-         if tableView == self.searchDisplayController!.searchResultsTableView {
-            rowData = self.filteredItems[indexPath.row] as NSDictionary
-         }else{
+        if filteredCells != nil && tableView == self.searchDisplayController!.searchResultsTableView {
+            var filteredCell = filteredCells[indexPath.row]
+            names = filteredCell.titleLabel.text
+            locations = filteredCell.locationLabel.text
+            prices = filteredCell.priceLabel.text
+            adImage = filteredCell.adImageLabel.image
+            adContents = filteredCell.listedAdContent
+            emails = filteredCell.listedAdEmail
+        } else{
+            //store json objects into variables
             rowData = self.adData[indexPath.row] as NSDictionary
+            names =  rowData["name"] as? String
+            locations = rowData["city"] as? String
+            prices = rowData["price"] as? String
+            var URL =  rowData["primary_image_url"] as String
+            var fullURL = "http://www.pulgalatina.com" + URL
+            var adImagesNSURL: NSURL! = NSURL(string: fullURL)
+            var adImagesData: NSData! = NSData(contentsOfURL: adImagesNSURL)
+            adImage = UIImage(data:adImagesData)!
+            adContents = rowData["description"] as? NSString
+            emails = rowData["email"] as?String
         }
-        var names =  rowData["name"] as? String
-        var locations = rowData["city"] as? String
-        var prices = rowData["price"] as? String
-        var URL =  rowData["primary_image_url"] as String
-        var fullURL = "http://www.pulgalatina.com" + URL
-        var adImagesNSURL: NSURL! = NSURL(string: fullURL)
-        var adImagesData: NSData! = NSData(contentsOfURL: adImagesNSURL)
-        var adImage:UIImage = UIImage(data:adImagesData)!
-        var adContents: NSString = rowData["description"] as NSString
-        var  emails = rowData["email"] as?String
-        cell.swipeEnabled = true
-        cell.loadAd(names!, price: prices, location: locations, adImage: adImage, adContent: adContents, email: emails)
-        return cell
-    }
+        
+            cell.swipeEnabled = true
+            cell.loadAd(names!, price: prices, location: locations, adImage: adImage, adContent: adContents, email: emails)
+            if loadedCells != nil {
+                loadedCells.append(cell)
+            }
+         return cell
+        }
+    
     
    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
        let rowData: NSDictionary = self.adData[indexPath.row] as NSDictionary
@@ -221,23 +236,44 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
     }
 
     func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool {
-        self.filterContentForSearchText(searchString, scope: nil)
+        self.filterContentForSearchText(searchString)
         return true
     }
+    
+//    func searchBar(searchBar: UISearchBar!, textDidChange searchText: NSString) {
+//        if searchText.length == 0 {
+//            isFiltered = false
+//        } else{
+//            isFiltered = true
+//            for( var i = 0; i < adData.count ;i++) {
+//                var name = self.adData[i]["name"] as String
+//                var nameRange = name.rangeOfString(searchText)
+//                    if nameRange != nil {
+//                        filteredItems.append(adData[i])
+//                    }
+//            }
+//        }
+//    }
     
     func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchScope searchOption: Int) -> Bool {
-        self.filterContentForSearchText(self.searchDisplayController!.searchBar.text, scope: nil)
+        self.filterContentForSearchText(self.searchDisplayController!.searchBar.text)
         return true
     }
     
-    func filterContentForSearchText(searchText: String, scope: String?){
-        filteredItems = namesToSearch.filter({ (namesToSearch: String) -> Bool in
-        let categoryMatch = (scope == "All") || (namesToSearch == scope)
-        let stringMatch = namesToSearch.rangeOfString(searchText)
-        return categoryMatch && (stringMatch != nil)
-           
-        })
+    func filterContentForSearchText(searchText: NSString){
+        
+        if searchText.length == 0 {
+            isFiltered = false
+        } else {
+            isFiltered = true
+        var scope = String()
+        
+            filteredCells = loadedCells.filter({ (ad: AdCell) -> Bool in
+            let locationMatch = (scope == "All") || (ad.locationLabel.text == scope)
+            let stringMatch = ad.titleForSearch.rangeOfString(searchText)
+            return locationMatch && (stringMatch != nil)
+            })
+        }
     }
-
-    
 }
+    

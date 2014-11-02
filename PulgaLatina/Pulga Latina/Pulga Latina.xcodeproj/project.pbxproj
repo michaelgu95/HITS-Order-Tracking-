@@ -43,6 +43,9 @@
 		689B16D319F2E45B004CF144 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 689B16D219F2E45B004CF144 /* Images.xcassets */; };
 		689B16D619F2E45B004CF144 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 689B16D419F2E45B004CF144 /* LaunchScreen.xib */; };
 		689B16E219F2E45B004CF144 /* Pulga_LatinaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689B16E119F2E45B004CF144 /* Pulga_LatinaTests.swift */; };
+		68C684DA1A0683FA00E1055F /* heart-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 68C684D91A0683FA00E1055F /* heart-7.png */; };
+		68C684DC1A06842700E1055F /* list-simple-star-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 68C684DB1A06842700E1055F /* list-simple-star-7.png */; };
+		68C684DE1A06844900E1055F /* new-sign-badge-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 68C684DD1A06844900E1055F /* new-sign-badge-7.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +104,9 @@
 		689B16DB19F2E45B004CF144 /* Pulga LatinaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pulga LatinaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		689B16E019F2E45B004CF144 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		689B16E119F2E45B004CF144 /* Pulga_LatinaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pulga_LatinaTests.swift; sourceTree = "<group>"; };
+		68C684D91A0683FA00E1055F /* heart-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart-7.png"; sourceTree = "<group>"; };
+		68C684DB1A06842700E1055F /* list-simple-star-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-simple-star-7.png"; sourceTree = "<group>"; };
+		68C684DD1A06844900E1055F /* new-sign-badge-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new-sign-badge-7.png"; sourceTree = "<group>"; };
 		A00834CA342F57E407FFF7FF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -200,6 +206,9 @@
 				6825E2A019F93F4200731110 /* MGSwipeTableCell.m */,
 				6835795A19F4509F004B73C4 /* pulgalogo.png */,
 				6815E8EC1A00107800BE3597 /* pulgalogo.jpg */,
+				68C684D91A0683FA00E1055F /* heart-7.png */,
+				68C684DD1A06844900E1055F /* new-sign-badge-7.png */,
+				68C684DB1A06842700E1055F /* list-simple-star-7.png */,
 				68430C9B19F6B2DA004FA1AE /* 13.png */,
 				68430C9F19F6B583004FA1AE /* 15.png */,
 				68430CA119F6B5B4004FA1AE /* 90.png */,
@@ -333,12 +342,15 @@
 				68430C9E19F6B534004FA1AE /* cell_middle@2x.png in Resources */,
 				68430C9C19F6B2DA004FA1AE /* 13.png in Resources */,
 				689B16D119F2E45B004CF144 /* Main.storyboard in Resources */,
+				68C684DA1A0683FA00E1055F /* heart-7.png in Resources */,
+				68C684DC1A06842700E1055F /* list-simple-star-7.png in Resources */,
 				6825E2A419F957B200731110 /* 55.png in Resources */,
 				6836674A1A041C34008FA1CE /* Images.xcassets in Resources */,
 				68265DFB19F5A44E001A7506 /* gradient.jpg in Resources */,
 				6815E8ED1A00107800BE3597 /* pulgalogo.jpg in Resources */,
 				689B16D619F2E45B004CF144 /* LaunchScreen.xib in Resources */,
 				68265E0319F606BE001A7506 /* cell_top.png in Resources */,
+				68C684DE1A06844900E1055F /* new-sign-badge-7.png in Resources */,
 				689B16D319F2E45B004CF144 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -98,20 +98,20 @@ class FavoritesTableViewController:UITableViewController, UITableViewDataSource,
         self.performSegueWithIdentifier("favoriteDetail", sender: tableView)
     }
     
-    override func tableView(tableView: UITableView!, canEditRowAtIndexPath indexPath: NSIndexPath!) -> Bool {
+    override func tableView(tableView: (UITableView!), canEditRowAtIndexPath indexPath: NSIndexPath!) -> Bool {
         return true
     }
     
     override func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
+       //remove from favorite attributes arrays
         favoriteTitles.removeLast()
         favoritePrices.removeLast()
         favoriteLocations.removeLast()
         favoriteImages.removeLast()
         favoriteAdContent.removeLast()
         favoriteEmail.removeLast()
-        
-                     
+        //delete from CoreData
         managedObjectContext.deleteObject(fetchResults[indexPath.row])
         managedObjectContext.save(nil)
         self.tableView.reloadData()

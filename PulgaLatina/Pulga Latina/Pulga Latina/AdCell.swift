@@ -24,7 +24,7 @@ class AdCell: MGSwipeTableCell, MGSwipeTableCellDelegate {
     var newFavoriteAdded: Bool = false
     var listedAdContent: String!
     var listedAdEmail: String!
-    
+    var titleForSearch:String!
     
     
     func UIColorFromRGB(rgbValue: UInt) -> UIColor {
@@ -38,6 +38,8 @@ class AdCell: MGSwipeTableCell, MGSwipeTableCellDelegate {
     
          
     func loadAd(title: String, price: String?, location: String?, adImage: UIImage?, adContent: String?, email: String?) {
+        titleForSearch = title
+        
         newFavoriteAdded = false
        
     
