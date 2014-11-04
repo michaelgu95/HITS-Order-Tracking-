@@ -11,6 +11,7 @@ import UIKit
 import CoreData
 
 
+
 public func UIColorFromRGB(rgbValue: UInt) -> UIColor {
     return UIColor(
         red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
@@ -27,8 +28,8 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
     var refresher: UIRefreshControl!
     var jsonURL:NSURL!
     var jsonURLString:String!
-    var loadedCells: [AdCell]!
-    var filteredCells: [AdCell]!
+    var loadedCells = [AdCell]()
+    var filteredCells = [AdCell]()
     var adData = []
     //variables to store cell values
     var names: String?
@@ -40,11 +41,6 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
     var detailViewController: DetailViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil
     var isFiltered: Bool = false
-
-
-    
-    
-    
     @IBOutlet var adTableView : UITableView!
     
     override func awakeFromNib() {
@@ -169,6 +165,12 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
         }
+        
+        if segue.identifier == "search" {
+            let controller: SearchController = segue.destinationViewController as SearchController
+            controller.loadedCells = self.loadedCells 
+
+        }
     }
 
     // MARK: - Table View
@@ -193,8 +195,8 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var rowData: NSDictionary
-        var cell:AdCell = tableView.dequeueReusableCellWithIdentifier("Ad") as AdCell
-        if filteredCells != nil && tableView == self.searchDisplayController!.searchResultsTableView {
+        var cell:AdCell = self.tableView.dequeueReusableCellWithIdentifier("Ad") as AdCell
+        if  tableView == self.searchDisplayController!.searchResultsTableView {
             var filteredCell = filteredCells[indexPath.row]
             names = filteredCell.titleLabel.text
             locations = filteredCell.locationLabel.text
@@ -219,9 +221,10 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
         
             cell.swipeEnabled = true
             cell.loadAd(names!, price: prices, location: locations, adImage: adImage, adContent: adContents, email: emails)
-            if loadedCells != nil {
+        
                 loadedCells.append(cell)
-            }
+              
+            
          return cell
         }
     
@@ -234,46 +237,43 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
         displayedEmail = emails
         self.performSegueWithIdentifier("showDetail", sender: tableView)
     }
-
-    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool {
-        self.filterContentForSearchText(searchString)
-        return true
-    }
     
-//    func searchBar(searchBar: UISearchBar!, textDidChange searchText: NSString) {
-//        if searchText.length == 0 {
-//            isFiltered = false
-//        } else{
-//            isFiltered = true
-//            for( var i = 0; i < adData.count ;i++) {
-//                var name = self.adData[i]["name"] as String
-//                var nameRange = name.rangeOfString(searchText)
-//                    if nameRange != nil {
-//                        filteredItems.append(adData[i])
-//                    }
-//            }
-//        }
+//
+//    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool {
+//        self.filterContentForSearchText(searchString)
+//        return true
 //    }
-    
-    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchScope searchOption: Int) -> Bool {
-        self.filterContentForSearchText(self.searchDisplayController!.searchBar.text)
-        return true
-    }
-    
-    func filterContentForSearchText(searchText: NSString){
-        
-        if searchText.length == 0 {
-            isFiltered = false
-        } else {
-            isFiltered = true
-        var scope = String()
-        
-            filteredCells = loadedCells.filter({ (ad: AdCell) -> Bool in
-            let locationMatch = (scope == "All") || (ad.locationLabel.text == scope)
-            let stringMatch = ad.titleForSearch.rangeOfString(searchText)
-            return locationMatch && (stringMatch != nil)
-            })
-        }
-    }
+//    
+////    func searchBar(searchBar: UISearchBar!, textDidChange searchText: NSString) {
+////        if searchText.length == 0 {
+////            isFiltered = false
+////        } else{
+////            isFiltered = true
+////            for( var i = 0; i < adData.count ;i++) {
+////                var name = self.adData[i]["name"] as String
+////                var nameRange = name.rangeOfString(searchText)
+////                    if nameRange != nil {
+////                        filteredItems.append(adData[i])
+////                    }
+////            }
+////        }
+////    }
+//    
+//    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchScope searchOption: Int) -> Bool {
+//        self.filterContentForSearchText(self.searchDisplayController!.searchBar.text)
+//        return true
+//    }
+//    
+//    func filterContentForSearchText(searchText: NSString){
+//    
+//            var scope = String()
+//            
+//            self.filteredCells = self.loadedCells.filter({ (ad: AdCell) -> Bool in
+//            let locationMatch = (scope == "All") || (ad.locationLabel.text == scope)
+//            
+//            let stringMatch = ad.titleForSearch.rangeOfString(searchText)
+//            return locationMatch && (stringMatch != nil)
+//            })
+//    }
 }
-    
+

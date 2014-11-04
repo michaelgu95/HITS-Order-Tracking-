@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6801B68319F3F8FC0097988D /* AdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6801B68219F3F8FC0097988D /* AdCell.swift */; };
 		6801B68519F40B040097988D /* AdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6801B68419F40B040097988D /* AdCell.xib */; };
+		6811C0F21A087C90002F1BF7 /* SearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6811C0F11A087C90002F1BF7 /* SearchController.m */; };
 		6815E8ED1A00107800BE3597 /* pulgalogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6815E8EC1A00107800BE3597 /* pulgalogo.jpg */; };
 		6825E2A119F93F4200731110 /* MGSwipeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6825E29E19F93F4200731110 /* MGSwipeButton.m */; };
 		6825E2A219F93F4200731110 /* MGSwipeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6825E2A019F93F4200731110 /* MGSwipeTableCell.m */; };
@@ -46,6 +47,7 @@
 		68C684DA1A0683FA00E1055F /* heart-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 68C684D91A0683FA00E1055F /* heart-7.png */; };
 		68C684DC1A06842700E1055F /* list-simple-star-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 68C684DB1A06842700E1055F /* list-simple-star-7.png */; };
 		68C684DE1A06844900E1055F /* new-sign-badge-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 68C684DD1A06844900E1055F /* new-sign-badge-7.png */; };
+		68C684EC1A07FA7D00E1055F /* SearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C684EB1A07FA7D00E1055F /* SearchTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		4DAFDDBE9DC4FB3C8A2F6D0A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6801B68219F3F8FC0097988D /* AdCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdCell.swift; sourceTree = "<group>"; };
 		6801B68419F40B040097988D /* AdCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdCell.xib; sourceTree = "<group>"; };
+		6811C0F01A087C90002F1BF7 /* SearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchController.h; sourceTree = "<group>"; };
+		6811C0F11A087C90002F1BF7 /* SearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchController.m; sourceTree = "<group>"; };
 		6815E8EC1A00107800BE3597 /* pulgalogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pulgalogo.jpg; path = ../../../Downloads/pulgalogo.jpg; sourceTree = "<group>"; };
 		6825E28B19F93A5800731110 /* Pulga Latina-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pulga Latina-Bridging-Header.h"; sourceTree = "<group>"; };
 		6825E29D19F93F4200731110 /* MGSwipeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGSwipeButton.h; path = "../../../Downloads/MGSwipeTableCell-master/MGSwipeTableCell/MGSwipeButton.h"; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 		68C684D91A0683FA00E1055F /* heart-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart-7.png"; sourceTree = "<group>"; };
 		68C684DB1A06842700E1055F /* list-simple-star-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-simple-star-7.png"; sourceTree = "<group>"; };
 		68C684DD1A06844900E1055F /* new-sign-badge-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new-sign-badge-7.png"; sourceTree = "<group>"; };
+		68C684EA1A07FA7D00E1055F /* SearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewController.h; sourceTree = "<group>"; };
+		68C684EB1A07FA7D00E1055F /* SearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewController.m; sourceTree = "<group>"; };
 		A00834CA342F57E407FFF7FF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -200,8 +206,12 @@
 		689B16C419F2E45A004CF144 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6825E29E19F93F4200731110 /* MGSwipeButton.m */,
+				6811C0F01A087C90002F1BF7 /* SearchController.h */,
+				6811C0F11A087C90002F1BF7 /* SearchController.m */,
+				68C684EA1A07FA7D00E1055F /* SearchTableViewController.h */,
+				68C684EB1A07FA7D00E1055F /* SearchTableViewController.m */,
 				6825E29D19F93F4200731110 /* MGSwipeButton.h */,
+				6825E29E19F93F4200731110 /* MGSwipeButton.m */,
 				6825E29F19F93F4200731110 /* MGSwipeTableCell.h */,
 				6825E2A019F93F4200731110 /* MGSwipeTableCell.m */,
 				6835795A19F4509F004B73C4 /* pulgalogo.png */,
@@ -413,9 +423,11 @@
 				6825E2A219F93F4200731110 /* MGSwipeTableCell.m in Sources */,
 				689B16CC19F2E45A004CF144 /* MasterViewController.swift in Sources */,
 				689B16CE19F2E45A004CF144 /* DetailViewController.swift in Sources */,
+				68C684EC1A07FA7D00E1055F /* SearchTableViewController.m in Sources */,
 				683667461A041C34008FA1CE /* FrameView.swift in Sources */,
 				6836674C1A041C34008FA1CE /* Window.swift in Sources */,
 				685523C219FD844C00EAA1E8 /* TipInCellAnimator.swift in Sources */,
+				6811C0F21A087C90002F1BF7 /* SearchController.m in Sources */,
 				6801B68319F3F8FC0097988D /* AdCell.swift in Sources */,
 				683667491A041C34008FA1CE /* HUDController.swift in Sources */,
 			);

@@ -20,11 +20,12 @@ class AdCell: MGSwipeTableCell, MGSwipeTableCellDelegate {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet  weak var locationLabel: UILabel!
     @IBOutlet var adImageLabel: UIImageView!
-    var swipeEnabled: Bool!
+    var swipeEnabled: Bool?
     var newFavoriteAdded: Bool = false
     var listedAdContent: String!
     var listedAdEmail: String!
     var titleForSearch:String!
+    var locationForSearch:String!
     
     
     func UIColorFromRGB(rgbValue: UInt) -> UIColor {
@@ -38,7 +39,9 @@ class AdCell: MGSwipeTableCell, MGSwipeTableCellDelegate {
     
          
     func loadAd(title: String, price: String?, location: String?, adImage: UIImage?, adContent: String?, email: String?) {
+        // variables for searchbar
         titleForSearch = title
+        locationForSearch = location
         
         newFavoriteAdded = false
        
@@ -110,7 +113,7 @@ class AdCell: MGSwipeTableCell, MGSwipeTableCellDelegate {
                     HUDController.sharedController.show()
                     HUDController.sharedController.hide(afterDelay: 0.83)
                     
-                    //add favorite to coredata
+                    //add favorite to CoreData
                     let entityDescription = NSEntityDescription.entityForName("FavoriteAd", inManagedObjectContext: context)
                     let task = Pulga_Latina(entity: entityDescription!, insertIntoManagedObjectContext: context)
                     task.favTitle = self.titleLabel.text!

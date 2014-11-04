@@ -10,14 +10,18 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="graygradient.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pAg-NT-ncy">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="graygradient.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pAg-NT-ncy">
                     <rect key="frame" x="-33" y="-28" width="480" height="795"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pulgalogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="2Yn-4t-7X0">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="pulgalogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="2Yn-4t-7X0">
                     <rect key="frame" x="24" y="336" width="366" height="63"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="0.29947299235523506" green="0.48121922108836102" blue="0.66436144770408156" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="pAg-NT-ncy" firstAttribute="centerY" secondItem="2Yn-4t-7X0" secondAttribute="centerY" constant="2" id="UTf-8J-fnN"/>
+                <constraint firstItem="pAg-NT-ncy" firstAttribute="centerX" secondItem="2Yn-4t-7X0" secondAttribute="centerX" id="tIP-tZ-j5b"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
             <point key="canvasLocation" x="548" y="455"/>
