@@ -21,7 +21,7 @@ public func UIColorFromRGB(rgbValue: UInt) -> UIColor {
     )
 }
 
-class MasterViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UISearchDisplayDelegate, UITabBarControllerDelegate {
+class MasterViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate, UITabBarControllerDelegate {
     var window: UIWindow?
     var namesToSearch:Array<String> = []
     var rowData: NSDictionary!
@@ -238,42 +238,5 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
         self.performSegueWithIdentifier("showDetail", sender: tableView)
     }
     
-//
-//    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool {
-//        self.filterContentForSearchText(searchString)
-//        return true
-//    }
-//    
-////    func searchBar(searchBar: UISearchBar!, textDidChange searchText: NSString) {
-////        if searchText.length == 0 {
-////            isFiltered = false
-////        } else{
-////            isFiltered = true
-////            for( var i = 0; i < adData.count ;i++) {
-////                var name = self.adData[i]["name"] as String
-////                var nameRange = name.rangeOfString(searchText)
-////                    if nameRange != nil {
-////                        filteredItems.append(adData[i])
-////                    }
-////            }
-////        }
-////    }
-//    
-//    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchScope searchOption: Int) -> Bool {
-//        self.filterContentForSearchText(self.searchDisplayController!.searchBar.text)
-//        return true
-//    }
-//    
-//    func filterContentForSearchText(searchText: NSString){
-//    
-//            var scope = String()
-//            
-//            self.filteredCells = self.loadedCells.filter({ (ad: AdCell) -> Bool in
-//            let locationMatch = (scope == "All") || (ad.locationLabel.text == scope)
-//            
-//            let stringMatch = ad.titleForSearch.rangeOfString(searchText)
-//            return locationMatch && (stringMatch != nil)
-//            })
-//    }
 }
 

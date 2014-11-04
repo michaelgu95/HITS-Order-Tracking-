@@ -225,14 +225,6 @@
                                 <outlet property="delegate" destination="2wE-KU-o6X" id="oSQ-6w-x1F"/>
                             </connections>
                         </searchBar>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Ad" id="cCI-Cs-EMj" customClass="AdCell" customModule="Pulga_Latina" customModuleProvider="target">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cCI-Cs-EMj" id="Gwo-0g-dz8">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="2wE-KU-o6X" id="e71-T0-SRG"/>
                             <outlet property="delegate" destination="2wE-KU-o6X" id="ofU-L9-1gY"/>

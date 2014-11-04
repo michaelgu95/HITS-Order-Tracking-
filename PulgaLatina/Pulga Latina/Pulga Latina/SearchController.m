@@ -23,6 +23,9 @@
     UINib *adNib = [UINib nibWithNibName: @"AdCell" bundle: nil];
     [self.tableView registerNib:adNib forCellReuseIdentifier:@"Ad"];
     
+    self.tableView.separatorInset = UIEdgeInsetsZero;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -49,6 +52,10 @@
     return self.filteredCells.count;
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 110;
+}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -72,25 +79,6 @@
 }
 
 #pragma mark Content Filtering
-//-(void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
-//{
-//    [self.filteredCells removeAllObjects];
-//
-//    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.titleForSearch contains[c] %@", searchText];
-//    self.filteredCells = [NSMutableArray arrayWithArray:[self.loadedCells filteredArrayUsingPredicate:predicate]];
-//    [self.tableView reloadData];
-//}
-//
-//#pragma mark - UISearchDisplayController Delegate Methods
-//-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
-//
-//    [self filterContentForSearchText:searchString scope:
-//     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
-//
-//    return YES;
-//}
-
-
 -(void)searchBar:(UISearchBar*)searchBar textDidChange:(NSString*)text
 {
     
@@ -143,14 +131,11 @@
  }
  */
 
-/*
+
  #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+
  }
- */
+ 
 
 @end
