@@ -161,6 +161,15 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
             if let indexPath = self.tableView.indexPathForSelectedRow() {
           
                 let controller = (segue.destinationViewController as UINavigationController).topViewController as DetailViewController
+               
+                let rowData: NSDictionary = self.adData[indexPath.row] as NSDictionary
+                
+                var adContents = rowData["description"] as? String
+               
+                var  emails = rowData["email"] as? String
+               
+                controller.detailAdContent = adContents
+                controller.detailAdEmail = emails
     
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
@@ -171,6 +180,11 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
             controller.loadedCells = self.loadedCells 
 
         }
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+ 
+        self.performSegueWithIdentifier("showDetail", sender: tableView)
     }
 
     // MARK: - Table View
@@ -227,16 +241,5 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
             
          return cell
         }
-    
-    
-   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-       let rowData: NSDictionary = self.adData[indexPath.row] as NSDictionary
-        var adContents = rowData["description"] as? String
-        var  emails = rowData["email"] as? String
-        displayedAdContent = adContents
-        displayedEmail = emails
-        self.performSegueWithIdentifier("showDetail", sender: tableView)
-    }
-    
 }
 

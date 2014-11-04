@@ -8,9 +8,6 @@
 
 import UIKit
 
-var displayedAdContent:String? = ""
-var displayedEmail:String? = ""
-
 class DetailViewController: UIViewController {
     
     @IBOutlet weak var emailLabel: UILabel!
@@ -27,8 +24,7 @@ class DetailViewController: UIViewController {
 
     func configureView() {
         // Update the user interface for the detail item.
-        detailAdContent = displayedAdContent
-        detailAdEmail = displayedEmail
+        
 
         webView.loadHTMLString(detailAdContent, baseURL: nil)
         

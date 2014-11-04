@@ -90,13 +90,7 @@ class FavoritesTableViewController:UITableViewController, UITableViewDataSource,
         
         return cell
     }
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-       
-        displayedAdContent = favoriteAdContent[indexPath.row] as String
-        displayedEmail = favoriteEmail[indexPath.row] as String
-        self.performSegueWithIdentifier("favoriteDetail", sender: tableView)
-    }
+  
     
     override func tableView(tableView: (UITableView!), canEditRowAtIndexPath indexPath: NSIndexPath!) -> Bool {
         return true
@@ -112,7 +106,7 @@ class FavoritesTableViewController:UITableViewController, UITableViewDataSource,
         favoriteAdContent.removeLast()
         favoriteEmail.removeLast()
         //delete from CoreData
-        managedObjectContext.deleteObject(fetchResults[indexPath.row])
+        managedObjectContext.deleteObject(fetchResults[indexPath.row-1])
         managedObjectContext.save(nil)
         self.tableView.reloadData()
         }
@@ -128,8 +122,17 @@ class FavoritesTableViewController:UITableViewController, UITableViewDataSource,
         if segue.identifier == "favoriteDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow() {
                 let controller = (segue.destinationViewController as UINavigationController).topViewController as DetailViewController
+                controller.detailAdContent = favoriteAdContent[indexPath.row] as String
+                controller.detailAdEmail = favoriteEmail[indexPath.row] as String
+                
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
         }
     }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        self.performSegueWithIdentifier("favoriteDetail", sender: tableView)
+    }
+    
 }

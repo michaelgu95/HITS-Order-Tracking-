@@ -10,20 +10,22 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="graygradient.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pAg-NT-ncy">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="graygradient.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pAg-NT-ncy">
                     <rect key="frame" x="-33" y="-28" width="480" height="795"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="pulgalogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="2Yn-4t-7X0">
-                    <rect key="frame" x="24" y="336" width="366" height="63"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pulgalogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="2Yn-4t-7X0">
+                    <rect key="frame" x="24" y="273" width="366" height="126"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="0.29947299235523506" green="0.48121922108836102" blue="0.66436144770408156" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="pAg-NT-ncy" firstAttribute="centerY" secondItem="2Yn-4t-7X0" secondAttribute="centerY" constant="2" id="UTf-8J-fnN"/>
-                <constraint firstItem="pAg-NT-ncy" firstAttribute="centerX" secondItem="2Yn-4t-7X0" secondAttribute="centerX" id="tIP-tZ-j5b"/>
+                <constraint firstAttribute="centerY" secondItem="2Yn-4t-7X0" secondAttribute="centerY" id="LDn-lh-ZHy"/>
+                <constraint firstAttribute="centerX" secondItem="pAg-NT-ncy" secondAttribute="centerX" id="eH3-0G-drJ"/>
+                <constraint firstAttribute="centerX" secondItem="2Yn-4t-7X0" secondAttribute="centerX" id="gkI-i8-4KQ"/>
+                <constraint firstAttribute="centerY" secondItem="pAg-NT-ncy" secondAttribute="centerY" id="sUM-gQ-ONR"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>
