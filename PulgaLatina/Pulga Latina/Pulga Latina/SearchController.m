@@ -16,9 +16,8 @@
     [super viewDidLoad];
     self.searchBar.delegate = (id)self;
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-    
-    NSLog(@"%@",self.loadedCells);
     [self.tableView reloadData];
+    [self.searchBar becomeFirstResponder];
     
     UINib *adNib = [UINib nibWithNibName: @"AdCell" bundle: nil];
     [self.tableView registerNib:adNib forCellReuseIdentifier:@"Ad"];
@@ -38,6 +37,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (BOOL)disablesAutomaticKeyboardDismissal {
+    return NO;
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *) searchBar
+{
+    [self.searchBar resignFirstResponder];
+}
+
+-(void)searchBarTextDidEndEditing:(UISearchBar *)searchBar
+{
+    [self.searchBar resignFirstResponder];
+}
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

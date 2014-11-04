@@ -220,7 +220,7 @@
                         <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="prominent" placeholder="Que es lo que buscas?" id="6Ge-YG-Ggh">
                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="barTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
                                 <outlet property="delegate" destination="2wE-KU-o6X" id="oSQ-6w-x1F"/>
