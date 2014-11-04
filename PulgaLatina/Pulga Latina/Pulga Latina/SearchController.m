@@ -15,7 +15,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.searchBar.delegate = (id)self;
-    
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     
     NSLog(@"%@",self.loadedCells);
     [self.tableView reloadData];
@@ -97,6 +97,25 @@
     
     [self.tableView reloadData];
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath{
+    
+    [self performSegueWithIdentifier: @"showDetail" sender: self.tableView];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    if ([[segue identifier] isEqualToString: @"showDetail"]){
+         AdCell *filteredCell = [self.filteredCells objectAtIndex: indexPath.row];
+        UINavigationController *controller = segue.destinationViewController;
+        DetailViewController *detailController = (DetailViewController *)controller.topViewController;
+        detailController.detailAdContent = filteredCell.listedAdContent;
+        detailController.detailAdEmail = filteredCell.listedAdEmail;
+        detailController.navigationItem.leftItemsSupplementBackButton = TRUE;
+
+        
+    }
+}
 /*
  // Override to support conditional editing of the table view.
  - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -132,10 +151,6 @@
  */
 
 
- #pragma mark - Navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 
- }
- 
 
 @end

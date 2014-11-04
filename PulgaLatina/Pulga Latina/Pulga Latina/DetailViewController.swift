@@ -15,6 +15,8 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var webView: UIWebView!
+    var detailAdContent:String? = ""
+    var detailAdEmail:String? = ""
 
     var detailItem: AnyObject? {
         didSet {
@@ -25,27 +27,29 @@ class DetailViewController: UIViewController {
 
     func configureView() {
         // Update the user interface for the detail item.
-     
+        detailAdContent = displayedAdContent
+        detailAdEmail = displayedEmail
 
-        webView.loadHTMLString(displayedAdContent, baseURL: nil)
-        var nav = self.navigationController?.navigationBar
-        nav?.tintColor = UIColor.whiteColor()
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-        nav?.barTintColor = UIColorFromRGB(0x067AB5)
-      
-        var tLabel = UILabel(frame: CGRectMake(0, 0, 200, 40))
-        tLabel.textColor = UIColor.whiteColor()
-        tLabel.adjustsFontSizeToFitWidth = true
-        self.navigationItem.titleView = tLabel
-       
-        emailLabel.text = displayedEmail
+        webView.loadHTMLString(detailAdContent, baseURL: nil)
+        
+        emailLabel.text = detailAdEmail
       
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-       
+        var nav = self.navigationController?.navigationBar
+        nav?.tintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        nav?.barTintColor = UIColorFromRGB(0x067AB5)
+        
+        var tLabel = UILabel(frame: CGRectMake(0, 0, 200, 40))
+        tLabel.textColor = UIColor.whiteColor()
+        tLabel.adjustsFontSizeToFitWidth = true
+        self.navigationItem.titleView = tLabel
+
+        
         self.configureView()
     }
 

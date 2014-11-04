@@ -92,8 +92,8 @@ class FavoritesTableViewController:UITableViewController, UITableViewDataSource,
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+       
         displayedAdContent = favoriteAdContent[indexPath.row] as String
-        println(displayedAdContent)
         displayedEmail = favoriteEmail[indexPath.row] as String
         self.performSegueWithIdentifier("favoriteDetail", sender: tableView)
     }
