@@ -36,9 +36,11 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         var nav = self.navigationController?.navigationBar
-        nav?.tintColor = UIColor.whiteColor()
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-        nav?.barTintColor = UIColorFromRGB(0x067AB5)
+//        nav?.barTintColor = UIColorFromRGB(0x067AB5)
         
         var tLabel = UILabel(frame: CGRectMake(0, 0, 200, 40))
         tLabel.textColor = UIColor.whiteColor()

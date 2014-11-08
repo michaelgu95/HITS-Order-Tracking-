@@ -122,14 +122,9 @@ class AdCell: MGSwipeTableCell, MGSwipeTableCellDelegate {
                     task.favContent = self.listedAdContent!
                     task.favEmail = self.listedAdEmail!
                     task.favImage = UIImagePNGRepresentation(adImage!)
-                    println(task.favTitle)
                     context.save(nil)
-                    return true}),
-                
-                MGSwipeButton(title: "Compartir", icon: newShareImage, backgroundColor: UIColorFromRGB(0x067AB5), callback:{ (sender) -> Bool in
-                    println("yes")
-                    return true
-                })]
+                    return true})
+            ]
         }
         
         func swipeTableCell(cell: MGSwipeTableCell!, canSwipe direction: MGSwipeDirection) -> Bool {

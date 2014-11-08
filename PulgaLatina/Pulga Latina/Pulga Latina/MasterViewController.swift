@@ -30,17 +30,12 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
     var jsonURLString:String!
     var loadedCells = [AdCell]()
     var filteredCells = [AdCell]()
-    var adData = []
+    var adData: NSMutableArray = []
+    var newAdData: Array <AnyObject> = []
     //variables to store cell values
-    var names: String?
-    var prices: String?
-    var locations: String?
-    var adImage:UIImage?
-    var adContents: NSString?
-    var emails: String?
     var detailViewController: DetailViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil
-    var isFiltered: Bool = false
+    var cellsAlreadyLoaded: Bool = false
     @IBOutlet var adTableView : UITableView!
     
     override func awakeFromNib() {
@@ -55,11 +50,7 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
                    }
-    
-//    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-//            TipInCellAnimator.animate(cell)
-//    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -105,16 +96,24 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
         //load json
         jsonURLString = "http://www.pulgalatina.com/api/v1/ads/?format=json&page=1"
         jsonURL = NSURL(string: jsonURLString)
+        if !cellsAlreadyLoaded {
         loadJSON(jsonURL)
-        
-        //make pull to refresh
-        refresher = UIRefreshControl()
-        refresher.attributedTitle = NSAttributedString(string: "Nuevos Anuncios")
-        refresher.addTarget(self, action: "loadNewJSON", forControlEvents: UIControlEvents.ValueChanged)
-        adTableView.addSubview(refresher)
+        }
+
+       
 
     }
     
+  override func scrollViewDidScroll(scroll:UIScrollView){
+        let currentOffset:CGFloat = scroll.contentOffset.y
+        let maximumOffset:CGFloat = scroll.contentSize.height - scroll.frame.size.height
+        if(maximumOffset - currentOffset <= 2.0){
+            self.tableView.addInfiniteScrollingWithActionHandler({
+                self.loadNewJSON()
+                
+            })
+        }
+    }
     
     func loadJSON(jsonURL: NSURL){
         var request: NSURLRequest = NSURLRequest(URL:jsonURL)
@@ -126,15 +125,16 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
             }
             var err: NSError?
             var jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as NSDictionary
-            let results: NSArray = jsonResult["results"] as NSArray
+            let results = jsonResult["results"] as NSMutableArray
             
             dispatch_async(dispatch_get_main_queue(), {
-                self.adData = results
+                self.adData = results as NSMutableArray
                 self.adTableView!.reloadData()
             })
             
         })
         task.resume()
+        cellsAlreadyLoaded = true
     }
     
     func loadNewJSON(){
@@ -143,11 +143,38 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
         pageNumber += 1
         jsonURLString = "http://www.pulgalatina.com/api/v1/ads/?format=json&page=\(pageNumber)"
         jsonURL = NSURL(string: jsonURLString)
-        println(jsonURL)
-        loadJSON(jsonURL)
-        self.adTableView.reloadData()
-        refresher.endRefreshing()
+        var request: NSURLRequest = NSURLRequest(URL:jsonURL)
+        let config = NSURLSessionConfiguration.defaultSessionConfiguration()
+        let session  = NSURLSession(configuration: config)
+        let task: NSURLSessionDataTask = session.dataTaskWithRequest(request, completionHandler: {(data, response, error)  in
+            if error != nil {
+                println(error.localizedDescription)
+            }
+            var err: NSError?
+            var jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as NSDictionary
+            let results: Array = jsonResult["results"] as NSArray
+            
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.newAdData = results
+                for var i = 0; i<self.newAdData.count; i++ {
+                    self.adData.addObject(self.newAdData[i])
+                    println(self.adData)
+                    self.adTableView!.beginUpdates()
+                    var indexPath: NSIndexPath = NSIndexPath(forRow: self.adData.count  - 1 , inSection: 0)
+                    var indexPaths = [indexPath]
+                    self.adTableView!.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Fade)
+                    self.adTableView!.endUpdates()
+                    self.adTableView!.reloadData()
+
+                    }
+            })
+            
+        })
+        task.resume()
+         self.adTableView!.infiniteScrollingView.stopAnimating()
     }
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -163,14 +190,11 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
                 let controller = (segue.destinationViewController as UINavigationController).topViewController as DetailViewController
                
                 let rowData: NSDictionary = self.adData[indexPath.row] as NSDictionary
-                
                 var adContents = rowData["description"] as? String
-               
                 var  emails = rowData["email"] as? String
                
                 controller.detailAdContent = adContents
                 controller.detailAdEmail = emails
-    
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
         }
@@ -194,52 +218,42 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if isFiltered == true {
-            return filteredCells.count
-        } else {
+       
             return adData.count
-        }
-        
         
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 110
     }
+    
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var rowData: NSDictionary
         var cell:AdCell = self.tableView.dequeueReusableCellWithIdentifier("Ad") as AdCell
-        if  tableView == self.searchDisplayController!.searchResultsTableView {
-            var filteredCell = filteredCells[indexPath.row]
-            names = filteredCell.titleLabel.text
-            locations = filteredCell.locationLabel.text
-            prices = filteredCell.priceLabel.text
-            adImage = filteredCell.adImageLabel.image
-            adContents = filteredCell.listedAdContent
-            emails = filteredCell.listedAdEmail
-        } else{
+    
             //store json objects into variables
             rowData = self.adData[indexPath.row] as NSDictionary
-            names =  rowData["name"] as? String
-            locations = rowData["city"] as? String
-            prices = rowData["price"] as? String
+            var names =  rowData["name"] as? String
+            var locations = rowData["city"] as? String
+            var prices = rowData["price"] as? String
             var URL =  rowData["primary_image_url"] as String
             var fullURL = "http://www.pulgalatina.com" + URL
             var adImagesNSURL: NSURL! = NSURL(string: fullURL)
             var adImagesData: NSData! = NSData(contentsOfURL: adImagesNSURL)
-            adImage = UIImage(data:adImagesData)!
-            adContents = rowData["description"] as? NSString
-            emails = rowData["email"] as?String
-        }
+            var adImage = UIImage(data:adImagesData)!
+            var adContents = rowData["description"] as? NSString
+            var emails = rowData["email"] as?String
+        
         
             cell.swipeEnabled = true
             cell.loadAd(names!, price: prices, location: locations, adImage: adImage, adContent: adContents, email: emails)
-        
+            //add already loaded cells to loadedCells array for search function
                 loadedCells.append(cell)
-              
-            
-         return cell
-        }
+        
+        
+        return cell
+    }
+    
 }
 

@@ -45,8 +45,10 @@
 		689B16D619F2E45B004CF144 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 689B16D419F2E45B004CF144 /* LaunchScreen.xib */; };
 		689B16E219F2E45B004CF144 /* Pulga_LatinaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689B16E119F2E45B004CF144 /* Pulga_LatinaTests.swift */; };
 		68C684DA1A0683FA00E1055F /* heart-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 68C684D91A0683FA00E1055F /* heart-7.png */; };
-		68C684DC1A06842700E1055F /* list-simple-star-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 68C684DB1A06842700E1055F /* list-simple-star-7.png */; };
 		68C684DE1A06844900E1055F /* new-sign-badge-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 68C684DD1A06844900E1055F /* new-sign-badge-7.png */; };
+		68FAF4AD1A0D771000F58999 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68FAF4AC1A0D771000F58999 /* QuartzCore.framework */; };
+		68FAF4B41A0D778900F58999 /* UIScrollView+SVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAF4B11A0D778900F58999 /* UIScrollView+SVInfiniteScrolling.m */; };
+		68FAF4B51A0D778900F58999 /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAF4B31A0D778900F58999 /* UIScrollView+SVPullToRefresh.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,8 +110,13 @@
 		689B16E019F2E45B004CF144 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		689B16E119F2E45B004CF144 /* Pulga_LatinaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pulga_LatinaTests.swift; sourceTree = "<group>"; };
 		68C684D91A0683FA00E1055F /* heart-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart-7.png"; sourceTree = "<group>"; };
-		68C684DB1A06842700E1055F /* list-simple-star-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-simple-star-7.png"; sourceTree = "<group>"; };
 		68C684DD1A06844900E1055F /* new-sign-badge-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new-sign-badge-7.png"; sourceTree = "<group>"; };
+		68FAF4AC1A0D771000F58999 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		68FAF4AF1A0D778900F58999 /* SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVPullToRefresh.h; sourceTree = "<group>"; };
+		68FAF4B01A0D778900F58999 /* UIScrollView+SVInfiniteScrolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVInfiniteScrolling.h"; sourceTree = "<group>"; };
+		68FAF4B11A0D778900F58999 /* UIScrollView+SVInfiniteScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVInfiniteScrolling.m"; sourceTree = "<group>"; };
+		68FAF4B21A0D778900F58999 /* UIScrollView+SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVPullToRefresh.h"; sourceTree = "<group>"; };
+		68FAF4B31A0D778900F58999 /* UIScrollView+SVPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVPullToRefresh.m"; sourceTree = "<group>"; };
 		A00834CA342F57E407FFF7FF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68FAF4AD1A0D771000F58999 /* QuartzCore.framework in Frameworks */,
 				683667331A0186A0008FA1CE /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,6 +211,7 @@
 		689B16C419F2E45A004CF144 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				68FAF4AE1A0D778900F58999 /* SVPullToRefresh */,
 				6811C0F01A087C90002F1BF7 /* SearchController.h */,
 				6811C0F11A087C90002F1BF7 /* SearchController.m */,
 				6825E29D19F93F4200731110 /* MGSwipeButton.h */,
@@ -213,7 +222,6 @@
 				6815E8EC1A00107800BE3597 /* pulgalogo.jpg */,
 				68C684D91A0683FA00E1055F /* heart-7.png */,
 				68C684DD1A06844900E1055F /* new-sign-badge-7.png */,
-				68C684DB1A06842700E1055F /* list-simple-star-7.png */,
 				68430C9B19F6B2DA004FA1AE /* 13.png */,
 				68430C9F19F6B583004FA1AE /* 15.png */,
 				68430CA119F6B5B4004FA1AE /* 90.png */,
@@ -246,9 +254,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		68FAF4AE1A0D778900F58999 /* SVPullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				68FAF4AF1A0D778900F58999 /* SVPullToRefresh.h */,
+				68FAF4B01A0D778900F58999 /* UIScrollView+SVInfiniteScrolling.h */,
+				68FAF4B11A0D778900F58999 /* UIScrollView+SVInfiniteScrolling.m */,
+				68FAF4B21A0D778900F58999 /* UIScrollView+SVPullToRefresh.h */,
+				68FAF4B31A0D778900F58999 /* UIScrollView+SVPullToRefresh.m */,
+			);
+			name = SVPullToRefresh;
+			path = "../../../Downloads/SVPullToRefresh-master/SVPullToRefresh";
+			sourceTree = "<group>";
+		};
 		CDD0D946BE404FCCBC078967 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				68FAF4AC1A0D771000F58999 /* QuartzCore.framework */,
 				683667321A0186A0008FA1CE /* CoreData.framework */,
 			);
 			name = Frameworks;
@@ -348,7 +370,6 @@
 				68430C9C19F6B2DA004FA1AE /* 13.png in Resources */,
 				689B16D119F2E45B004CF144 /* Main.storyboard in Resources */,
 				68C684DA1A0683FA00E1055F /* heart-7.png in Resources */,
-				68C684DC1A06842700E1055F /* list-simple-star-7.png in Resources */,
 				6825E2A419F957B200731110 /* 55.png in Resources */,
 				6836674A1A041C34008FA1CE /* Images.xcassets in Resources */,
 				68265DFB19F5A44E001A7506 /* gradient.jpg in Resources */,
@@ -409,7 +430,9 @@
 			files = (
 				6825E2A119F93F4200731110 /* MGSwipeButton.m in Sources */,
 				683667481A041C34008FA1CE /* HUDContentView.swift in Sources */,
+				68FAF4B41A0D778900F58999 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				6836673B1A01C93B008FA1CE /* Pulga Latina.swift in Sources */,
+				68FAF4B51A0D778900F58999 /* UIScrollView+SVPullToRefresh.m in Sources */,
 				683667471A041C34008FA1CE /* HUDAssets.swift in Sources */,
 				6836674D1A041C34008FA1CE /* WindowRootViewController.swift in Sources */,
 				689B16CA19F2E45A004CF144 /* Pulga_Latina.xcdatamodeld in Sources */,
