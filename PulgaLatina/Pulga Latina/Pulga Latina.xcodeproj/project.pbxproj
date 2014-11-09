@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6801B68319F3F8FC0097988D /* AdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6801B68219F3F8FC0097988D /* AdCell.swift */; };
 		6801B68519F40B040097988D /* AdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6801B68419F40B040097988D /* AdCell.xib */; };
+		680223F41A10026B007210F6 /* UIImage+ProportionalFill.m in Sources */ = {isa = PBXBuildFile; fileRef = 680223F11A10026B007210F6 /* UIImage+ProportionalFill.m */; };
+		680223F51A10026B007210F6 /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = 680223F31A10026B007210F6 /* UIImage+Tint.m */; };
 		6811C0F21A087C90002F1BF7 /* SearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6811C0F11A087C90002F1BF7 /* SearchController.m */; };
 		6815E8ED1A00107800BE3597 /* pulgalogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6815E8EC1A00107800BE3597 /* pulgalogo.jpg */; };
 		6825E2A119F93F4200731110 /* MGSwipeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6825E29E19F93F4200731110 /* MGSwipeButton.m */; };
@@ -49,6 +51,13 @@
 		68FAF4AD1A0D771000F58999 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68FAF4AC1A0D771000F58999 /* QuartzCore.framework */; };
 		68FAF4B41A0D778900F58999 /* UIScrollView+SVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAF4B11A0D778900F58999 /* UIScrollView+SVInfiniteScrolling.m */; };
 		68FAF4B51A0D778900F58999 /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FAF4B31A0D778900F58999 /* UIScrollView+SVPullToRefresh.m */; };
+		68FAF4BE1A0F4A3D00F58999 /* icon-120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = 68FAF4B71A0F4A3D00F58999 /* icon-120x120.png */; };
+		68FAF4BF1A0F4A3D00F58999 /* icon-152x152.png in Resources */ = {isa = PBXBuildFile; fileRef = 68FAF4B81A0F4A3D00F58999 /* icon-152x152.png */; };
+		68FAF4C01A0F4A3D00F58999 /* icon-76x76.png in Resources */ = {isa = PBXBuildFile; fileRef = 68FAF4B91A0F4A3D00F58999 /* icon-76x76.png */; };
+		68FAF4C11A0F4A3D00F58999 /* icon-80x80.png in Resources */ = {isa = PBXBuildFile; fileRef = 68FAF4BA1A0F4A3D00F58999 /* icon-80x80.png */; };
+		68FAF4C21A0F4A3D00F58999 /* icon-xl.png in Resources */ = {isa = PBXBuildFile; fileRef = 68FAF4BB1A0F4A3D00F58999 /* icon-xl.png */; };
+		68FAF4C31A0F4A3D00F58999 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 68FAF4BC1A0F4A3D00F58999 /* logo.png */; };
+		68FAF4C41A0F4A3D00F58999 /* pulga.png in Resources */ = {isa = PBXBuildFile; fileRef = 68FAF4BD1A0F4A3D00F58999 /* pulga.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +74,10 @@
 		4DAFDDBE9DC4FB3C8A2F6D0A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6801B68219F3F8FC0097988D /* AdCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdCell.swift; sourceTree = "<group>"; };
 		6801B68419F40B040097988D /* AdCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdCell.xib; sourceTree = "<group>"; };
+		680223F01A10026B007210F6 /* UIImage+ProportionalFill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+ProportionalFill.h"; path = "../../../Downloads/MGImageUtilities-master/Classes/UIImage+ProportionalFill.h"; sourceTree = "<group>"; };
+		680223F11A10026B007210F6 /* UIImage+ProportionalFill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ProportionalFill.m"; path = "../../../Downloads/MGImageUtilities-master/Classes/UIImage+ProportionalFill.m"; sourceTree = "<group>"; };
+		680223F21A10026B007210F6 /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Tint.h"; path = "../../../Downloads/MGImageUtilities-master/Classes/UIImage+Tint.h"; sourceTree = "<group>"; };
+		680223F31A10026B007210F6 /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Tint.m"; path = "../../../Downloads/MGImageUtilities-master/Classes/UIImage+Tint.m"; sourceTree = "<group>"; };
 		6811C0F01A087C90002F1BF7 /* SearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchController.h; sourceTree = "<group>"; };
 		6811C0F11A087C90002F1BF7 /* SearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchController.m; sourceTree = "<group>"; };
 		6815E8EC1A00107800BE3597 /* pulgalogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pulgalogo.jpg; path = ../../../Downloads/pulgalogo.jpg; sourceTree = "<group>"; };
@@ -74,11 +87,11 @@
 		6825E29F19F93F4200731110 /* MGSwipeTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGSwipeTableCell.h; path = "../../../Downloads/MGSwipeTableCell-master/MGSwipeTableCell/MGSwipeTableCell.h"; sourceTree = "<group>"; };
 		6825E2A019F93F4200731110 /* MGSwipeTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGSwipeTableCell.m; path = "../../../Downloads/MGSwipeTableCell-master/MGSwipeTableCell/MGSwipeTableCell.m"; sourceTree = "<group>"; };
 		6825E2A319F957B200731110 /* 55.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 55.png; path = "../../../Downloads/200_flat_icons_freepik/png/256 px/55.png"; sourceTree = "<group>"; };
-		68265DFA19F5A44E001A7506 /* gradient.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gradient.jpg; sourceTree = "<group>"; };
-		68265DFE19F5AC67001A7506 /* bluegradient.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bluegradient.jpeg; sourceTree = "<group>"; };
-		68265E0019F5B7EF001A7506 /* graygradient.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = graygradient.jpg; sourceTree = "<group>"; };
-		68265E0219F606BE001A7506 /* cell_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_top.png; sourceTree = "<group>"; };
-		6835795A19F4509F004B73C4 /* pulgalogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pulgalogo.png; sourceTree = "<group>"; };
+		68265DFA19F5A44E001A7506 /* gradient.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = gradient.jpg; path = "../Pulga Latina/gradient.jpg"; sourceTree = "<group>"; };
+		68265DFE19F5AC67001A7506 /* bluegradient.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bluegradient.jpeg; path = "../Pulga Latina/bluegradient.jpeg"; sourceTree = "<group>"; };
+		68265E0019F5B7EF001A7506 /* graygradient.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = graygradient.jpg; path = "../Pulga Latina/graygradient.jpg"; sourceTree = "<group>"; };
+		68265E0219F606BE001A7506 /* cell_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cell_top.png; path = "../Pulga Latina/cell_top.png"; sourceTree = "<group>"; };
+		6835795A19F4509F004B73C4 /* pulgalogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pulgalogo.png; path = "../Pulga Latina/pulgalogo.png"; sourceTree = "<group>"; };
 		683667321A0186A0008FA1CE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6836673A1A01C93B008FA1CE /* Pulga Latina.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pulga Latina.swift"; sourceTree = "<group>"; };
 		6836673D1A041C34008FA1CE /* FrameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameView.swift; sourceTree = "<group>"; };
@@ -90,11 +103,11 @@
 		683667431A041C34008FA1CE /* PKHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKHUD.h; sourceTree = "<group>"; };
 		683667441A041C34008FA1CE /* Window.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
 		683667451A041C34008FA1CE /* WindowRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowRootViewController.swift; sourceTree = "<group>"; };
-		68430C9B19F6B2DA004FA1AE /* 13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 13.png; sourceTree = "<group>"; };
-		68430C9D19F6B534004FA1AE /* cell_middle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_middle@2x.png"; sourceTree = "<group>"; };
-		68430C9F19F6B583004FA1AE /* 15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 15.png; sourceTree = "<group>"; };
-		68430CA119F6B5B4004FA1AE /* 90.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 90.png; sourceTree = "<group>"; };
-		68430CA319F6B5F9004FA1AE /* 32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 32.png; sourceTree = "<group>"; };
+		68430C9B19F6B2DA004FA1AE /* 13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 13.png; path = "../Pulga Latina/13.png"; sourceTree = "<group>"; };
+		68430C9D19F6B534004FA1AE /* cell_middle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cell_middle@2x.png"; path = "../Pulga Latina/cell_middle@2x.png"; sourceTree = "<group>"; };
+		68430C9F19F6B583004FA1AE /* 15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 15.png; path = "../Pulga Latina/15.png"; sourceTree = "<group>"; };
+		68430CA119F6B5B4004FA1AE /* 90.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 90.png; path = "../Pulga Latina/90.png"; sourceTree = "<group>"; };
+		68430CA319F6B5F9004FA1AE /* 32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 32.png; path = "../Pulga Latina/32.png"; sourceTree = "<group>"; };
 		685523BF19FAFE4000EAA1E8 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		685523C119FD844C00EAA1E8 /* TipInCellAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipInCellAnimator.swift; sourceTree = "<group>"; };
 		689B16C119F2E45A004CF144 /* Pulga Latina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pulga Latina.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,14 +122,21 @@
 		689B16DB19F2E45B004CF144 /* Pulga LatinaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pulga LatinaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		689B16E019F2E45B004CF144 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		689B16E119F2E45B004CF144 /* Pulga_LatinaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pulga_LatinaTests.swift; sourceTree = "<group>"; };
-		68C684D91A0683FA00E1055F /* heart-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart-7.png"; sourceTree = "<group>"; };
-		68C684DD1A06844900E1055F /* new-sign-badge-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new-sign-badge-7.png"; sourceTree = "<group>"; };
+		68C684D91A0683FA00E1055F /* heart-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "heart-7.png"; path = "../Pulga Latina/heart-7.png"; sourceTree = "<group>"; };
+		68C684DD1A06844900E1055F /* new-sign-badge-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "new-sign-badge-7.png"; path = "../Pulga Latina/new-sign-badge-7.png"; sourceTree = "<group>"; };
 		68FAF4AC1A0D771000F58999 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		68FAF4AF1A0D778900F58999 /* SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVPullToRefresh.h; sourceTree = "<group>"; };
 		68FAF4B01A0D778900F58999 /* UIScrollView+SVInfiniteScrolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVInfiniteScrolling.h"; sourceTree = "<group>"; };
 		68FAF4B11A0D778900F58999 /* UIScrollView+SVInfiniteScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVInfiniteScrolling.m"; sourceTree = "<group>"; };
 		68FAF4B21A0D778900F58999 /* UIScrollView+SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVPullToRefresh.h"; sourceTree = "<group>"; };
 		68FAF4B31A0D778900F58999 /* UIScrollView+SVPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVPullToRefresh.m"; sourceTree = "<group>"; };
+		68FAF4B71A0F4A3D00F58999 /* icon-120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-120x120.png"; sourceTree = "<group>"; };
+		68FAF4B81A0F4A3D00F58999 /* icon-152x152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-152x152.png"; sourceTree = "<group>"; };
+		68FAF4B91A0F4A3D00F58999 /* icon-76x76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-76x76.png"; sourceTree = "<group>"; };
+		68FAF4BA1A0F4A3D00F58999 /* icon-80x80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-80x80.png"; sourceTree = "<group>"; };
+		68FAF4BB1A0F4A3D00F58999 /* icon-xl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-xl.png"; sourceTree = "<group>"; };
+		68FAF4BC1A0F4A3D00F58999 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		68FAF4BD1A0F4A3D00F58999 /* pulga.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pulga.png; sourceTree = "<group>"; };
 		A00834CA342F57E407FFF7FF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,6 +167,50 @@
 				A00834CA342F57E407FFF7FF /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		680223F61A100275007210F6 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				6835795A19F4509F004B73C4 /* pulgalogo.png */,
+				6815E8EC1A00107800BE3597 /* pulgalogo.jpg */,
+				68C684D91A0683FA00E1055F /* heart-7.png */,
+				68C684DD1A06844900E1055F /* new-sign-badge-7.png */,
+				68430C9B19F6B2DA004FA1AE /* 13.png */,
+				68430C9F19F6B583004FA1AE /* 15.png */,
+				68430CA119F6B5B4004FA1AE /* 90.png */,
+				68430CA319F6B5F9004FA1AE /* 32.png */,
+				6825E2A319F957B200731110 /* 55.png */,
+				68265E0019F5B7EF001A7506 /* graygradient.jpg */,
+				68265DFE19F5AC67001A7506 /* bluegradient.jpeg */,
+				68265DFA19F5A44E001A7506 /* gradient.jpg */,
+				68430C9D19F6B534004FA1AE /* cell_middle@2x.png */,
+				68265E0219F606BE001A7506 /* cell_top.png */,
+			);
+			name = Images;
+			path = ../Logos;
+			sourceTree = "<group>";
+		};
+		680223F71A1002B2007210F6 /* MGSwipe */ = {
+			isa = PBXGroup;
+			children = (
+				6825E29D19F93F4200731110 /* MGSwipeButton.h */,
+				6825E29E19F93F4200731110 /* MGSwipeButton.m */,
+				6825E29F19F93F4200731110 /* MGSwipeTableCell.h */,
+				6825E2A019F93F4200731110 /* MGSwipeTableCell.m */,
+			);
+			name = MGSwipe;
+			sourceTree = "<group>";
+		};
+		680223F81A1002D3007210F6 /* MGImageUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				680223F01A10026B007210F6 /* UIImage+ProportionalFill.h */,
+				680223F11A10026B007210F6 /* UIImage+ProportionalFill.m */,
+				680223F21A10026B007210F6 /* UIImage+Tint.h */,
+				680223F31A10026B007210F6 /* UIImage+Tint.m */,
+			);
+			name = MGImageUtilities;
 			sourceTree = "<group>";
 		};
 		6836673C1A041C34008FA1CE /* PKHUD */ = {
@@ -196,6 +260,8 @@
 				689B16CD19F2E45A004CF144 /* DetailViewController.swift */,
 				685523BF19FAFE4000EAA1E8 /* FavoritesTableViewController.swift */,
 				6801B68219F3F8FC0097988D /* AdCell.swift */,
+				6811C0F01A087C90002F1BF7 /* SearchController.h */,
+				6811C0F11A087C90002F1BF7 /* SearchController.m */,
 				685523C119FD844C00EAA1E8 /* TipInCellAnimator.swift */,
 				689B16CF19F2E45B004CF144 /* Main.storyboard */,
 				689B16D219F2E45B004CF144 /* Images.xcassets */,
@@ -211,28 +277,12 @@
 		689B16C419F2E45A004CF144 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				680223F81A1002D3007210F6 /* MGImageUtilities */,
+				680223F71A1002B2007210F6 /* MGSwipe */,
 				68FAF4AE1A0D778900F58999 /* SVPullToRefresh */,
-				6811C0F01A087C90002F1BF7 /* SearchController.h */,
-				6811C0F11A087C90002F1BF7 /* SearchController.m */,
-				6825E29D19F93F4200731110 /* MGSwipeButton.h */,
-				6825E29E19F93F4200731110 /* MGSwipeButton.m */,
-				6825E29F19F93F4200731110 /* MGSwipeTableCell.h */,
-				6825E2A019F93F4200731110 /* MGSwipeTableCell.m */,
-				6835795A19F4509F004B73C4 /* pulgalogo.png */,
-				6815E8EC1A00107800BE3597 /* pulgalogo.jpg */,
-				68C684D91A0683FA00E1055F /* heart-7.png */,
-				68C684DD1A06844900E1055F /* new-sign-badge-7.png */,
-				68430C9B19F6B2DA004FA1AE /* 13.png */,
-				68430C9F19F6B583004FA1AE /* 15.png */,
-				68430CA119F6B5B4004FA1AE /* 90.png */,
-				68430CA319F6B5F9004FA1AE /* 32.png */,
-				6825E2A319F957B200731110 /* 55.png */,
-				68265E0019F5B7EF001A7506 /* graygradient.jpg */,
-				68265DFE19F5AC67001A7506 /* bluegradient.jpeg */,
-				68265DFA19F5A44E001A7506 /* gradient.jpg */,
-				68430C9D19F6B534004FA1AE /* cell_middle@2x.png */,
-				68265E0219F606BE001A7506 /* cell_top.png */,
 				689B16C519F2E45A004CF144 /* Info.plist */,
+				680223F61A100275007210F6 /* Images */,
+				68FAF4B61A0F4A3D00F58999 /* Logos */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -266,6 +316,20 @@
 			name = SVPullToRefresh;
 			path = "../../../Downloads/SVPullToRefresh-master/SVPullToRefresh";
 			sourceTree = "<group>";
+		};
+		68FAF4B61A0F4A3D00F58999 /* Logos */ = {
+			isa = PBXGroup;
+			children = (
+				68FAF4B71A0F4A3D00F58999 /* icon-120x120.png */,
+				68FAF4B81A0F4A3D00F58999 /* icon-152x152.png */,
+				68FAF4B91A0F4A3D00F58999 /* icon-76x76.png */,
+				68FAF4BA1A0F4A3D00F58999 /* icon-80x80.png */,
+				68FAF4BB1A0F4A3D00F58999 /* icon-xl.png */,
+				68FAF4BC1A0F4A3D00F58999 /* logo.png */,
+				68FAF4BD1A0F4A3D00F58999 /* pulga.png */,
+			);
+			path = Logos;
+			sourceTree = SOURCE_ROOT;
 		};
 		CDD0D946BE404FCCBC078967 /* Frameworks */ = {
 			isa = PBXGroup;
@@ -358,8 +422,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68FAF4C31A0F4A3D00F58999 /* logo.png in Resources */,
 				68430CA219F6B5B4004FA1AE /* 90.png in Resources */,
 				68430CA019F6B583004FA1AE /* 15.png in Resources */,
+				68FAF4C21A0F4A3D00F58999 /* icon-xl.png in Resources */,
 				6836674B1A041C34008FA1CE /* Info.plist in Resources */,
 				68265E0119F5B7EF001A7506 /* graygradient.jpg in Resources */,
 				68265DFF19F5AC67001A7506 /* bluegradient.jpeg in Resources */,
@@ -372,12 +438,17 @@
 				68C684DA1A0683FA00E1055F /* heart-7.png in Resources */,
 				6825E2A419F957B200731110 /* 55.png in Resources */,
 				6836674A1A041C34008FA1CE /* Images.xcassets in Resources */,
+				68FAF4BE1A0F4A3D00F58999 /* icon-120x120.png in Resources */,
+				68FAF4BF1A0F4A3D00F58999 /* icon-152x152.png in Resources */,
+				68FAF4C01A0F4A3D00F58999 /* icon-76x76.png in Resources */,
 				68265DFB19F5A44E001A7506 /* gradient.jpg in Resources */,
 				6815E8ED1A00107800BE3597 /* pulgalogo.jpg in Resources */,
 				689B16D619F2E45B004CF144 /* LaunchScreen.xib in Resources */,
 				68265E0319F606BE001A7506 /* cell_top.png in Resources */,
 				68C684DE1A06844900E1055F /* new-sign-badge-7.png in Resources */,
 				689B16D319F2E45B004CF144 /* Images.xcassets in Resources */,
+				68FAF4C41A0F4A3D00F58999 /* pulga.png in Resources */,
+				68FAF4C11A0F4A3D00F58999 /* icon-80x80.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +500,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6825E2A119F93F4200731110 /* MGSwipeButton.m in Sources */,
+				680223F41A10026B007210F6 /* UIImage+ProportionalFill.m in Sources */,
 				683667481A041C34008FA1CE /* HUDContentView.swift in Sources */,
 				68FAF4B41A0D778900F58999 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				6836673B1A01C93B008FA1CE /* Pulga Latina.swift in Sources */,
@@ -442,6 +514,7 @@
 				689B16CC19F2E45A004CF144 /* MasterViewController.swift in Sources */,
 				689B16CE19F2E45A004CF144 /* DetailViewController.swift in Sources */,
 				683667461A041C34008FA1CE /* FrameView.swift in Sources */,
+				680223F51A10026B007210F6 /* UIImage+Tint.m in Sources */,
 				6836674C1A041C34008FA1CE /* Window.swift in Sources */,
 				685523C219FD844C00EAA1E8 /* TipInCellAnimator.swift in Sources */,
 				6811C0F21A087C90002F1BF7 /* SearchController.m in Sources */,

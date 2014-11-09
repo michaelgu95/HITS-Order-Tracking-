@@ -73,14 +73,10 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
         nav?.barStyle = UIBarStyle.Black
         
         
-        let image = UIImage(named: "pulgalogo.png") as UIImage!
+        let image = UIImage(named: "pulga.png") as UIImage!
         //resize navbar image
-        var newSize:CGSize = CGSize(width: 320,height: 46)
-        let rect = CGRectMake(0,0, newSize.width, newSize.height)
-        UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
-        image.drawInRect(rect)
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
+        var newSize:CGSize = CGSize(width: 190,height: 54)
+               let newImage = image.imageScaledToFitSize(newSize)
         
         //set navbar image
         self.navigationItem.titleView = UIImageView(image: newImage)
@@ -100,20 +96,14 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
         loadJSON(jsonURL)
         }
 
-       
+        self.tableView.addInfiniteScrollingWithActionHandler({
+            self.loadNewJSON()
+            
+            self.tableView.infiniteScrollingView.stopAnimating()
+        })
 
     }
-    
-  override func scrollViewDidScroll(scroll:UIScrollView){
-        let currentOffset:CGFloat = scroll.contentOffset.y
-        let maximumOffset:CGFloat = scroll.contentSize.height - scroll.frame.size.height
-        if(maximumOffset - currentOffset <= 2.0){
-            self.tableView.addInfiniteScrollingWithActionHandler({
-                self.loadNewJSON()
-                
-            })
-        }
-    }
+
     
     func loadJSON(jsonURL: NSURL){
         var request: NSURLRequest = NSURLRequest(URL:jsonURL)
@@ -124,17 +114,19 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
                 println(error.localizedDescription)
             }
             var err: NSError?
-            var jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as NSDictionary
+            if var jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as? NSDictionary {
             let results = jsonResult["results"] as NSMutableArray
             
             dispatch_async(dispatch_get_main_queue(), {
                 self.adData = results as NSMutableArray
                 self.adTableView!.reloadData()
             })
+            }
             
         })
         task.resume()
         cellsAlreadyLoaded = true
+        
     }
     
     func loadNewJSON(){
@@ -154,10 +146,10 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
             var jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as NSDictionary
             let results: Array = jsonResult["results"] as NSArray
             
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+          
                 self.newAdData = results
-                for var i = 0; i<self.newAdData.count; i++ {
-                    self.adData.addObject(self.newAdData[i])
+                for object in self.newAdData {
+                    self.adData.addObject(object)
                     println(self.adData)
                     self.adTableView!.beginUpdates()
                     var indexPath: NSIndexPath = NSIndexPath(forRow: self.adData.count  - 1 , inSection: 0)
@@ -167,11 +159,11 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
                     self.adTableView!.reloadData()
 
                     }
-            })
+      
             
         })
         task.resume()
-         self.adTableView!.infiniteScrollingView.stopAnimating()
+        
     }
     
     

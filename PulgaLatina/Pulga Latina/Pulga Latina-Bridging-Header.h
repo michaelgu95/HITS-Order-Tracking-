@@ -6,6 +6,8 @@
 #import "MGSwipeTableCell.h"
 #import "SearchController.h"
 #import "UIScrollView+SVInfiniteScrolling.h"
+#import "UIImage+ProportionalFill.h"
+#import "UIImage+Tint.h"
 
 
 
