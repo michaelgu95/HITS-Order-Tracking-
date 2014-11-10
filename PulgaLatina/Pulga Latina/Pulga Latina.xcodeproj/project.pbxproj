@@ -11,6 +11,7 @@
 		6801B68519F40B040097988D /* AdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6801B68419F40B040097988D /* AdCell.xib */; };
 		680223F41A10026B007210F6 /* UIImage+ProportionalFill.m in Sources */ = {isa = PBXBuildFile; fileRef = 680223F11A10026B007210F6 /* UIImage+ProportionalFill.m */; };
 		680223F51A10026B007210F6 /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = 680223F31A10026B007210F6 /* UIImage+Tint.m */; };
+		680223FA1A10116C007210F6 /* dottedlines.png in Resources */ = {isa = PBXBuildFile; fileRef = 680223F91A10116C007210F6 /* dottedlines.png */; };
 		6811C0F21A087C90002F1BF7 /* SearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6811C0F11A087C90002F1BF7 /* SearchController.m */; };
 		6815E8ED1A00107800BE3597 /* pulgalogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6815E8EC1A00107800BE3597 /* pulgalogo.jpg */; };
 		6825E2A119F93F4200731110 /* MGSwipeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6825E29E19F93F4200731110 /* MGSwipeButton.m */; };
@@ -78,6 +79,7 @@
 		680223F11A10026B007210F6 /* UIImage+ProportionalFill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ProportionalFill.m"; path = "../../../Downloads/MGImageUtilities-master/Classes/UIImage+ProportionalFill.m"; sourceTree = "<group>"; };
 		680223F21A10026B007210F6 /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Tint.h"; path = "../../../Downloads/MGImageUtilities-master/Classes/UIImage+Tint.h"; sourceTree = "<group>"; };
 		680223F31A10026B007210F6 /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Tint.m"; path = "../../../Downloads/MGImageUtilities-master/Classes/UIImage+Tint.m"; sourceTree = "<group>"; };
+		680223F91A10116C007210F6 /* dottedlines.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dottedlines.png; sourceTree = "<group>"; };
 		6811C0F01A087C90002F1BF7 /* SearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchController.h; sourceTree = "<group>"; };
 		6811C0F11A087C90002F1BF7 /* SearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchController.m; sourceTree = "<group>"; };
 		6815E8EC1A00107800BE3597 /* pulgalogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pulgalogo.jpg; path = ../../../Downloads/pulgalogo.jpg; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 		680223F61A100275007210F6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				680223F91A10116C007210F6 /* dottedlines.png */,
 				6835795A19F4509F004B73C4 /* pulgalogo.png */,
 				6815E8EC1A00107800BE3597 /* pulgalogo.jpg */,
 				68C684D91A0683FA00E1055F /* heart-7.png */,
@@ -254,7 +257,6 @@
 		689B16C319F2E45A004CF144 /* Pulga Latina */ = {
 			isa = PBXGroup;
 			children = (
-				6836673C1A041C34008FA1CE /* PKHUD */,
 				689B16C619F2E45A004CF144 /* AppDelegate.swift */,
 				689B16CB19F2E45A004CF144 /* MasterViewController.swift */,
 				689B16CD19F2E45A004CF144 /* DetailViewController.swift */,
@@ -277,12 +279,13 @@
 		689B16C419F2E45A004CF144 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				680223F61A100275007210F6 /* Images */,
+				68FAF4B61A0F4A3D00F58999 /* Logos */,
+				6836673C1A041C34008FA1CE /* PKHUD */,
 				680223F81A1002D3007210F6 /* MGImageUtilities */,
 				680223F71A1002B2007210F6 /* MGSwipe */,
 				68FAF4AE1A0D778900F58999 /* SVPullToRefresh */,
 				689B16C519F2E45A004CF144 /* Info.plist */,
-				680223F61A100275007210F6 /* Images */,
-				68FAF4B61A0F4A3D00F58999 /* Logos */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 				68FAF4C01A0F4A3D00F58999 /* icon-76x76.png in Resources */,
 				68265DFB19F5A44E001A7506 /* gradient.jpg in Resources */,
 				6815E8ED1A00107800BE3597 /* pulgalogo.jpg in Resources */,
+				680223FA1A10116C007210F6 /* dottedlines.png in Resources */,
 				689B16D619F2E45B004CF144 /* LaunchScreen.xib in Resources */,
 				68265E0319F606BE001A7506 /* cell_top.png in Resources */,
 				68C684DE1A06844900E1055F /* new-sign-badge-7.png in Resources */,

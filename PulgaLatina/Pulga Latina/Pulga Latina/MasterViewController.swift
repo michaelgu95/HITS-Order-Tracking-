@@ -36,6 +36,7 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
     var detailViewController: DetailViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil
     var cellsAlreadyLoaded: Bool = false
+    var newAdsLoaded: Bool = false
     @IBOutlet var adTableView : UITableView!
     
     override func awakeFromNib() {
@@ -73,14 +74,13 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
         nav?.barStyle = UIBarStyle.Black
         
         
-        let image = UIImage(named: "pulga.png") as UIImage!
+        let image = UIImage(named: "logo.png") as UIImage!
         //resize navbar image
-        var newSize:CGSize = CGSize(width: 190,height: 54)
+        var newSize:CGSize = CGSize(width: 280,height: 48)
                let newImage = image.imageScaledToFitSize(newSize)
         
         //set navbar image
         self.navigationItem.titleView = UIImageView(image: newImage)
-        //nav?.setBackgroundImage(newImage, forBarMetrics: UIBarMetrics.Default)
         nav?.translucent = true
         nav?.barTintColor = UIColorFromRGB(0x067AB5)
        
@@ -97,13 +97,24 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
         }
 
         self.tableView.addInfiniteScrollingWithActionHandler({
-            self.loadNewJSON()
             
+            
+            if(self.newAdsLoaded == true){
             self.tableView.infiniteScrollingView.stopAnimating()
+            }
         })
 
     }
 
+    override func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate:Bool) {
+        let currentOffset: CGFloat = scrollView.contentOffset.y
+        let maximumOffset: CGFloat = scrollView.contentSize.height - scrollView.frame.size.height
+        
+        if maximumOffset - currentOffset <= -20 {
+            self.loadNewJSON()
+        }
+    }
+    
     
     func loadJSON(jsonURL: NSURL){
         var request: NSURLRequest = NSURLRequest(URL:jsonURL)
@@ -130,6 +141,7 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
     }
     
     func loadNewJSON(){
+        newAdsLoaded = false
         var page = jsonURLString.componentsSeparatedByString("page=")
         var pageNumber:Int = page[1].toInt()!
         pageNumber += 1
@@ -145,9 +157,10 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
             var err: NSError?
             var jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as NSDictionary
             let results: Array = jsonResult["results"] as NSArray
-            
+                dispatch_async(dispatch_get_main_queue(), {
           
                 self.newAdData = results
+                
                 for object in self.newAdData {
                     self.adData.addObject(object)
                     println(self.adData)
@@ -156,17 +169,12 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
                     var indexPaths = [indexPath]
                     self.adTableView!.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Fade)
                     self.adTableView!.endUpdates()
-                    self.adTableView!.reloadData()
-
                     }
-      
-            
-        })
+                })
+            })
         task.resume()
-        
+        self.newAdsLoaded = false
     }
-    
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -203,7 +211,7 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
         self.performSegueWithIdentifier("showDetail", sender: tableView)
     }
 
-    // MARK: - Table View
+    // MARK: - Table View Delegate Methods
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -224,7 +232,7 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
         var rowData: NSDictionary
         var cell:AdCell = self.tableView.dequeueReusableCellWithIdentifier("Ad") as AdCell
     
-            //store json objects into variables
+        //store json objects into variables for cell
             rowData = self.adData[indexPath.row] as NSDictionary
             var names =  rowData["name"] as? String
             var locations = rowData["city"] as? String
@@ -240,11 +248,10 @@ class MasterViewController: UITableViewController, UITableViewDataSource, UITabl
         
             cell.swipeEnabled = true
             cell.loadAd(names!, price: prices, location: locations, adImage: adImage, adContent: adContents, email: emails)
-            //add already loaded cells to loadedCells array for search function
-                loadedCells.append(cell)
         
-        
-        return cell
+        //add already loaded cells to loadedCells array for search function
+            loadedCells.append(cell)
+            return cell
     }
     
 }

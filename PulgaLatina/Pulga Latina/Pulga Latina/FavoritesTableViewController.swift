@@ -43,11 +43,8 @@ class FavoritesTableViewController:UITableViewController, UITableViewDataSource,
         let image = UIImage(named: "32.png") as UIImage!
         //resize navbar image
         var newSize:CGSize = CGSize(width: 46,height: 46)
-        let rect = CGRectMake(0,0, newSize.width, newSize.height)
-        UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
-        image.drawInRect(rect)
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
+  
+        let newImage = image.imageScaledToFitSize(newSize)
         
         //set navbar image
         self.navigationItem.titleView = UIImageView(image: newImage)

@@ -102,7 +102,6 @@ class AdCell: MGSwipeTableCell, MGSwipeTableCellDelegate {
                     favoriteImages.append(adImage!)
                     favoriteAdContent.append(self.listedAdContent!)
                     favoriteEmail.append(self.listedAdEmail!)
-                 
                     
                     coreDataEnabled = true
                     
@@ -129,9 +128,6 @@ class AdCell: MGSwipeTableCell, MGSwipeTableCellDelegate {
         
         func swipeTableCell(cell: MGSwipeTableCell!, canSwipe direction: MGSwipeDirection) -> Bool {
             return true
-            
         }
-        
-        
     }
 }

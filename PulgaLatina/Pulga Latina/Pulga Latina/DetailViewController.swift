@@ -40,7 +40,7 @@ class DetailViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
 
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-//        nav?.barTintColor = UIColorFromRGB(0x067AB5)
+        nav?.tintColor = UIColor.whiteColor()
         
         var tLabel = UILabel(frame: CGRectMake(0, 0, 200, 40))
         tLabel.textColor = UIColor.whiteColor()

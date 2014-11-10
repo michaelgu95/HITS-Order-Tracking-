@@ -9,9 +9,12 @@
         <scene sceneID="pY4-Hu-kfo">
             <objects>
                 <navigationController title="Master" id="RMx-3f-FxP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Anuncios" image="new-sign-badge-7.png" id="MDC-1S-6jn"/>
+                    <tabBarItem key="tabBarItem" title="Clasificados" image="new-sign-badge-7.png" id="MDC-1S-6jn"/>
                     <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Pmd-2v-anx">
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="7bK-jq-Zjz" kind="relationship" relationship="rootViewController" id="tsl-Nk-0bq"/>
@@ -33,6 +36,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bluegradient.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="49W-ex-cZu">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </imageView>
                             <webView contentMode="scaleAspectFill" misplaced="YES" paginationMode="topToBottom" pageLength="10000" translatesAutoresizingMaskIntoConstraints="NO" id="oRp-F5-zri">
                                 <rect key="frame" x="0.0" y="34" width="600" height="566"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -45,7 +51,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descripción:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Er-Of-RsC">
-                                <rect key="frame" x="16" y="104" width="130" height="21"/>
+                                <rect key="frame" x="16" y="99" width="130" height="21"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -243,10 +249,13 @@
         <!--Navigation Controller-->
         <scene sceneID="r7l-gg-dq7">
             <objects>
-                <navigationController id="vC3-pB-5Vb" sceneMemberID="viewController">
+                <navigationController modalTransitionStyle="flipHorizontal" id="vC3-pB-5Vb" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="DjV-YW-jjY">
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="5dY-my-Mxs">
                         <autoresizingMask key="autoresizingMask"/>
@@ -261,10 +270,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bluegradient.jpeg" width="1280" height="600"/>
         <image name="heart-7.png" width="30" height="30"/>
         <image name="new-sign-badge-7.png" width="29" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dPP-lq-hpQ"/>
+        <segue reference="b13-K8-7mA"/>
     </inferredMetricsTieBreakers>
 </document>
