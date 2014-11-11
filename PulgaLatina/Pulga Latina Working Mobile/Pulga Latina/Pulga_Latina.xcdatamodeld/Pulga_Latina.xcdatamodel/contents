@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6252" systemVersion="13F34" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Event" representedClassName="Event">
+        <attribute name="timeStamp" optional="YES" attributeType="Date">
+            <userInfo/>
+        </attribute>
+        <userInfo/>
+    </entity>
+    <entity name="FavoriteAd" representedClassName="Pulga_Latina.Pulga_Latina" syncable="YES">
+        <attribute name="favContent" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="favEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="favImage" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="favLocation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="favPrice" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="favTitle" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Event" positionX="261" positionY="189" width="128" height="58"/>
+        <element name="FavoriteAd" positionX="279" positionY="216" width="128" height="133"/>
+    </elements>
+</model>
