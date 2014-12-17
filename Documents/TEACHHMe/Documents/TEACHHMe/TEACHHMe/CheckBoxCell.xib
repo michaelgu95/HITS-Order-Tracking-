@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="HOp-dW-4SQ" customClass="CheckBoxCell">
+            <rect key="frame" x="0.0" y="0.0" width="903" height="250"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="903" height="250"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" alpha="0.85000002384185791" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="graybackground.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dn3-Fb-Bns">
+                        <rect key="frame" x="-10" y="0.0" width="913" height="269"/>
+                        <color key="tintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </imageView>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Clean room" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TL8-Ri-x6e">
+                        <rect key="frame" x="566" y="26" width="240" height="198"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="240" id="fKp-yy-xFQ"/>
+                            <constraint firstAttribute="height" constant="198" id="pq1-2P-cA2"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="39"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HTC-Py-8ez">
+                        <rect key="frame" x="327" y="25" width="240" height="200"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="240" id="6kc-Ug-mbF"/>
+                            <constraint firstAttribute="height" constant="240" id="94f-Zn-H6c"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="TL8-Ri-x6e" firstAttribute="leading" secondItem="dn3-Fb-Bns" secondAttribute="trailing" constant="-337" id="2aa-7r-w7M"/>
+                <constraint firstAttribute="bottom" secondItem="dn3-Fb-Bns" secondAttribute="bottom" constant="-19" id="MZZ-sy-Iws"/>
+                <constraint firstItem="dn3-Fb-Bns" firstAttribute="top" secondItem="HOp-dW-4SQ" secondAttribute="top" id="QPi-bJ-AET"/>
+                <constraint firstAttribute="trailing" secondItem="dn3-Fb-Bns" secondAttribute="trailing" id="TRy-E2-1B9"/>
+                <constraint firstItem="HTC-Py-8ez" firstAttribute="leading" secondItem="HOp-dW-4SQ" secondAttribute="leading" constant="226" id="a5L-Ng-JbE"/>
+                <constraint firstItem="TL8-Ri-x6e" firstAttribute="leading" secondItem="HTC-Py-8ez" secondAttribute="trailing" constant="-1" id="nNc-xF-OB9"/>
+                <constraint firstItem="dn3-Fb-Bns" firstAttribute="leading" secondItem="HOp-dW-4SQ" secondAttribute="leading" id="qpU-no-UEb"/>
+                <constraint firstAttribute="centerY" secondItem="HTC-Py-8ez" secondAttribute="centerY" id="sz1-Eq-xhu"/>
+                <constraint firstItem="TL8-Ri-x6e" firstAttribute="centerY" secondItem="HTC-Py-8ez" secondAttribute="centerY" id="y6q-g8-uaJ"/>
+            </constraints>
+            <size key="customSize" width="528" height="50"/>
+            <connections>
+                <outlet property="imageView" destination="HTC-Py-8ez" id="AwC-aM-Hgg"/>
+            </connections>
+            <point key="canvasLocation" x="353.5" y="524"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="graybackground.jpg" width="615" height="494"/>
+    </resources>
+</document>
