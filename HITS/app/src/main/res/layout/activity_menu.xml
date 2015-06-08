@@ -7,7 +7,10 @@
     >
 
     <TextView android:text="@string/hits" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -22,9 +25,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/delivery_button"
-        android:layout_alignParentBottom="true"
+        android:id="@+id/delivery_button"
+        android:layout_below="@+id/pickup_button"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="124dp"
-        android:id="@+id/delivery_button" />
+        android:layout_marginTop="96dp" />
 
 </RelativeLayout>
