@@ -11,9 +11,28 @@
         android:layout_height="115dp"
         android:id="@+id/hits_logo_image"
         android:src="@drawable/hits_logo"
-        android:layout_marginLeft="52dp"
-        android:layout_marginStart="52dp"
-        android:layout_alignBottom="@+id/textView"
+        android:layout_alignTop="@+id/titleText"
+        android:layout_alignBottom="@+id/titleText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Pickup Order Form"
+        android:id="@+id/titleText"
+        android:textSize="20sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/addressText"
+        android:layout_alignEnd="@+id/addressText" />
+
+    <TextView
+        android:text="@string/HITS_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:id="@+id/addressText"
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/textView3"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -21,23 +40,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Pickup Order Form"
-        android:id="@+id/textView"
-        android:textSize="50sp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:text="@string/HITS_address"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:id="@+id/textView2"
-        android:layout_marginTop="93dp"
+        android:text="Date:"
+        android:id="@+id/textView3"
+        android:textSize="20sp"
         android:layout_below="@+id/hits_logo_image"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="54dp" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/dateTextView"
+        android:textSize="20sp"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_marginLeft="82dp"
+        android:layout_marginStart="82dp" />
 
 
 </RelativeLayout>

@@ -4,14 +4,33 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+
+import java.util.Calendar;
 
 
 public class PickupActivity extends ActionBarActivity {
+
+    private TextView dateTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pickup);
+
+        //set current Date on dateTextView
+        dateTextView = (TextView) findViewById(R.id.textView3);
+        Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH);
+        int day = calendar.get(Calendar.DAY_OF_MONTH);
+        showDate(year, month + 1, day);
+
+    }
+
+    private void showDate(int year, int month, int day) {
+        dateTextView.setText(new StringBuilder().append(day).append("/")
+                .append(month).append("/").append(year));
     }
 
     @Override
