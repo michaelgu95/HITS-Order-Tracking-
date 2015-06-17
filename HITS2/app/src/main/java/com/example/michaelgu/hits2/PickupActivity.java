@@ -22,6 +22,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.View.*;
+import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.GridLayout;
 import android.widget.GridLayout.LayoutParams;
@@ -81,7 +83,12 @@ public class PickupActivity extends ActionBarActivity {
             // path to /data/data/yourapp/app_data/imageDir
             File directory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
 
-            Bitmap bitmap = Bitmap.createBitmap(takeScreenshot());
+
+
+            View rootView = view.getRootView();
+            Bitmap bitmap = Bitmap.createBitmap(rootView.getMeasuredWidth(), rootView.getMeasuredHeight(), Bitmap.Config.RGB_565);
+            Canvas screenShotCanvas = new Canvas(bitmap);
+            rootView.draw(screenShotCanvas);
 
             OutputStream os = null;
             File imageFile = new File(directory, fileName);
@@ -103,11 +110,6 @@ public class PickupActivity extends ActionBarActivity {
         }
     };
 
-    private Bitmap takeScreenshot() {
-        View rootView = getWindow().getDecorView().getRootView();
-        rootView.setDrawingCacheEnabled(true);
-        return rootView.getDrawingCache();
-    }
 
 
     @Override

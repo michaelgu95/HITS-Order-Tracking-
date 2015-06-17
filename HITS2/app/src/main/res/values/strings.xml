@@ -2,6 +2,8 @@
     <string name="app_name">HITS 2</string>
 
     <string name="hits">HITS</string>
+    <string name="app_subtitle">Electronic Pickup and Delivery System</string>
+    <string name="choose">Choose: </string>
     <string name="action_settings">Settings</string>
     <string name="pickup_button">Pickup</string>
     <string name="delivery_button">Delivery</string>

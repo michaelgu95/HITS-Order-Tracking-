@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 
 
 public class MenuActivity extends ActionBarActivity {
@@ -15,6 +16,10 @@ public class MenuActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
         findViewById(R.id.pickup_button).setOnClickListener(launchPickup);
+        findViewById(R.id.delivery_button).setOnClickListener(launchDelivery);
+
+        ImageView logo = (ImageView)findViewById(R.id.menu_logo);
+        logo.setImageResource(R.drawable.hits_logo);
     }
 
     @Override
@@ -43,7 +48,7 @@ public class MenuActivity extends ActionBarActivity {
         @Override
         public void onClick(View view) {
             Intent pickupIntent = new Intent(MenuActivity.this, PickupActivity.class);
-            MenuActivity.this.startActivity(pickupIntent);
+            startActivity(pickupIntent);
         }
     };
 
@@ -51,11 +56,8 @@ public class MenuActivity extends ActionBarActivity {
         @Override
         public void onClick(View v) {
             Intent deliveryIntent = new Intent(MenuActivity.this, DeliveryActivity.class);
-
-
+            startActivity(deliveryIntent);
         }
-    }
-
-
+    };
 
 }
