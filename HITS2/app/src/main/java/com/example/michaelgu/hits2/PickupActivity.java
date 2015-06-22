@@ -4,6 +4,7 @@ package com.example.michaelgu.hits2;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -15,8 +16,10 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,11 +27,14 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.*;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.GridLayout;
 import android.widget.GridLayout.LayoutParams;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 import com.microsoft.onedrivesdk.saver.ISaver;
 import com.microsoft.onedrivesdk.saver.Saver;
@@ -44,30 +50,89 @@ import java.util.Calendar;
 
 public class PickupActivity extends ActionBarActivity {
 
-    private TextView dateTextView;
-    private ISaver mSaver;
     private static final String ONEDRIVE_APP_ID = "000000004C151DA2";
     public static final int PICK_FROM_GALLERY_REQUEST_CODE = 4;
+    private TextView dateTextView;
+    private ISaver mSaver;
+    private File savedFileDirectory;
+    private ListView mDrawerList;
+    private ArrayAdapter<String> mAdapter;
+    private ActionBarDrawerToggle mDrawerToggle;
+    private DrawerLayout mDrawerLayout;
+    private String mActivityTitle;
+    private Calendar mCalendar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pickup);
 
+        //configure ListView for Side Navigation Drawer
+        mDrawerList = (ListView)findViewById(R.id.navList);
+        mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
+        mActivityTitle = getTitle().toString();
+        setupDrawer();
+        addDrawerItems();
+
+        //obtain hamburger style nav icons
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+
         // Create the picker instance
         mSaver = Saver.createSaver(ONEDRIVE_APP_ID);
 
-        // Add the on click listener
+        // set click listeners
         findViewById(R.id.saveButton).setOnClickListener(mScreenShotListener);
+        mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent deliveryIntent = new Intent(PickupActivity.this, DeliveryActivity.class);
+                startActivity(deliveryIntent);
+            }
+        });
 
-        //set current Date on dateTextView
+        //create current Date and set on dateTextView
+        configureDate();
+
+    }
+
+    private void setupDrawer(){
+        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
+                R.string.drawer_open, R.string.drawer_close) {
+
+            /** Called when a drawer has settled in a completely open state. */
+            public void onDrawerOpened(View drawerView) {
+                super.onDrawerOpened(drawerView);
+                getSupportActionBar().setTitle("Options");
+                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+            }
+
+            /** Called when a drawer has settled in a completely closed state. */
+            public void onDrawerClosed(View view) {
+                super.onDrawerClosed(view);
+                getSupportActionBar().setTitle(mActivityTitle);
+                invalidateOptionsMenu();
+            }
+        };
+
+        mDrawerToggle.setDrawerIndicatorEnabled(true);
+        mDrawerLayout.setDrawerListener(mDrawerToggle);
+
+    }
+
+    private void addDrawerItems() {
+        String[] osArray = { "Pickup", "Delivery" };
+        mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, osArray);
+        mDrawerList.setAdapter(mAdapter);
+    }
+
+    private void configureDate(){
         dateTextView = (TextView) findViewById(R.id.date_holder);
-        Calendar calendar = Calendar.getInstance();
-        int year = calendar.get(Calendar.YEAR);
-        int month = calendar.get(Calendar.MONTH);
-        int day = calendar.get(Calendar.DAY_OF_MONTH);
+        mCalendar = Calendar.getInstance();
+        int year = mCalendar.get(Calendar.YEAR);
+        int month = mCalendar.get(Calendar.MONTH);
+        int day = mCalendar.get(Calendar.DAY_OF_MONTH);
         showDate(year, month + 1, day);
-
     }
 
     private void showDate(int year, int month, int day) {
@@ -78,23 +143,30 @@ public class PickupActivity extends ActionBarActivity {
     public final View.OnClickListener mScreenShotListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            String fileName = ((EditText)findViewById(R.id.editPickupFrom)).getText().toString() ;
+
+            //format month correctly for database
+            String month = Integer.toString(mCalendar.get(Calendar.MONTH) +1);
+            if(mCalendar.get(Calendar.MONTH) < 9){
+                month = "0" + mCalendar.get(Calendar.MONTH);
+            }
+
+            //configure filename
+            String fileName = ((EditText)findViewById(R.id.editPickupFrom)).getText().toString() + mCalendar.get(Calendar.YEAR) + month + mCalendar.get(Calendar.DATE);
 
             // path to /data/data/yourapp/app_data/imageDir
             File directory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
 
-
-
+            //prep for screenshot
             View rootView = view.getRootView();
             Bitmap bitmap = Bitmap.createBitmap(rootView.getMeasuredWidth(), rootView.getMeasuredHeight(), Bitmap.Config.RGB_565);
             Canvas screenShotCanvas = new Canvas(bitmap);
             rootView.draw(screenShotCanvas);
 
             OutputStream os = null;
-            File imageFile = new File(directory, fileName);
+            savedFileDirectory = new File(directory, fileName);
 
             try {
-                os = new FileOutputStream(imageFile);
+                os = new FileOutputStream(savedFileDirectory);
                 bitmap.compress(Bitmap.CompressFormat.JPEG, 100, os);
                 os.flush();
                 os.close();
@@ -105,12 +177,24 @@ public class PickupActivity extends ActionBarActivity {
             }catch(IOException e){
                 e.printStackTrace();
             }
-
-            mSaver.startSaving((Activity)view.getContext(), fileName, Uri.fromFile(imageFile));
+            mSaver.startSaving((Activity)view.getContext(), fileName, Uri.fromFile(savedFileDirectory));
         }
     };
 
 
+    private void sendMail(String path, String address) {
+        Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
+        emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL,
+                new String[] { address });
+        emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT,
+                "HITS Scanning Solutions - Pickup Receipt");
+        emailIntent.putExtra(android.content.Intent.EXTRA_TEXT,
+                "This is an autogenerated pickup receipt from HITS Scanning Solutions. Thank you for choosing our services!");
+        emailIntent.setType("image/jpg");
+        Uri myUri = Uri.parse("file://" + path);
+        emailIntent.putExtra(Intent.EXTRA_STREAM, myUri);
+        startActivity(Intent.createChooser(emailIntent, "Send mail..."));
+    }
 
     @Override
     protected void onActivityResult(final int requestCode, final int resultCode, final Intent data) {
@@ -118,6 +202,9 @@ public class PickupActivity extends ActionBarActivity {
 
             try {
                 mSaver.handleSave(requestCode, resultCode, data);
+                EditText emailText = (EditText) findViewById(R.id.editEmail);
+                sendMail(savedFileDirectory.toString(), emailText.getText().toString());
+
             } catch (final SaverException e) {
             }
         } else if(requestCode == PICK_FROM_GALLERY_REQUEST_CODE) {
@@ -176,6 +263,11 @@ public class PickupActivity extends ActionBarActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
+
+        if (mDrawerToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
@@ -186,4 +278,15 @@ public class PickupActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        mDrawerToggle.syncState();
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        mDrawerToggle.onConfigurationChanged(newConfig);
+    }
 }

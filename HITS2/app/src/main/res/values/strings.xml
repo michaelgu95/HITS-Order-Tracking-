@@ -8,13 +8,16 @@
     <string name="pickup_button">Pickup</string>
     <string name="delivery_button">Delivery</string>
     <string name="title_activity_pickup">PickupActivity</string>
-
+    <string name="email"> Email Address: </string>
     <string name="hello_world">Hello world!</string>
     <string name="pickup_from">Pickup From:</string>
     <string name="date">Date: </string>
     <string name="description_holder">Description: </string>
     <string name="received_from">Received From: </string>
     <string name="courier">HITS Courier: </string>
-    <string name="HITS_address">11833 New Halls Ferry Road\nSt. Louis, MO 63033\nPhone: (314) 837–4000\nFax: (314) 837–4059</string>
+    <string name="HITS_address">11833 New Halls Ferry Road\nSt. Louis, MO 63033\nPhone: (314) 837–4000\nFax: (314) 837–4059\nwww.hitsscan.com</string>
     <string name="title_activity_delivery">DeliveryActivity</string>
+    <string name="sign_holder">Sign: X </string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
 </resources>

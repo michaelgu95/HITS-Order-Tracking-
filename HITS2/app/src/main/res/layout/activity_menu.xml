@@ -10,39 +10,38 @@
         android:layout_height="wrap_content"
         android:id="@+id/menu_logo"
         android:src="@drawable/hits_logo"
-        android:layout_alignLeft="@+id/app_subtitle"
-        android:layout_alignStart="@+id/app_subtitle"
-        android:layout_alignBottom="@+id/app_subtitle" />
+        android:layout_alignBottom="@+id/app_subtitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView android:text="@string/app_subtitle" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/app_subtitle"
         android:textSize="18sp"
         android:textStyle="bold|italic"
-        android:layout_marginTop="84dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_above="@+id/choose_holder"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="98dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/pickup_button"
         android:id="@+id/pickup_button"
-        android:layout_below="@+id/menu_logo"
-        android:layout_toLeftOf="@+id/choose_holder"
-        android:layout_toStartOf="@+id/choose_holder"
-        android:layout_marginTop="189dp" />
+        android:layout_alignTop="@+id/delivery_button"
+        android:layout_toRightOf="@+id/delivery_button"
+        android:layout_toEndOf="@+id/delivery_button" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/delivery_button"
         android:id="@+id/delivery_button"
-        android:layout_alignTop="@+id/pickup_button"
-        android:layout_alignRight="@+id/app_subtitle"
-        android:layout_alignEnd="@+id/app_subtitle"
-        android:layout_marginRight="36dp"
-        android:layout_marginEnd="36dp" />
+        android:layout_marginLeft="51dp"
+        android:layout_marginStart="51dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/choose_holder"
+        android:layout_toEndOf="@+id/choose_holder" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -51,6 +50,9 @@
         android:text="@string/choose"
         android:id="@+id/choose_holder"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignLeft="@+id/menu_logo"
+        android:layout_alignStart="@+id/menu_logo"
+        android:layout_marginLeft="31dp"
+        android:layout_marginStart="31dp" />
 
 </RelativeLayout>
