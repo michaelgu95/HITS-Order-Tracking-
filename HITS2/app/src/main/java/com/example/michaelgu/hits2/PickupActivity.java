@@ -207,47 +207,6 @@ public class PickupActivity extends ActionBarActivity {
 
             } catch (final SaverException e) {
             }
-        } else if(requestCode == PICK_FROM_GALLERY_REQUEST_CODE) {
-            saveFileToDrive(data.getData(), this);
-            System.out.println(Environment.getExternalStorageDirectory().toString());
-            System.out.println(data.getData());
-        } else {
-            Log.e(getClass().getSimpleName(), "Unable to resolve onActivityResult request code " + requestCode);
-        }
-    }
-
-    private void saveFileToDrive(final Uri data, final Activity activity) {
-        new AsyncTask<Void, Void, Void>(){
-            @Override
-            protected Void doInBackground(final Void... voids) {
-                // Create URI from real path
-                final String path = getPathFromUri(data);
-
-                mSaver.startSaving(activity, path, Uri.parse(data.toString()));
-                return null;
-            }
-        }.execute((Void) null);
-    }
-
-    /**
-     * Gets the path from a URI
-     * @param uri The uri fro the item to look up its full path
-     * @return The path
-     */
-    private String getPathFromUri(final Uri uri)
-    {
-        final String[] projection = { MediaStore.Images.Media.DATA };
-        Cursor cursor = null;
-        try {
-            cursor = getContentResolver().query(uri, projection, null, null, null);
-            final int data_column = cursor
-                    .getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
-            cursor.moveToFirst();
-            return cursor.getString(data_column);
-        } finally {
-            if (cursor != null) {
-                cursor.close();
-            }
         }
     }
 
