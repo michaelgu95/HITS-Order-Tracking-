@@ -25,10 +25,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/pdfWebView"
-            android:layout_above="@+id/pickup_holder"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginBottom="57dp" />
+            android:layout_above="@+id/textView5" />
 
 
 
@@ -38,10 +37,9 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/received_from"
             android:id="@+id/received_from"
-            android:layout_above="@+id/signature_holder"
+            android:layout_alignTop="@+id/editName"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginBottom="33dp" />
+            android:layout_alignParentStart="true" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -49,9 +47,10 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/sign_holder"
             android:id="@+id/signature_holder"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_above="@+id/editEmail" />
+            android:layout_below="@+id/received_from"
+            android:layout_alignLeft="@+id/email_holder"
+            android:layout_alignStart="@+id/email_holder"
+            android:layout_marginTop="49dp" />
 
         <com.github.gcacace.signaturepad.views.SignaturePad
             xmlns:android="http://schemas.android.com/apk/res/android"
@@ -60,9 +59,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:penColor="@android:color/black"
-            android:layout_above="@+id/email_holder"
             android:layout_toRightOf="@+id/signature_holder"
             android:layout_toEndOf="@+id/signature_holder"
+            android:layout_above="@+id/editEmail"
             android:layout_below="@+id/editName" />
 
 
@@ -72,10 +71,9 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/email"
             android:id="@+id/email_holder"
-            android:layout_marginBottom="57dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignBottom="@+id/editEmail"
+            android:layout_alignRight="@+id/received_from"
+            android:layout_alignEnd="@+id/received_from" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -86,8 +84,8 @@
             android:layout_above="@+id/saveButton"
             android:layout_alignRight="@+id/signature_pad"
             android:layout_alignEnd="@+id/signature_pad"
-            android:layout_toRightOf="@+id/received_from"
-            android:layout_toEndOf="@+id/received_from" />
+            android:layout_alignLeft="@+id/editName"
+            android:layout_alignStart="@+id/editName" />
 
         <Button
             style="?android:attr/buttonStyleSmall"
@@ -107,10 +105,10 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/pickup_from"
             android:id="@+id/pickup_holder"
-            android:layout_above="@+id/received_from"
+            android:layout_below="@+id/editCourier"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginBottom="25dp" />
+            android:layout_marginTop="43dp" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -129,10 +127,11 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/editName"
-            android:layout_below="@+id/pickup_holder"
+            android:layout_marginTop="65dp"
+            android:layout_below="@+id/editPickupFrom"
             android:layout_toRightOf="@+id/received_from"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignRight="@+id/pdfWebView"
+            android:layout_alignEnd="@+id/pdfWebView" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -140,7 +139,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/courier"
             android:id="@+id/textView5"
-            android:layout_below="@+id/launchButton"
+            android:layout_centerVertical="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
 
