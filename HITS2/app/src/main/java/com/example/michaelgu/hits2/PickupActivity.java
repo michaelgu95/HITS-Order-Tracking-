@@ -52,8 +52,8 @@ public class PickupActivity extends ActionBarActivity {
 
     private static final String ONEDRIVE_APP_ID = "000000004C151DA2";
     public static final int PICK_FROM_GALLERY_REQUEST_CODE = 4;
-    private TextView dateTextView;
     private ISaver mSaver;
+    private TextView dateTextView;
     private File savedFileDirectory;
     private ListView mDrawerList;
     private ArrayAdapter<String> mAdapter;
