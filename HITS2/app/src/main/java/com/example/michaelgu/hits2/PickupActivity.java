@@ -147,11 +147,11 @@ public class PickupActivity extends ActionBarActivity {
             //format month correctly for database
             String month = Integer.toString(mCalendar.get(Calendar.MONTH) +1);
             if(mCalendar.get(Calendar.MONTH) < 9){
-                month = "0" + mCalendar.get(Calendar.MONTH);
+                month = "0" + Integer.toString(mCalendar.get(Calendar.MONTH) + 1);
             }
 
             //configure filename
-            String fileName = ((EditText)findViewById(R.id.editPickupFrom)).getText().toString() + mCalendar.get(Calendar.YEAR) + month + mCalendar.get(Calendar.DATE);
+            String fileName = ((EditText)findViewById(R.id.editPickupFrom)).getText().toString() + mCalendar.get(Calendar.YEAR) + month + mCalendar.get(Calendar.DATE) + ".png";
 
             // path to /data/data/yourapp/app_data/imageDir
             File directory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
@@ -167,7 +167,7 @@ public class PickupActivity extends ActionBarActivity {
 
             try {
                 os = new FileOutputStream(savedFileDirectory);
-                bitmap.compress(Bitmap.CompressFormat.JPEG, 100, os);
+                bitmap.compress(Bitmap.CompressFormat.PNG, 100, os);
                 os.flush();
                 os.close();
 
