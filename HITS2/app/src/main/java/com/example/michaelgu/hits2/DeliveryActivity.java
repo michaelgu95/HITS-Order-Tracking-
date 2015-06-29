@@ -7,6 +7,7 @@ import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Environment;
@@ -45,6 +46,8 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.URL;
 import java.util.Calendar;
+
+import static android.graphics.Color.parseColor;
 
 
 public class DeliveryActivity extends ActionBarActivity {
@@ -199,9 +202,11 @@ public class DeliveryActivity extends ActionBarActivity {
         setupDrawer();
         addDrawerItems();
 
-        //obtain hamburger style nav icons
+        //configure action bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(parseColor("#D32F2F")));
+        getSupportActionBar().setTitle("");
 
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

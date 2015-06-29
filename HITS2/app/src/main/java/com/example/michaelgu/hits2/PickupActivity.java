@@ -13,6 +13,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.RectF;
+import android.graphics.drawable.ColorDrawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
@@ -50,6 +51,8 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Calendar;
 
+import static android.graphics.Color.parseColor;
+
 
 public class PickupActivity extends ActionBarActivity {
 
@@ -78,9 +81,11 @@ public class PickupActivity extends ActionBarActivity {
         setupDrawer();
         addDrawerItems();
 
-        //obtain hamburger style nav icons
+        //configure the actionbar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(parseColor("#D32F2F")));
+        getSupportActionBar().setTitle("");
 
         // Create the picker instance
         mSaver = Saver.createSaver(ONEDRIVE_APP_ID);
@@ -97,7 +102,6 @@ public class PickupActivity extends ActionBarActivity {
 
         //create current Date and set on dateTextView
         configureDate();
-
     }
 
     private void setupDrawer(){

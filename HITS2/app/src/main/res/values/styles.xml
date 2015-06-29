@@ -1,8 +1,18 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
         <!-- Customize your theme here. -->
+        <!--<item name="android:color">#F44336</item>-->
+        <!--<item name="android:colorAccent">#9E9E9E</item>-->
+        <!--<item name="android:textColorPrimary">#212121</item>-->
+        <!--<item name="android:windowBackground">@color/white</item>-->
+
+        <!--<item name="colorControlNormal">#212121</item>-->
+        <!--<item name="colorControlActivated">#212121</item>-->
+        <!--<item name="colorControlHighlight">#212121</item>-->
     </style>
+
+
 
 </resources>

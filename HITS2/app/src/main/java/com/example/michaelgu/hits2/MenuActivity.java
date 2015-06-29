@@ -1,12 +1,15 @@
 package com.example.michaelgu.hits2;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+
+import static android.graphics.Color.parseColor;
 
 
 public class MenuActivity extends ActionBarActivity {
@@ -20,6 +23,10 @@ public class MenuActivity extends ActionBarActivity {
 
         ImageView logo = (ImageView)findViewById(R.id.menu_logo);
         logo.setImageResource(R.drawable.hits_logo);
+
+        //configure the actionbar
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(parseColor("#D32F2F")));
+        getSupportActionBar().setTitle("");
     }
 
     @Override
