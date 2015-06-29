@@ -142,10 +142,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:penColor="@android:color/black"
-            android:layout_below="@+id/textView2"
             android:layout_above="@+id/editEmail"
             android:layout_toRightOf="@+id/textView3"
-            android:layout_toEndOf="@+id/textView3" />
+            android:layout_toEndOf="@+id/textView3"
+            android:layout_below="@+id/editName" />
 
 
         <EditText
@@ -164,9 +164,9 @@
             android:text="@string/email"
             android:id="@+id/email_holder"
             android:layout_above="@+id/saveButton"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginBottom="156dp" />
+            android:layout_alignRight="@+id/textView2"
+            android:layout_alignEnd="@+id/textView2"
+            android:layout_marginBottom="58dp" />
 
         <EditText
             android:layout_width="wrap_content"

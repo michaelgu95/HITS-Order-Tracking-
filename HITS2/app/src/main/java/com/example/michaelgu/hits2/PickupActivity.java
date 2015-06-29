@@ -2,6 +2,7 @@ package com.example.michaelgu.hits2;
 
 
 import android.app.Activity;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -12,6 +13,8 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.RectF;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Environment;
@@ -61,6 +64,7 @@ public class PickupActivity extends ActionBarActivity {
     private DrawerLayout mDrawerLayout;
     private String mActivityTitle;
     private Calendar mCalendar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
