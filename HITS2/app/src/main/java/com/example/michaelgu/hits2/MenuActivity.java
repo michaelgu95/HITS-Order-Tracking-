@@ -25,7 +25,7 @@ public class MenuActivity extends ActionBarActivity {
         logo.setImageResource(R.drawable.hits_logo);
 
         //configure the actionbar
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(parseColor("#D32F2F")));
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(parseColor("#ED1C24")));
         getSupportActionBar().setTitle("");
     }
 

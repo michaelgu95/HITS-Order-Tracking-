@@ -205,7 +205,7 @@ public class DeliveryActivity extends ActionBarActivity {
         //configure action bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(parseColor("#D32F2F")));
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(parseColor("#ED1C24")));
         getSupportActionBar().setTitle("");
 
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
