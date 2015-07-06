@@ -49,6 +49,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.net.URLEncoder;
 import java.util.Calendar;
 
 import static android.graphics.Color.parseColor;
@@ -155,11 +156,18 @@ public class PickupActivity extends ActionBarActivity {
             //format month correctly for database
             String month = Integer.toString(mCalendar.get(Calendar.MONTH) +1);
             if(mCalendar.get(Calendar.MONTH) < 9){
-                month = "0" + Integer.toString(mCalendar.get(Calendar.MONTH) + 1);
+                month = "0" + month;
             }
 
+            String date = Integer.toString(mCalendar.get(Calendar.DATE));
+            if(mCalendar.get(Calendar.DATE)< 10){
+                date = "0" + date;
+            }
+
+            uploadEmailAddress();
+
             //configure filename
-            String fileName = ((EditText)findViewById(R.id.editPickupFrom)).getText().toString() + mCalendar.get(Calendar.YEAR) + month + mCalendar.get(Calendar.DATE) + ".png";
+            String fileName = ((EditText)findViewById(R.id.editPickupFrom)).getText().toString() + mCalendar.get(Calendar.YEAR) + month + date + ".png";
 
             // path to /data/data/yourapp/app_data/imageDir
             File directory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
@@ -188,6 +196,27 @@ public class PickupActivity extends ActionBarActivity {
             mSaver.startSaving((Activity)view.getContext(), fileName, Uri.fromFile(savedFileDirectory));
         }
     };
+
+    private void uploadEmailAddress(){
+        Thread t = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                String fullURL = "https://docs.google.com/forms/d/1J2IxyopQe6ec_8mEp2lj101nPTPvUBiQu4WS98SmBn8/formResponse";
+                HttpRequest req = new HttpRequest();
+
+                EditText customerText = (EditText)findViewById(R.id.editPickupFrom);
+                String customer = customerText.getText().toString();
+
+                EditText emailText = (EditText)findViewById(R.id.editEmail);
+                String emailAddress = emailText.getText().toString();
+
+                String data = "entry_37742976=" + URLEncoder.encode(customer) + "&"
+                        + "entry_830948319=" + URLEncoder.encode(emailAddress);
+                String response = req.sendPost(fullURL, data);
+            }
+        });
+        t.start();
+    }
 
 
     private void sendMail(String path, String address) {

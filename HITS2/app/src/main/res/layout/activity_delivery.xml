@@ -35,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/received_from"
+            android:text="@string/signed_by"
             android:id="@+id/received_from"
             android:layout_alignTop="@+id/editName"
             android:layout_alignParentLeft="true"
