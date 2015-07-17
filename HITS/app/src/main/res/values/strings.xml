@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">HITS</string>
+
+    <string name="hits">HITS</string>
+    <string name="action_settings">Settings</string>
+    <string name="pickup_button">Pickup</string>
+    <string name="delivery_button">Delivery</string>
+    <string name="title_activity_pickup">PickupActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="HITS_address">11833 New Halls Ferry Road\nSt. Louis, MO 63033\nPhone:(314) 837–4000\nFax: (314) 837–4059</string>
+</resources>

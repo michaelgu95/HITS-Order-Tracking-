@@ -1,0 +1,165 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context="com.example.michaelgu.hits2.DeliveryActivity" >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Launch OneDrive"
+            android:id="@+id/launchButton"
+            android:layout_alignBottom="@+id/pdfWebView"
+            android:layout_centerHorizontal="true" />
+
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/pdfWebView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/textView5" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/signed_by"
+            android:id="@+id/received_from"
+            android:layout_alignTop="@+id/editName"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/sign_holder"
+            android:id="@+id/signature_holder"
+            android:layout_below="@+id/received_from"
+            android:layout_alignLeft="@+id/email_holder"
+            android:layout_alignStart="@+id/email_holder"
+            android:layout_marginTop="49dp" />
+
+        <com.github.gcacace.signaturepad.views.SignaturePad
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/signature_pad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:penColor="@android:color/black"
+            android:layout_toRightOf="@+id/signature_holder"
+            android:layout_toEndOf="@+id/signature_holder"
+            android:layout_above="@+id/editEmail"
+            android:layout_below="@+id/editName" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/email"
+            android:id="@+id/email_holder"
+            android:layout_alignTop="@+id/saveButton"
+            android:layout_alignRight="@+id/received_from"
+            android:layout_alignEnd="@+id/received_from" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/editEmail"
+            android:layout_alignTop="@+id/email_holder"
+            android:layout_alignLeft="@+id/editName"
+            android:layout_alignStart="@+id/editName"
+            android:layout_toLeftOf="@+id/saveButton"
+            android:layout_toStartOf="@+id/saveButton" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:id="@+id/saveButton"
+            android:fontFamily="sans-serif-medium"
+            android:focusableInTouchMode="false"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/pickup_from"
+            android:id="@+id/pickup_holder"
+            android:layout_below="@+id/editCourier"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="43dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editPickupFrom"
+            android:layout_alignBaseline="@+id/pickup_holder"
+            android:layout_alignBottom="@+id/pickup_holder"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/pickup_holder"
+            android:layout_toEndOf="@+id/pickup_holder" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editName"
+            android:layout_marginTop="65dp"
+            android:layout_below="@+id/editPickupFrom"
+            android:layout_toRightOf="@+id/received_from"
+            android:layout_alignRight="@+id/pdfWebView"
+            android:layout_alignEnd="@+id/pdfWebView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/courier"
+            android:id="@+id/textView5"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editCourier"
+            android:layout_alignTop="@+id/textView5"
+            android:layout_toRightOf="@+id/textView5"
+            android:layout_alignRight="@+id/editPickupFrom"
+            android:layout_alignEnd="@+id/editPickupFrom" />
+
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/navList"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|start"
+        android:background="#ffeeeeee"/>
+
+</android.support.v4.widget.DrawerLayout>

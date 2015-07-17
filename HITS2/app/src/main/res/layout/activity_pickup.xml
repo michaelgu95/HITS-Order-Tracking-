@@ -1,0 +1,227 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context="com.example.michaelgu.hits.PickupActivity">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title_logo"
+            android:src="@drawable/hits_logo"
+            android:layout_toLeftOf="@+id/addressText"
+            android:layout_marginRight="58dp"
+            android:layout_marginEnd="58dp"
+            android:layout_above="@+id/date_holder"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/dateTextView"
+            android:layout_toEndOf="@+id/dateTextView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Pickup Order Form"
+            android:id="@+id/titleText"
+            android:textSize="25sp"
+            android:layout_marginRight="58dp"
+            android:layout_marginEnd="58dp"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/saveButton"
+            android:layout_toStartOf="@+id/saveButton"
+            android:phoneNumber="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/date"
+            android:id="@+id/date_holder"
+            android:layout_below="@+id/titleText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="@string/HITS_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:id="@+id/addressText"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/dateTextView" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/dateTextView"
+            android:textSize="20sp"
+            android:layout_alignTop="@+id/date_holder"
+            android:layout_alignLeft="@+id/date_holder"
+            android:layout_alignStart="@+id/date_holder"
+            android:layout_marginLeft="82dp"
+            android:layout_marginStart="82dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/pickup_from"
+            android:id="@+id/pickup_holder"
+            android:layout_below="@+id/editCourier"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editPickupFrom"
+            android:layout_below="@+id/editCourier"
+            android:layout_toRightOf="@+id/pickup_holder"
+            android:layout_alignRight="@+id/editCourier"
+            android:layout_alignEnd="@+id/editCourier" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/description_holder"
+            android:id="@+id/descriptionHolder"
+            android:layout_below="@+id/editPickupFrom"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/courier"
+            android:id="@+id/textView"
+            android:layout_below="@+id/addressText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/signed_by"
+            android:id="@+id/textView2"
+            android:layout_marginTop="123dp"
+            android:layout_below="@+id/editDescription"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editCourier"
+            android:layout_alignTop="@+id/textView"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/pickup_holder"
+            android:layout_toEndOf="@+id/pickup_holder" />
+
+
+
+        <com.github.gcacace.signaturepad.views.SignaturePad
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/signature_pad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:penColor="@android:color/black"
+            android:layout_above="@+id/editEmail"
+            android:layout_toRightOf="@+id/textView3"
+            android:layout_toEndOf="@+id/textView3"
+            android:layout_below="@+id/editName" />
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editDescription"
+            android:layout_below="@+id/editPickupFrom"
+            android:layout_toRightOf="@+id/descriptionHolder"
+            android:layout_alignRight="@+id/editPickupFrom"
+            android:layout_alignEnd="@+id/editPickupFrom" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/email"
+            android:id="@+id/email_holder"
+            android:layout_above="@+id/saveButton"
+            android:layout_alignRight="@+id/textView2"
+            android:layout_alignEnd="@+id/textView2"
+            android:layout_marginBottom="58dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editEmail"
+            android:inputType="textEmailAddress"
+            android:layout_alignTop="@+id/email_holder"
+            android:layout_toRightOf="@+id/email_holder"
+            android:layout_alignRight="@+id/signature_pad"
+            android:layout_alignEnd="@+id/signature_pad"
+            android:singleLine="false" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:id="@+id/saveButton"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/editPickupFrom"
+            android:layout_alignEnd="@+id/editPickupFrom"
+            android:fontFamily="sans-serif-medium"
+            android:focusableInTouchMode="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/sign_holder"
+            android:id="@+id/textView3"
+            android:layout_alignTop="@+id/signature_pad"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="71dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editName"
+            android:layout_alignTop="@+id/textView2"
+            android:layout_toRightOf="@+id/email_holder"
+            android:layout_alignRight="@+id/signature_pad"
+            android:layout_alignEnd="@+id/signature_pad" />
+
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/navList"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|start"
+        android:background="#ffeeeeee"/>
+
+</android.support.v4.widget.DrawerLayout>
